@@ -1,0 +1,64 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: white; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-family: Bagatela, serif; }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside; }
+
+li {
+  margin: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+header {
+  grid-column: 1/span 6;
+  grid-row-start: 1;
+  padding: 0 20px 0 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 10px;
+  grid-template-rows: repeat(10, 50px);
+  background-image: linear-gradient(to bottom, #3a3a3a, rgba(0, 0, 0, 0.5));
+  grid-template-rows: repeat(3, 50px); }
+
+.Menubar {
+  grid-column: 6/span 1;
+  grid-row-start: 1;
+  margin-top: 40%; }
+
+.LogoType {
+  grid-column: 1/span 4;
+  grid-row-start: 1;
+  margin-top: 7%; }
+
+section {
+  padding: 0 20px 0 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 10px;
+  grid-template-rows: repeat(10, 50px); }
+
+.kassemedbillede {
+  grid-column: 1/span 5;
+  grid-row-start: 2;
+  background: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.3)), url("../images/TFIOS.png"); }
+
+/*# sourceMappingURL=index.css.map */

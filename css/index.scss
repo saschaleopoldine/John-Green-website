@@ -1,0 +1,108 @@
+// Alt der gælder for mobil og højere
+
+* { // Gælder alt på hele siden
+  -webkit-box-sizing: border-box; // -webkit- browserunderstøttelse
+  box-sizing: border-box; // Bokse har altid den størrelse man giver uanset om der tilføjes margen mv.
+}
+
+body {
+  margin: 0; // Ingen kanter i siden af browser
+  background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; // Ingen ydre margen fra overskrifter
+  padding: 0; // Ingen indre margen fra overskrifter
+  font-family: Bagatela, serif;
+}
+
+ul, ol {
+  margin: 0; // Ingen ydre margen fra lister
+  padding: 0; // Ingen indre margen fra lister
+  list-style-position: inside; // List punkter står på linje
+}
+
+li {
+  margin: 0; // Ingen ydre margen fra listpunkter
+}
+
+p {
+  margin: 0; // Ingen ydre margen fra paragraffer
+  padding: 0; // Ingen indre margen fra paragraffer
+}
+
+// Sikrer billeder er responsive
+img {
+  display: block; // Billeder er et element (laver linjeskift)
+  max-width: 100%; // Bredde må maks fylde 100%
+  height: auto; // Højden skal tilpasse sig
+}
+
+$baggrund: #3a3a3a;
+$bluePrimary: #0097d7;
+$orangePrimary: #f37121;
+$overlay: rgba(93, 144, 183, 0.5);
+$hoverYellow: #fccc28;
+
+@mixin gridmobil{
+  padding: 0 20px 0 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 10px;
+  grid-template-rows: repeat(10, 50px);
+
+}
+
+header{
+  grid-column: 1/span 6;
+  grid-row-start: 1;
+  @include gridmobil;
+  background-image: linear-gradient(to bottom, #3a3a3a , rgba(0,0,0,0.5));
+  grid-template-rows: repeat(3, 50px);
+
+}
+.Menubar{
+  grid-column: 6/span 1;
+  grid-row-start: 1;
+  margin-top: 40%;
+}
+.LogoType{
+  grid-column: 1/span 4;
+  grid-row-start: 1;
+  margin-top: 7%;
+}
+
+section{
+  @include gridmobil;
+}
+
+
+.kassemedbillede{
+  grid-column: 1/span 5;
+  grid-row-start: 2;
+  background:
+          /* top, transparent red, faked with gradient */
+          linear-gradient(
+                          to bottom, #3a3a3a , rgba(58,58,58,0.3)
+          ),
+            /* bottom, image */
+          url("../images/TFIOS.png");
+}
+
+
+
+@media screen and (min-width: 768px) {
+  // Alt der ændres i tablet stående fra mobil
+}
+
+@media screen and (min-width: 992px) {
+  // Alt der ændres i tablet liggende fra mobil og tablet stående
+}
+
+@media screen and (min-width: 1200px) {
+  // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+}
+
+@media print {
+  // Alt der gælder for print specifikt
+}
