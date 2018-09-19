@@ -9,7 +9,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  font-family: Bagatela, serif; }
+  font-family: adorn-condensed-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400; }
 
 ul, ol {
   margin: 0;
@@ -20,6 +22,9 @@ li {
   margin: 0; }
 
 p {
+  font-family: adorn-condensed-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
   margin: 0;
   padding: 0; }
 
@@ -36,7 +41,7 @@ header {
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 10px;
   background-image: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.5));
-  grid-template-rows: repeat(1, 50px); }
+  grid-template-rows: repeat(1, 1fr); }
 
 .Menubar {
   grid-column: 6/span 1;
@@ -48,35 +53,59 @@ header {
   grid-row-start: 1;
   margin-top: 7%; }
 
-#et {
+section {
   padding: 0 0 0 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 10px;
-  grid-template-rows: repeat(15, 50px); }
-  #et .billede {
+  grid-template-rows: repeat(10, 50px); }
+  section .billede {
     grid-column: 1/span 6;
-    grid-row: 1/span 3;
-    background: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.4)); }
-    #et .billede img {
+    grid-row: 1/span 4; }
+    section .billede img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: bottom; }
+      background: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.4)); }
 
 .KommendeFilm {
-  grid-column: 1/span 4;
-  grid-row-start: 7;
-  color: white; }
+  grid-column: 1/span 6;
+  grid-row: 5/span 2;
+  color: white;
+  border-bottom: 0.5px solid #707070;
+  text-align: center;
+  padding: 10%; }
+  .KommendeFilm h1 {
+    font-family: adorn-condensed-sans, sans-serif;
+    font-weight: 400; }
 
 .OmJohnGreen {
-  grid-column: 1/span 4;
-  grid-row-start: 9;
-  color: white; }
+  grid-column: 1/span 6;
+  grid-row: 7/span 2;
+  color: white;
+  border-bottom: 0.5px solid #707070;
+  text-align: center;
+  padding: 10%; }
 
 .Blog {
-  grid-column: 1/span 4;
-  grid-row-start: 11;
-  color: white; }
+  grid-column: 1/span 6;
+  grid-row: 9/ span 2;
+  color: white;
+  text-align: center;
+  padding: 10%; }
+
+footer {
+  padding: 0 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 10px;
+  grid-template-rows: repeat(3, 47px);
+  background-image: url("../images/footer_background2.png");
+  background-size: contain; }
+
+.socialemedier {
+  grid-column: 2/span 4;
+  grid-row-start: 2;
+  margin-left: 20%; }
 
 /*# sourceMappingURL=index.css.map */

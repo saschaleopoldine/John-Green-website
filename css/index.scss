@@ -13,7 +13,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0; // Ingen ydre margen fra overskrifter
   padding: 0; // Ingen indre margen fra overskrifter
-  font-family: Bagatela, serif;
+  font-family: adorn-condensed-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 ul, ol {
@@ -27,6 +29,9 @@ li {
 }
 
 p {
+  font-family: adorn-condensed-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
   margin: 0; // Ingen ydre margen fra paragraffer
   padding: 0; // Ingen indre margen fra paragraffer
 }
@@ -54,7 +59,7 @@ header{
   grid-row-start: 1;
   @include gridmobil;
   background-image: linear-gradient(to bottom, #3a3a3a , rgba(58,58,58,0.5));
-  grid-template-rows: repeat(1, 50px);
+  grid-template-rows: repeat(1, 1fr);
 
 }
 .Menubar{
@@ -68,44 +73,73 @@ header{
   margin-top: 7%;
 }
 
-#et{
+section{
   @include gridmobil;
-  grid-template-rows: repeat(15, 50px);
+  grid-template-rows: repeat(10, 50px);
 
   .billede{
     grid-column: 1/span 6;
-    grid-row: 1/span 3;
+    grid-row: 1/span 4;
     img {
+
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: bottom;
+      background:
+              /* top, transparent red, faked with gradient */
+              linear-gradient(
+                              to bottom, #3a3a3a , rgba(58,58,58,0.4)
+              );
     }
 
-    background:
-            /* top, transparent red, faked with gradient */
-            linear-gradient(
-                            to bottom, #3a3a3a , rgba(58,58,58,0.4)
-            );
+
   }
 }
 
-
 .KommendeFilm{
-  grid-column: 1/span 4;
-  grid-row-start: 7;
+  grid-column: 1/span 6;
+  grid-row: 5/span 2;
   color: white;
+  border-bottom: 0.5px solid #707070;
+  text-align: center;
+  padding: 10%;
+  h1{
+    font-family: adorn-condensed-sans, sans-serif;
+    font-weight: 400;
+  }
+
+
 }
 .OmJohnGreen{
-  grid-column: 1/span 4;
-  grid-row-start: 9;
+  grid-column: 1/span 6;
+  grid-row: 7/span 2;
   color: white;
+  border-bottom: 0.5px solid #707070;
+  text-align: center;
+  padding: 10%;
 }
 .Blog{
-  grid-column: 1/span 4;
-  grid-row-start: 11;
+  grid-column: 1/span 6;
+  grid-row: 9/ span 2;
   color: white;
+  text-align: center;
+  padding: 10%;
 }
+
+footer{
+  @include gridmobil;
+    grid-template-rows: repeat(3, 47px);
+  background-image: url("../images/footer_background2.png");
+  background-size: contain;
+}
+
+.socialemedier{
+  grid-column: 2/span 4;
+  grid-row-start: 2;
+  margin-left: 20%;
+}
+
+
 
 
 @media screen and (min-width: 768px) {
