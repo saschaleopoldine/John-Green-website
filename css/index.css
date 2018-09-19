@@ -9,7 +9,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  font-family: Bagatela, serif; }
+  font-family: adorn-condensed-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400; }
 
 ul, ol {
   margin: 0;
@@ -20,6 +22,9 @@ li {
   margin: 0; }
 
 p {
+  font-family: adorn-condensed-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
   margin: 0;
   padding: 0; }
 
@@ -36,7 +41,7 @@ header {
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 10px;
   background-image: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.5));
-  grid-template-rows: repeat(1, 50px); }
+  grid-template-rows: repeat(1, 1fr); }
 
 .Menubar {
   grid-column: 6/span 1;
@@ -67,15 +72,18 @@ section {
   grid-column: 1/span 6;
   grid-row: 5/span 2;
   color: white;
-  border: 1px solid #707070;
+  border-bottom: 0.5px solid #707070;
   text-align: center;
   padding: 10%; }
+  .KommendeFilm h1 {
+    font-family: adorn-condensed-sans, sans-serif;
+    font-weight: 400; }
 
 .OmJohnGreen {
   grid-column: 1/span 6;
   grid-row: 7/span 2;
   color: white;
-  border: 1px solid #707070;
+  border-bottom: 0.5px solid #707070;
   text-align: center;
   padding: 10%; }
 
@@ -83,8 +91,21 @@ section {
   grid-column: 1/span 6;
   grid-row: 9/ span 2;
   color: white;
-  border: 1px solid #707070;
   text-align: center;
   padding: 10%; }
+
+footer {
+  padding: 0 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 10px;
+  grid-template-rows: repeat(3, 47px);
+  background-image: url("../images/footer_background2.png");
+  background-size: contain; }
+
+.socialemedier {
+  grid-column: 2/span 4;
+  grid-row-start: 2;
+  margin-left: 20%; }
 
 /*# sourceMappingURL=index.css.map */
