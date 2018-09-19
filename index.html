@@ -43,7 +43,7 @@
 
 </header>
 
-<section id="et">
+<section>
     <div class="billede">
 
 
@@ -51,15 +51,14 @@
 
 <div class="KommendeFilm"><h1>Kommende Film</h1></div>
 <div class="OmJohnGreen"><h1>Om John Green</h1></div>
-<div class="Blog"><h1 class="Blog"> Blog</h1></div>
-
+<div class="Blog"><h1> Blog</h1></div>
 
 
 </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
-    //the fualt in our stars//
+    //the fault in our stars//
     $.ajax( {
         type: "GET",
         dataType: "json",
@@ -72,7 +71,6 @@
         success: function(alt) {
             $("#titel").append(alt.title);
             $(".billede").append("<img src='http://image.tmdb.org/t/p/w300/eVo90gqdHXQhcH7bNfbNjXtlZBW.jpg'" + alt.poster_path + ">");
-            $("#overview").append(alt.overview);
             $.each(alt.genres, function (i,genre) {
                 $("#genre").append(genre.name + "<br>");
 

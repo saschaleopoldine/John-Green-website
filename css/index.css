@@ -48,35 +48,43 @@ header {
   grid-row-start: 1;
   margin-top: 7%; }
 
-#et {
+section {
   padding: 0 0 0 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 10px;
-  grid-template-rows: repeat(15, 50px); }
-  #et .billede {
+  grid-template-rows: repeat(10, 50px); }
+  section .billede {
     grid-column: 1/span 6;
-    grid-row: 1/span 3;
-    background: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.4)); }
-    #et .billede img {
+    grid-row: 1/span 4; }
+    section .billede img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: bottom; }
+      background: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.4)); }
 
 .KommendeFilm {
-  grid-column: 1/span 4;
-  grid-row-start: 7;
-  color: white; }
+  grid-column: 1/span 6;
+  grid-row: 5/span 2;
+  color: white;
+  border: 1px solid #707070;
+  text-align: center;
+  padding: 10%; }
 
 .OmJohnGreen {
-  grid-column: 1/span 4;
-  grid-row-start: 9;
-  color: white; }
+  grid-column: 1/span 6;
+  grid-row: 7/span 2;
+  color: white;
+  border: 1px solid #707070;
+  text-align: center;
+  padding: 10%; }
 
 .Blog {
-  grid-column: 1/span 4;
-  grid-row-start: 11;
-  color: white; }
+  grid-column: 1/span 6;
+  grid-row: 9/ span 2;
+  color: white;
+  border: 1px solid #707070;
+  text-align: center;
+  padding: 10%; }
 
 /*# sourceMappingURL=index.css.map */
