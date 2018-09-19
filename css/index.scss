@@ -6,8 +6,8 @@
 }
 
 body {
-  margin: 0; // Ingen kanter i siden af browser
-  background-color: white;
+  margin:0;// Ingen kanter i siden af browser
+  background-color: #3a3a3a;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,11 +42,10 @@ $baggrund: #3a3a3a;
 
 
 @mixin gridmobil{
-  padding: 0 20px 0 20px;
+  padding: 0 0 0 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 10px;
-  grid-template-rows: repeat(10, 50px);
 
 }
 
@@ -54,8 +53,8 @@ header{
   grid-column: 1/span 6;
   grid-row-start: 1;
   @include gridmobil;
-  background-image: linear-gradient(to bottom, #3a3a3a , rgba(0,0,0,0.5));
-  grid-template-rows: repeat(3, 50px);
+  background-image: linear-gradient(to bottom, #3a3a3a , rgba(58,58,58,0.5));
+  grid-template-rows: repeat(1, 50px);
 
 }
 .Menubar{
@@ -69,23 +68,43 @@ header{
   margin-top: 7%;
 }
 
-section{
+#et{
   @include gridmobil;
+  grid-template-rows: repeat(15, 50px);
+
+  .billede{
+    grid-column: 1/span 6;
+    grid-row: 1/span 4;
+    img {
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+    }
+
+    background:
+            /* top, transparent red, faked with gradient */
+            linear-gradient(
+                            to bottom, #3a3a3a , rgba(58,58,58,0.4)
+            );
+  }
 }
 
 
-.kassemedbillede{
-  grid-column: 1/span 5;
-  grid-row-start: 2;
-  background:
-          /* top, transparent red, faked with gradient */
-          linear-gradient(
-                          to bottom, #3a3a3a , rgba(58,58,58,0.3)
-          ),
-            /* bottom, image */
-          url("../images/TFIOS.png");
+.KommendeFilm{
+  grid-column: 1/span 4;
+  grid-row-start: 7;
+  color: white;
 }
-
+.OmJohnGreen{
+  grid-column: 1/span 4;
+  grid-row-start: 9;
+  color: white;
+}
+.Blog{
+  grid-column: 1/span 4;
+  grid-row-start: 11;
+  color: white;
+}
 
 
 @media screen and (min-width: 768px) {
