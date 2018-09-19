@@ -4,7 +4,8 @@
 
 body {
   margin: 0;
-  background-color: #3a3a3a; }
+  background-color: #3a3a3a;
+  height: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -58,7 +59,7 @@ section {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 10px;
-  grid-template-rows: repeat(10, 50px); }
+  grid-template-rows: repeat(10, 60px); }
   section .billede {
     grid-column: 1/span 6;
     grid-row: 1/span 4; }
@@ -101,11 +102,17 @@ footer {
   grid-column-gap: 10px;
   grid-template-rows: repeat(3, 47px);
   background-image: url("../images/footer_background2.png");
-  background-size: contain; }
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .socialemedier {
   grid-column: 2/span 4;
   grid-row-start: 2;
   margin-left: 20%; }
+
+@media screen and (min-width: 600px) {
+  .socialemedier {
+    grid-column: 3/span 2;
+    grid-row-start: 2; } }
 
 /*# sourceMappingURL=index.css.map */

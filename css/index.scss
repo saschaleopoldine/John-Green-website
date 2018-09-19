@@ -8,6 +8,7 @@
 body {
   margin:0;// Ingen kanter i siden af browser
   background-color: #3a3a3a;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,7 +76,7 @@ header{
 
 section{
   @include gridmobil;
-  grid-template-rows: repeat(10, 50px);
+  grid-template-rows: repeat(10, 60px);
 
   .billede{
     grid-column: 1/span 6;
@@ -130,7 +131,8 @@ footer{
   @include gridmobil;
     grid-template-rows: repeat(3, 47px);
   background-image: url("../images/footer_background2.png");
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .socialemedier{
@@ -140,7 +142,13 @@ footer{
 }
 
 
-
+@media screen and (min-width: 600px) {
+  // Alt der ændres i tablet stående fra mobil
+  .socialemedier{
+    grid-column: 3/span 2;
+    grid-row-start: 2;
+  }
+}
 
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
@@ -149,6 +157,7 @@ footer{
 @media screen and (min-width: 992px) {
   // Alt der ændres i tablet liggende fra mobil og tablet stående
 }
+
 
 @media screen and (min-width: 1200px) {
   // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
