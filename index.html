@@ -38,20 +38,22 @@
 <header>
 
         <div class="LogoType"><img src="../John-Green-website/images/Logotype.png" width="70%" height="auto"></div>
-        <div class="Menubar"><img src="../John-Green-website/images/WeR_JohnGreen_Bars.png" width="80%" height="auto"></div>
+        <div class="Menubar"><img src="images/Menubar.png" width="50%" height="auto"></div>
 
 
 </header>
 
-<section>
-    <div class="billede">
-
-
-    </div>
-
-<div class="KommendeFilm"><h1>Kommende Film</h1><p>hdhouhdqhd</p></div>
+<section class="en">
+    <div class="Titel1"></div>
+    <div class="Titel2"></div>
+    <div class="billede"></div>
+    <div class="Højre"><i class="fa fas fa-angle-right fa-3x"></i></div>
+    <div class="Venstre"><i class="fa fas fa-angle-left fa-3x"></i></div>
+</section>
+<section class="to">
+<div class="KommendeFilm"><h1>Kommende Film</h1></div>
 <div class="OmJohnGreen"><h1>Om John Green</h1></div>
-<div class="Blog"><h1> Blog</h1></div>
+<div class="Blog"><h1>Blog</h1></div>
 </section>
 
 <footer>
@@ -73,7 +75,7 @@
         },
 
         success: function(alt) {
-            $("#titel").append(alt.title);
+            $(".Titel1").append(alt.title);
             $(".billede").append("<img src='http://image.tmdb.org/t/p/w300/eVo90gqdHXQhcH7bNfbNjXtlZBW.jpg'" + alt.poster_path + ">");
             $.each(alt.genres, function (i,genre) {
                 $("#genre").append(genre.name + "<br>");

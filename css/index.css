@@ -1,10 +1,12 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
   margin: 0;
-  background-color: #3a3a3a; }
+  background-color: #3a3a3a;
+  height: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -39,9 +41,9 @@ header {
   padding: 0 0 0 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 10px;
-  background-image: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.5));
-  grid-template-rows: repeat(1, 1fr); }
+  grid-column-gap: 0;
+  background-image: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.2));
+  grid-template-rows: repeat(2, 1fr); }
 
 .Menubar {
   grid-column: 6/span 1;
@@ -51,26 +53,56 @@ header {
 .LogoType {
   grid-column: 1/span 4;
   grid-row-start: 1;
-  margin-top: 7%; }
+  margin-top: 7%;
+  margin-left: 10%; }
 
-section {
+.en {
   padding: 0 0 0 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 10px;
-  grid-template-rows: repeat(10, 50px); }
-  section .billede {
+  grid-column-gap: 0;
+  grid-template-rows: repeat(5, 47px); }
+  .en .billede {
     grid-column: 1/span 6;
-    grid-row: 1/span 4; }
-    section .billede img {
+    grid-row: 1/span 5; }
+    .en .billede img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       background: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.4)); }
 
+.Højre {
+  grid-column: 6/span 1;
+  grid-row: 3/span 2;
+  color: white;
+  margin-left: 45%; }
+
+.Venstre {
+  grid-column: 1/span 1;
+  grid-row: 3/span 2;
+  color: white; }
+
+.Titel1 {
+  grid-column: 2/span 4;
+  grid-row: 3/span 2;
+  color: white;
+  z-index: 20;
+  font-size: 20pt;
+  margin-top: 4%; }
+
+.Titel2 {
+  display: none; }
+
+.to {
+  padding: 0 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 0;
+  grid-template-rows: repeat(6, 50px); }
+
 .KommendeFilm {
   grid-column: 1/span 6;
-  grid-row: 5/span 2;
+  grid-row: 1/span 2;
   color: white;
   border-bottom: 0.5px solid #707070;
   text-align: center;
@@ -81,7 +113,7 @@ section {
 
 .OmJohnGreen {
   grid-column: 1/span 6;
-  grid-row: 7/span 2;
+  grid-row: 3/span 2;
   color: white;
   border-bottom: 0.5px solid #707070;
   text-align: center;
@@ -89,7 +121,7 @@ section {
 
 .Blog {
   grid-column: 1/span 6;
-  grid-row: 9/ span 2;
+  grid-row: 5/ span 2;
   color: white;
   text-align: center;
   padding: 10%; }
@@ -98,14 +130,20 @@ footer {
   padding: 0 0 0 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 10px;
+  grid-column-gap: 0;
   grid-template-rows: repeat(3, 47px);
   background-image: url("../images/footer_background2.png");
-  background-size: contain; }
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .socialemedier {
   grid-column: 2/span 4;
   grid-row-start: 2;
   margin-left: 20%; }
+
+@media screen and (min-width: 600px) {
+  .socialemedier {
+    grid-column: 3/span 2;
+    grid-row-start: 2; } }
 
 /*# sourceMappingURL=index.css.map */
