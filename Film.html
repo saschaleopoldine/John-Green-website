@@ -65,18 +65,56 @@
     <div id="resume">Resumé</div>
     <div id="trailer">Trailer</div>
     <div id="film_billeder"></div>
-    <div id="tekst_element">
-        <img id="tekst_baggrund" src="images/tekst_baggrund.png">
+    <h1></h1>
+    <p id="resume_tekst"></p>
+    <p id="genre"><b>Genre:</b> <br></p>
+    <p id="spilletid"><b>Spilletid:</b> <br></p>
+    <p id="rating"><b>Rating:</b> <br></p>
+
+
+
+
+    <img id="tekst_baggrund" src="images/42155145_1921146014855921_8606842396480634880_n.png" height="370" width="356"/></section>
+
+<footer>
+    <div class="socialemedier">
+        <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
     </div>
-</section>
+</footer>
 
-<footer></footer>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-    $(document).ready(function (e) {
-        // Din kode her
+    $(document).ready(function(){ //fortæller at alt inde i denne tuborg først skal loades når resten af siden er loadet.
+        $.ajax({
+            type: "GET",
+            dataType: "json",//skal altiv være
+            url: "https://api.themoviedb.org/3/movie/222935",
+            data: {
+                'api_key':'485529680a690b00e64f1e1bfac047d4',
+                'language':'da_DA'
+            },
+            success: function(alt) {
+            $("h1").append(alt.title);
+            $("#resume_tekst").append(alt.overview);
+            $.each(alt.genres, function(i, genre){
+                $("#genre").append(genre.name + " ")
+            });
+            $("#spilletid").append(alt.runtime + " min.");
+            $("#rating").append(alt.vote_average + " baseret på " + alt.vote_count + " stemmer");
+
+
+
+
+
+
+            },
+
+
+            error: function (error) {
+                // Hvis den fejler. Fejl kan ses ved højreklik=>inspect=>Console i chrome (+ ud fra object)
+                console.log(error);
+            }
+        });
     });
 </script>
 

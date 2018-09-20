@@ -42,8 +42,13 @@ img {
   padding: 0 0 0 0;                     
   display: grid;                        
   grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 10px;                
-}                                       
+  grid-column-gap: 10px;
+}
+
+$blue: #31A7E0;
+$dark_grey: #3a3a3a;
+$ligt_grey: #707070;
+
 
 
 header{
@@ -52,7 +57,7 @@ header{
   grid-row-start: 1;
   @include gridmobil;
   background-image: linear-gradient(to bottom, #3a3a3a , rgba(58,58,58,0.5));
-  grid-template-rows: repeat(1, 50px);
+  grid-template-rows: repeat(1, 1fr);
   margin: 0 5%;
 }
 
@@ -70,37 +75,87 @@ header{
 
 .film{
   @include gridmobil;
-  grid-template-rows: repeat(15, 50fr);
+  grid-template-rows: repeat(11, 50px);
   #resume, #trailer{
-    font-size: 16pt;
+    font-size: 10pt;
     font-weight: lighter;
     text-align: center;
     padding-top: 10%;
     height: 90%;
     width: 140%;
     margin-left: -34px;
+    margin-top: 5%;
   }
   #resume{
     grid-column: 2/span 2;
     grid-row: 1/span 1;
     color: #ffffff;
-    border-top: 1px #707070 solid;
-    border-right: 0.5px #707070 solid;
+    border-top: 1px $ligt_grey solid;
+    border-right: 0.5px $ligt_grey solid;
     margin-right: -5.5px;
   }
   #trailer{
     grid-column: 4/span 2;
     grid-row: 1/span 1;
     color: #707070;
-    border-bottom: 1px #707070 solid;
-    border-left: 0.5px #707070 solid;
+    border-bottom: 1px $ligt_grey solid;
     margin-left: -5.5px;
   }
-  #tekst_element{
+
+  #tekst_baggrund{
     grid-column: 1/span 6;
-    grid-row: 4/span 6;
+    z-index: -1;
+    grid-row-start: 6;
+    margin-top: -10px;
+    width: 100%;
+  }
+  h1{
+    color: $blue;
+    z-index: 2;
+    grid-column: 2/span 4;
+    grid-row: 6/span 1;
+    font-size: 14pt;
+    margin-top: 25px;
+    margin-left: 2px;
+  }
+  #resume_tekst{
+    z-index: 2;
+    grid-column: 2/span 4;
+    grid-row: 7/span 7;
+    font-size: 10pt;
+  }
+  #genre{
+    font-size: 8pt;
+    grid-row: 11/span 1;
+    grid-column: 2/span 2;
+  }
+  #spilletid{
+    font-size: 8pt;
+    grid-row: 11/span 1;
+    grid-column: 4/span 2;
+  }
+  #rating{
+    font-size: 8pt;
+    grid-row: 12/span 1;
+    grid-column: 2/span 4;
   }
 
+
+
+}
+
+footer{
+  @include gridmobil;
+  grid-template-rows: repeat(3, 45px);
+  background-image: url("../images/footer_background2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  .socialemedier{
+    grid-column: 2/span 4;
+    grid-row-start: 2;
+    margin-left: 20%;
+  }
 }
 
 @media screen and (min-width: 768px) {
