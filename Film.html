@@ -58,23 +58,27 @@
 
 <header>
     <div class="LogoType"><img src="../John-Green-website/images/Logotype.png" width="70%" height="auto"></div>
-    <div class="Menubar"><img src="../John-Green-website/images/WeR_JohnGreen_Bars.png" width="80%" height="auto"></div>
+    <div class="Menubar"><img src="images/Menubar.png" width="50%" height="auto"></div>
 </header>
 
-<section class="film">
+<section id="valg">
     <div id="resume">Resumé</div>
     <div id="trailer">Trailer</div>
+</section>
+
+<section class="film">
     <div id="film_billeder"></div>
     <h1></h1>
     <p id="resume_tekst"></p>
-    <p id="genre"><b>Genre:</b> <br></p>
-    <p id="spilletid"><b>Spilletid:</b> <br></p>
-    <p id="rating"><b>Rating:</b> <br></p>
+    <p id="genre">Genre: <br></p>
+    <p id="spilletid">Spilletid: <br></p>
+    <p id="rating">Rating: <br></p>
 
 
 
 
-    <img id="tekst_baggrund" src="images/42155145_1921146014855921_8606842396480634880_n.png" height="370" width="356"/></section>
+    <img id="tekst_baggrund" src="images/tekstbaggrund.png">
+</section>
 
 <footer>
     <div class="socialemedier">
@@ -97,10 +101,10 @@
             $("h1").append(alt.title);
             $("#resume_tekst").append(alt.overview);
             $.each(alt.genres, function(i, genre){
-                $("#genre").append(genre.name + " ")
+                $("#genre").append("<div class='light'>" + genre.name + "</div>")
             });
-            $("#spilletid").append(alt.runtime + " min.");
-            $("#rating").append(alt.vote_average + " baseret på " + alt.vote_count + " stemmer");
+            $("#spilletid").append("<div class='light'>" + alt.runtime + " min. </div>");
+            $("#rating").append("<div class='light'>" + alt.vote_average + " baseret på " + alt.vote_count + " stemmer </div>");
 
 
 

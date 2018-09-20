@@ -8,7 +8,9 @@
 body {
   margin: 0; // Ingen kanter i siden af browser
   background-color: #3a3a3a;
-  font-family: Macho, sans-serif;
+  font-family: Yantramanavlight, sans-serif;
+  font-style: normal;
+  font-weight: 100;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,6 +40,57 @@ img {
   height: auto; // Højden skal tilpasse sig
 }
 
+
+@font-face {
+  font-family: 'ordinary_guy_demoregular';
+  src: url('../Fonts/ordinaryguydemo-webfont.woff2') format('woff2'),
+  url('../Fonts/ordinaryguydemo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'yantramanavlight';
+  src: url('../Fonts/yantramanav-light-webfont.woff2') format('woff2'),
+  url('../Fonts/yantramanav-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'yantramanavmedium';
+  src: url('../Fonts/yantramanav-medium-webfont.woff2') format('woff2'),
+  url('../Fonts/yantramanav-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'trashhandregular';
+  src: url('../Fonts/trashhand-webfont.woff2') format('woff2'),
+  url('../Fonts/trashhand-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'amatic_scregular';
+  src: url('../Fonts/amaticsc-regular-webfont.woff2') format('woff2'),
+  url('../Fonts/amaticsc-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'eraserregular';
+  src: url('../Fonts/eraserregular-webfont.woff2') format('woff2'),
+  url('../Fonts/eraserregular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @mixin gridmobil{                       
   padding: 0 0 0 0;                     
   display: grid;                        
@@ -48,6 +101,7 @@ img {
 $blue: #31A7E0;
 $dark_grey: #3a3a3a;
 $ligt_grey: #707070;
+$white: #ffffff;
 
 
 
@@ -72,42 +126,39 @@ header{
   margin-top: 7%;
 }
 
+#valg{
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  height: 45px;
+  margin-top: 10%;
+  #resume, #trailer {
+    width: 45%;
+    text-align: center;
+    padding-top: 12px;
+  }
+  #trailer{
+    border-bottom: 1px solid $ligt_grey;
+    color: $ligt_grey;
+  }
+  #resume{
+    border-top: 1px solid $ligt_grey;
+    border-right: 1px solid $ligt_grey;
+    color: $white;
+  }
+}
 
 .film{
   @include gridmobil;
   grid-template-rows: repeat(11, 50px);
-  #resume, #trailer{
-    font-size: 10pt;
-    font-weight: lighter;
-    text-align: center;
-    padding-top: 10%;
-    height: 90%;
-    width: 140%;
-    margin-left: -34px;
-    margin-top: 5%;
-  }
-  #resume{
-    grid-column: 2/span 2;
-    grid-row: 1/span 1;
-    color: #ffffff;
-    border-top: 1px $ligt_grey solid;
-    border-right: 0.5px $ligt_grey solid;
-    margin-right: -5.5px;
-  }
-  #trailer{
-    grid-column: 4/span 2;
-    grid-row: 1/span 1;
-    color: #707070;
-    border-bottom: 1px $ligt_grey solid;
-    margin-left: -5.5px;
-  }
-
   #tekst_baggrund{
-    grid-column: 1/span 6;
+    grid-column: 1/span 7;
     z-index: -1;
-    grid-row-start: 6;
-    margin-top: -10px;
+    grid-row: 5/Span 8;
     width: 100%;
+    margin-top: 30px;
+    margin-left: -5px;
+
   }
   h1{
     color: $blue;
@@ -115,29 +166,50 @@ header{
     grid-column: 2/span 4;
     grid-row: 6/span 1;
     font-size: 14pt;
-    margin-top: 25px;
-    margin-left: 2px;
+    margin-top: 10%;
+    font-family: ordinary_guy_demoregular, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+
   }
   #resume_tekst{
     z-index: 2;
     grid-column: 2/span 4;
     grid-row: 7/span 7;
     font-size: 10pt;
+    margin-top: -5px;
+
   }
   #genre{
     font-size: 8pt;
-    grid-row: 11/span 1;
-    grid-column: 2/span 2;
+    grid-row: 10/span 1;
+    grid-column: 2/span 3;
+    margin-top: 30px;
+    font-family: yantramanavmedium, sans-serif;
+    .light{
+      font-family: Yantramanavlight, sans-serif;
+    }
   }
   #spilletid{
     font-size: 8pt;
-    grid-row: 11/span 1;
-    grid-column: 4/span 2;
+    grid-row: 10/span 1;
+    grid-column: 5/span 2;
+    margin-top: 30px;
+    margin-left: -20px;
+    font-family: yantramanavmedium, sans-serif;
+    .light{
+      font-family: Yantramanavlight, sans-serif;
+    }
   }
   #rating{
     font-size: 8pt;
-    grid-row: 12/span 1;
+    grid-row: 11/span 1;
     grid-column: 2/span 4;
+    margin-top: 30px;
+    font-family: yantramanavmedium, sans-serif;
+    .light{
+      font-family: Yantramanavlight, sans-serif;
+    }
   }
 
 
@@ -155,12 +227,84 @@ footer{
     grid-column: 2/span 4;
     grid-row-start: 2;
     margin-left: 20%;
+    margin-top: 10px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  // Alt der ændres i tablet stående fra mobil
+
+
+
+
+
+
+
+@media screen and (min-width: 375px) {
+  .film {
+    @include gridmobil;
+    grid-template-rows: repeat(11, 50px);
+    #tekst_baggrund {
+      grid-column: 1/span 7;
+      z-index: -1;
+      grid-row: 5/Span 8;
+      width: 100%;
+      margin-top: 30px;
+      margin-left: -5px;
+
+    }
+    h1 {
+      color: $blue;
+      z-index: 2;
+      grid-column: 2/span 4;
+      grid-row: 6/span 1;
+      font-size: 14pt;
+      margin-top: 10%;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+
+    }
+    #resume_tekst {
+      z-index: 2;
+      grid-column: 2/span 4;
+      grid-row: 7/span 7;
+      font-size: 10pt;
+      margin-top: -5px;
+
+    }
+    #genre {
+      font-size: 8pt;
+      grid-row: 10/span 1;
+      grid-column: 2/span 3;
+      margin-top: 30px;
+      font-family: yantramanavmedium, sans-serif;
+      .light {
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    #spilletid {
+      font-size: 8pt;
+      grid-row: 10/span 1;
+      grid-column: 5/span 2;
+      margin-top: 30px;
+      margin-left: -20px;
+      font-family: yantramanavmedium, sans-serif;
+      .light {
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    #rating {
+      font-size: 8pt;
+      grid-row: 11/span 1;
+      grid-column: 2/span 4;
+      margin-top: 30px;
+      font-family: yantramanavmedium, sans-serif;
+      .light {
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+  }
 }
+
 
 @media screen and (min-width: 992px) {
   // Alt der ændres i tablet liggende fra mobil og tablet stående
