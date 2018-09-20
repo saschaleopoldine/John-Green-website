@@ -6,12 +6,17 @@
 }
 
 body {
-  margin: 0; // Ingen kanter i siden af browser
+  margin:0;// Ingen kanter i siden af browser
+  background-color: #3a3a3a;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; // Ingen ydre margen fra overskrifter
   padding: 0; // Ingen indre margen fra overskrifter
+  font-family: adorn-condensed-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 ul, ol {
@@ -25,6 +30,9 @@ li {
 }
 
 p {
+  font-family: adorn-condensed-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
   margin: 0; // Ingen ydre margen fra paragraffer
   padding: 0; // Ingen indre margen fra paragraffer
 }
@@ -35,6 +43,85 @@ img {
   max-width: 100%; // Bredde må maks fylde 100%
   height: auto; // Højden skal tilpasse sig
 }
+//farvevariabler
+$baggrund: #3a3a3a;
+$lysgrå: #707070;
+
+
+@mixin gridmobil{
+  padding: 0 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 0;
+
+}
+
+header{
+  grid-column: 1/span 6;
+  grid-row-start: 1;
+  @include gridmobil;
+  background-image: linear-gradient(to bottom, $baggrund, rgba(58,58,58,0.2));
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.Menubar{
+  grid-column: 6/span 1;
+  grid-row-start: 1;
+  margin-top: 40%;
+}
+.LogoType{
+  grid-column: 1/span 4;
+  grid-row-start: 1;
+  margin-top: 7%;
+  margin-left: 10%;
+}
+
+.to{
+  @include gridmobil;
+  grid-template-rows: repeat(10, 1fr);
+  background-image: url("../images/Chalk_ekstraShort.png");
+  background-repeat: no-repeat;
+
+
+}
+
+.Blog {
+  font-size: 20pt;
+  color: white;
+  grid-column: 3/span 2;
+  grid-row-start: 1;
+  text-align: center;
+}
+
+.tre{
+  @include gridmobil;
+  grid-template-rows: repeat(6, 50px);
+}
+
+
+
+footer{
+  @include gridmobil;
+  grid-template-rows: repeat(3, 47px);
+  background-image: url("../images/footer_background2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.socialemedier{
+  grid-column: 2/span 4;
+  grid-row-start: 2;
+  margin-left: 20%;
+}
+
+
+@media screen and (min-width: 600px) {
+  // Alt der ændres i tablet stående fra mobil
+  .socialemedier{
+    grid-column: 3/span 2;
+    grid-row-start: 2;
+  }
+}
 
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
@@ -43,6 +130,7 @@ img {
 @media screen and (min-width: 992px) {
   // Alt der ændres i tablet liggende fra mobil og tablet stående
 }
+
 
 @media screen and (min-width: 1200px) {
   // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
