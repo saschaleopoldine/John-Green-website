@@ -76,13 +76,9 @@ header{
   margin-left: 10%;
 }
 
-.to{
+.en{
   @include gridmobil;
   grid-template-rows: repeat(10, 1fr);
-  background-image: url("../images/Chalk_ekstraShort.png");
-  background-repeat: no-repeat;
-
-
 }
 
 .Blog {
@@ -92,6 +88,29 @@ header{
   grid-row-start: 1;
   text-align: center;
 }
+.blogbaggrund1{
+  background-image: url("../images/Blog_chalk.png");
+  grid-column: 1/span 6;
+  grid-row: 2/span 8;
+  background-repeat: no-repeat;
+}
+.blogoverskrift1{
+  grid-column: 2/span 4;
+  grid-row-start: 3;
+  font-size: 14pt;
+}
+
+
+.to{
+  @include gridmobil;
+  grid-template-rows: repeat(10, 1fr);
+
+  background-repeat: no-repeat;
+
+
+}
+
+
 
 .tre{
   @include gridmobil;

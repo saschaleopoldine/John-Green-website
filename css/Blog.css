@@ -55,14 +55,12 @@ header {
   margin-top: 7%;
   margin-left: 10%; }
 
-.to {
+.en {
   padding: 0 0 0 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 0;
-  grid-template-rows: repeat(10, 1fr);
-  background-image: url("../images/Chalk_ekstraShort.png");
-  background-repeat: no-repeat; }
+  grid-template-rows: repeat(10, 1fr); }
 
 .Blog {
   font-size: 20pt;
@@ -70,6 +68,25 @@ header {
   grid-column: 3/span 2;
   grid-row-start: 1;
   text-align: center; }
+
+.blogbaggrund1 {
+  background-image: url("../images/Blog_chalk.png");
+  grid-column: 1/span 6;
+  grid-row: 2/span 8;
+  background-repeat: no-repeat; }
+
+.blogoverskrift1 {
+  grid-column: 2/span 4;
+  grid-row-start: 3;
+  font-size: 14pt; }
+
+.to {
+  padding: 0 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 0;
+  grid-template-rows: repeat(10, 1fr);
+  background-repeat: no-repeat; }
 
 .tre {
   padding: 0 0 0 0;
