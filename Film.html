@@ -61,23 +61,24 @@
     <div class="Menubar"><img src="images/Menubar.png" width="50%" height="auto"></div>
 </header>
 
-<section id="valg">
-    <div id="resume">Resumé</div>
-    <div id="trailer">Trailer</div>
+<div id="mobil_flaenge">
+<section class="valg">
+    <div class="resume">Resumé</div>
+    <div class="trailer">Trailer</div>
 </section>
 
 <section class="film">
-    <div id="film_billeder"></div>
+    <img class="film_billede" src="images/TheFaultInOurStars.png">
     <h1></h1>
-    <p id="resume_tekst"></p>
-    <p id="genre">Genre: <br></p>
-    <p id="spilletid">Spilletid: <br></p>
-    <p id="rating">Rating: <br></p>
+    <p class="resume_tekst"></p>
+    <p class="genre">Genre: <br></p>
+    <p class="spilletid">Spilletid: <br></p>
+    <p class="rating">Rating: <br></p>
 
 
 
 
-    <img id="tekst_baggrund" src="images/tekstbaggrund.png">
+    <img class="tekst_baggrund" src="images/tekstbaggrund.png">
 </section>
 
 <footer>
@@ -85,6 +86,44 @@
         <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
     </div>
 </footer>
+</div>
+
+
+
+<div id="mobil_paper">
+    <section class="valg">
+        <div class="resume2">Resumé</div>
+        <div class="trailer2">Trailer</div>
+    </section>
+
+    <section class="film2">
+        <h1 id="h1_2"></h1>
+        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/uec0jU93Bg0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <p class="genre">Genre: <br></p>
+        <p class="spilletid">Spilletid: <br></p>
+        <p class="rating">Rating: <br></p>
+        <p class="CTA">Se filmene her</p>
+        <div id="flex">
+            <img id="viaplay" src="images/viaplay.png" height="351" width="349"/>
+            <img id="hbo" src="images/HBO.png" height="351" width="750"/>
+            <img id="netflix" src="images/Netflix.png" height="351" width="377"/>
+        </div>
+        <img class="tekst_baggrund2" src="images/tekst_baggrund_2.png">
+    </section>
+
+    <footer>
+        <div class="socialemedier">
+            <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
+        </div>
+    </footer>
+</div>
+
+
+
+
+
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
@@ -99,12 +138,12 @@
             },
             success: function(alt) {
             $("h1").append(alt.title);
-            $("#resume_tekst").append(alt.overview);
+            $(".resume_tekst").append(alt.overview);
             $.each(alt.genres, function(i, genre){
-                $("#genre").append("<div class='light'>" + genre.name + "</div>")
+                $(".genre").append("<div class='light'>" + genre.name + "</div>")
             });
-            $("#spilletid").append("<div class='light'>" + alt.runtime + " min. </div>");
-            $("#rating").append("<div class='light'>" + alt.vote_average + " baseret på " + alt.vote_count + " stemmer </div>");
+            $(".spilletid").append("<div class='light'>" + alt.runtime + " min. </div>");
+            $(".rating").append("<div class='light'>" + alt.vote_average + " baseret på " + alt.vote_count + " stemmer </div>");
 
 
 
@@ -118,6 +157,17 @@
                 // Hvis den fejler. Fejl kan ses ved højreklik=>inspect=>Console i chrome (+ ud fra object)
                 console.log(error);
             }
+        });
+
+
+        $(".trailer").click(function (e) {
+            $("#mobil_flaenge").hide(0);
+            $("#mobil_paper").show(0);
+        });
+
+        $(".resume2").click(function (e) {
+            $("#mobil_flaenge").show(0);
+            $("#mobil_paper").hide(0);
         });
     });
 </script>

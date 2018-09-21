@@ -60,6 +60,96 @@ img {
   src: url("../Fonts/eraserregular-webfont.woff2") format("woff2"), url("../Fonts/eraserregular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+#mobil_paper {
+  display: none; }
+  #mobil_paper .resume2, #mobil_paper .trailer2 {
+    width: 45%;
+    text-align: center;
+    padding-top: 12px; }
+  #mobil_paper .resume2 {
+    border-bottom: 1px solid #707070;
+    color: #707070; }
+  #mobil_paper .trailer2 {
+    border-top: 1px solid #707070;
+    border-left: 1px solid #707070;
+    color: #ffffff; }
+  #mobil_paper .film2 {
+    padding: 0 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-template-rows: repeat(9, 50px); }
+    #mobil_paper .film2 .tekst_baggrund2 {
+      grid-column: 1/span 6;
+      grid-row-start: 1;
+      margin-top: 5%;
+      margin-left: -2%; }
+    #mobil_paper .film2 #h1_2 {
+      grid-column: 2/span 4;
+      grid-row-start: 2;
+      margin-top: 5px;
+      z-index: 2;
+      font-size: 14pt;
+      color: #31A7E0;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      font-weight: 400;
+      letter-spacing: 1.5px; }
+    #mobil_paper .film2 iframe {
+      grid-column: 2/span 4;
+      grid-row-start: 3;
+      margin-left: -2%;
+      margin-top: -10px; }
+    #mobil_paper .film2 .genre {
+      z-index: 2;
+      font-size: 8pt;
+      grid-row: 6/span 1;
+      grid-column: 2/span 3;
+      font-family: yantramanavmedium, sans-serif; }
+      #mobil_paper .film2 .genre .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #mobil_paper .film2 .spilletid {
+      z-index: 2;
+      font-size: 8pt;
+      grid-row: 6/span 1;
+      grid-column: 5/span 2;
+      margin-left: -20px;
+      font-family: yantramanavmedium, sans-serif; }
+      #mobil_paper .film2 .spilletid .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #mobil_paper .film2 .rating {
+      z-index: 2;
+      font-size: 8pt;
+      grid-row: 7/span 1;
+      grid-column: 2/span 4;
+      font-family: yantramanavmedium, sans-serif; }
+      #mobil_paper .film2 .rating .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #mobil_paper .film2 .CTA {
+      font-size: 18pt;
+      color: #31A7E0;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      grid-column: 2/span 4;
+      grid-row-start: 8;
+      z-index: 2;
+      text-align: center; }
+    #mobil_paper .film2 #flex {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-around;
+      grid-row-start: 9;
+      grid-column: 2/span 4;
+      z-index: 2; }
+      #mobil_paper .film2 #flex #viaplay, #mobil_paper .film2 #flex #hbo, #mobil_paper .film2 #flex #netflix {
+        height: 40px;
+        width: auto; }
+  #mobil_paper footer .socialemedier {
+    grid-column: 2/span 4;
+    grid-row-start: 2;
+    margin-left: 17%;
+    margin-top: 10px; }
+
 header {
   padding: 0 0 0 0;
   display: grid;
@@ -85,20 +175,20 @@ header {
   grid-row-start: 1;
   margin-top: 7%; }
 
-#valg {
+.valg {
   display: flex;
   display: -webkit-flex;
   justify-content: center;
   height: 45px;
   margin-top: 10%; }
-  #valg #resume, #valg #trailer {
+  .valg .resume, .valg .trailer {
     width: 45%;
     text-align: center;
     padding-top: 12px; }
-  #valg #trailer {
+  .valg .trailer {
     border-bottom: 1px solid #707070;
     color: #707070; }
-  #valg #resume {
+  .valg .resume {
     border-top: 1px solid #707070;
     border-right: 1px solid #707070;
     color: #ffffff; }
@@ -108,54 +198,62 @@ header {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 10px;
-  grid-template-rows: repeat(11, 50px); }
-  .film #tekst_baggrund {
-    grid-column: 1/span 7;
+  grid-template-rows: repeat(10, 50px);
+  margin-left: 2%; }
+  .film .film_billede {
+    grid-column: 1/span 6;
+    grid-row: 1/span 7;
+    width: 90%;
+    height: 100%;
+    z-index: -2;
+    margin-left: 4%; }
+  .film .tekst_baggrund {
+    grid-column: 1/span 6;
     z-index: -1;
-    grid-row: 5/Span 8;
+    grid-row: 4/Span 8;
     width: 100%;
     margin-top: 30px;
     margin-left: -5px; }
   .film h1 {
-    color: #31A7E0;
     z-index: 2;
     grid-column: 2/span 4;
-    grid-row: 6/span 1;
-    font-size: 14pt;
+    grid-row: 5/span 1;
     margin-top: 10%;
+    font-size: 14pt;
+    color: #31A7E0;
     font-family: ordinary_guy_demoregular, sans-serif;
     font-weight: 400;
     letter-spacing: 1.5px; }
-  .film #resume_tekst {
+  .film .resume_tekst {
     z-index: 2;
     grid-column: 2/span 4;
-    grid-row: 7/span 7;
+    grid-row: 6/span 7;
     font-size: 10pt;
     margin-top: -5px; }
-  .film #genre {
+  .film .genre {
     font-size: 8pt;
-    grid-row: 10/span 1;
+    grid-row: 9/span 1;
     grid-column: 2/span 3;
     margin-top: 30px;
     font-family: yantramanavmedium, sans-serif; }
-    .film #genre .light {
+    .film .genre .light {
       font-family: Yantramanavlight, sans-serif; }
-  .film #spilletid {
+  .film .spilletid {
     font-size: 8pt;
-    grid-row: 10/span 1;
+    grid-row: 9/span 1;
     grid-column: 5/span 2;
     margin-top: 30px;
     margin-left: -20px;
     font-family: yantramanavmedium, sans-serif; }
-    .film #spilletid .light {
+    .film .spilletid .light {
       font-family: Yantramanavlight, sans-serif; }
-  .film #rating {
+  .film .rating {
     font-size: 8pt;
-    grid-row: 11/span 1;
+    grid-row: 10/span 1;
     grid-column: 2/span 4;
     margin-top: 30px;
     font-family: yantramanavmedium, sans-serif; }
-    .film #rating .light {
+    .film .rating .light {
       font-family: Yantramanavlight, sans-serif; }
 
 footer {
@@ -175,34 +273,104 @@ footer {
     margin-top: 10px; }
 
 @media screen and (min-width: 375px) {
-  .film {
-    grid-template-rows: repeat(15, 50px); }
-    .film h1 {
-      font-size: 16pt;
-      margin-top: 12%; }
-    .film #resume_tekst {
-      font-size: 12pt;
-      margin-top: 10px; }
-    .film #genre {
-      font-size: 10pt;
-      grid-row: 12/span 1;
+  #mobil_paper .film2 .tekst_baggrund2 {
+    grid-column: 1/span 6;
+    grid-row-start: 1;
+    margin-top: 5%;
+    margin-left: -2%; }
+  #mobil_paper footer {
+    margin-top: 0; }
+    #mobil_paper footer .socialemedier {
+      grid-column: 2/span 4;
+      grid-row-start: 2;
+      margin-left: 10%;
       margin-top: 0; }
-    .film #spilletid {
-      font-size: 10pt;
-      grid-row: 12/span 1;
-      margin-top: 0; }
-    .film #rating {
-      font-size: 10pt;
-      grid-row: 13/span 1;
-      margin-top: 15px; }
+
+  .film .film_billede {
+    width: 80%;
+    margin-left: 10%; }
+  .film .resume_tekst {
+    margin-top: 5px; }
+  .film .genre {
+    grid-row: 9/span 1; }
+  .film .spilletid {
+    grid-row: 9/span 1; }
+  .film .rating {
+    grid-row: 10/span 1; }
 
   footer {
-    grid-template-rows: repeat(5, 45px);
-    margin-top: -50%; }
+    margin-top: -20%; }
     footer .socialemedier {
       grid-column: 2/span 4;
       grid-row-start: 2;
       margin-left: 20%;
-      margin-top: 60px; } }
+      margin-top: 0; } }
+@media screen and (min-width: 414px) {
+  #mobil_paper .film2 .tekst_baggrund2 {
+    margin-top: 0; }
+  #mobil_paper footer {
+    grid-template-rows: repeat(3, 50px);
+    margin-top: 15px; }
+    #mobil_paper footer .socialemedier {
+      margin-left: 18%;
+      margin-top: -5%; } }
+@media screen and (min-height: 812px) {
+  .valg {
+    margin-top: 13%; }
+
+  .film .film_billede {
+    grid-row: 1/span 8;
+    margin-top: 3.5%; }
+  .film .tekst_baggrund {
+    grid-row: 5/Span 8;
+    margin-top: 15px;
+    margin-left: -5px; }
+  .film h1 {
+    grid-row: 6/span 1; }
+  .film .resume_tekst {
+    grid-row: 7/span 4;
+    margin-top: 5px; }
+  .film .genre {
+    grid-row: 10/span 1;
+    margin-top: 20px; }
+  .film .spilletid {
+    grid-row: 10/span 1;
+    margin-top: 20px; }
+  .film .rating {
+    grid-row: 11/span 1;
+    margin-top: 20px; }
+
+  footer {
+    margin-top: -14%; }
+    footer .socialemedier {
+      margin-left: 18%;
+      margin-top: -5%; }
+
+  #mobil_paper .film2 {
+    grid-template-rows: repeat(10, 50px); }
+    #mobil_paper .film2 .tekst_baggrund2 {
+      margin-top: 10%; }
+    #mobil_paper .film2 #h1_2 {
+      grid-row-start: 3; }
+    #mobil_paper .film2 iframe {
+      grid-row-start: 4; }
+    #mobil_paper .film2 .genre {
+      grid-row: 7/span 1; }
+    #mobil_paper .film2 .spilletid {
+      grid-row: 7/span 1; }
+    #mobil_paper .film2 .rating {
+      grid-row: 8/span 1; }
+    #mobil_paper .film2 .CTA {
+      grid-row-start: 9; }
+    #mobil_paper .film2 #flex {
+      grid-row-start: 10; }
+      #mobil_paper .film2 #flex #viaplay, #mobil_paper .film2 #flex #hbo, #mobil_paper .film2 #flex #netflix {
+        height: 40px;
+        width: auto; }
+  #mobil_paper footer {
+    margin-top: 12%; }
+    #mobil_paper footer .socialemedier {
+      margin-left: 18%;
+      margin-top: -5%; } }
 
 /*# sourceMappingURL=Film.css.map */
