@@ -167,67 +167,42 @@ footer {
   background-image: url("../images/footer_background2.png");
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -10%; }
+  margin-top: -12%; }
   footer .socialemedier {
     grid-column: 2/span 4;
     grid-row-start: 2;
-    margin-left: 20%;
+    margin-left: 10%;
     margin-top: 10px; }
 
 @media screen and (min-width: 375px) {
   .film {
-    padding: 0 0 0 0;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 10px;
-    grid-template-rows: repeat(11, 50px); }
-    .film #tekst_baggrund {
-      grid-column: 1/span 7;
-      z-index: -1;
-      grid-row: 5/Span 8;
-      width: 100%;
-      margin-top: 30px;
-      margin-left: -5px; }
+    grid-template-rows: repeat(15, 50px); }
     .film h1 {
-      color: #31A7E0;
-      z-index: 2;
-      grid-column: 2/span 4;
-      grid-row: 6/span 1;
-      font-size: 14pt;
-      margin-top: 10%;
-      font-family: ordinary_guy_demoregular, sans-serif;
-      font-weight: 400;
-      letter-spacing: 1.5px; }
+      font-size: 16pt;
+      margin-top: 12%; }
     .film #resume_tekst {
-      z-index: 2;
-      grid-column: 2/span 4;
-      grid-row: 7/span 7;
-      font-size: 10pt;
-      margin-top: -5px; }
+      font-size: 12pt;
+      margin-top: 10px; }
     .film #genre {
-      font-size: 8pt;
-      grid-row: 10/span 1;
-      grid-column: 2/span 3;
-      margin-top: 30px;
-      font-family: yantramanavmedium, sans-serif; }
-      .film #genre .light {
-        font-family: Yantramanavlight, sans-serif; }
+      font-size: 10pt;
+      grid-row: 12/span 1;
+      margin-top: 0; }
     .film #spilletid {
-      font-size: 8pt;
-      grid-row: 10/span 1;
-      grid-column: 5/span 2;
-      margin-top: 30px;
-      margin-left: -20px;
-      font-family: yantramanavmedium, sans-serif; }
-      .film #spilletid .light {
-        font-family: Yantramanavlight, sans-serif; }
+      font-size: 10pt;
+      grid-row: 12/span 1;
+      margin-top: 0; }
     .film #rating {
-      font-size: 8pt;
-      grid-row: 11/span 1;
+      font-size: 10pt;
+      grid-row: 13/span 1;
+      margin-top: 15px; }
+
+  footer {
+    grid-template-rows: repeat(5, 45px);
+    margin-top: -50%; }
+    footer .socialemedier {
       grid-column: 2/span 4;
-      margin-top: 30px;
-      font-family: yantramanavmedium, sans-serif; }
-      .film #rating .light {
-        font-family: Yantramanavlight, sans-serif; } }
+      grid-row-start: 2;
+      margin-left: 20%;
+      margin-top: 60px; } }
 
 /*# sourceMappingURL=Film.css.map */

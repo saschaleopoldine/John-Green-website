@@ -1,0 +1,148 @@
+// Alt der gælder for mobil og højere
+
+* { // Gælder alt på hele siden
+  -webkit-box-sizing: border-box; // -webkit- browserunderstøttelse
+  box-sizing: border-box; // Bokse har altid den størrelse man giver uanset om der tilføjes margen mv.
+}
+
+body {
+  margin: 0; // Ingen kanter i siden af browser
+  background-color: #3a3a3a;
+  font-family: Yantramanavlight, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; // Ingen ydre margen fra overskrifter
+  padding: 0; // Ingen indre margen fra overskrifter
+}
+
+ul, ol {
+  margin: 0; // Ingen ydre margen fra lister
+  padding: 0; // Ingen indre margen fra lister
+  list-style-position: inside; // List punkter står på linje
+}
+
+li {
+  margin: 0; // Ingen ydre margen fra listpunkter
+}
+
+p {
+  margin: 0; // Ingen ydre margen fra paragraffer
+  padding: 0; // Ingen indre margen fra paragraffer
+}
+
+// Sikrer billeder er responsive
+img {
+  display: block; // Billeder er et element (laver linjeskift)
+  max-width: 100%; // Bredde må maks fylde 100%
+  height: auto; // Højden skal tilpasse sig
+}
+
+@font-face {
+  font-family: 'yantramanavlight';
+  src: url('../Fonts/yantramanav-light-webfont.woff2') format('woff2'),
+  url('../Fonts/yantramanav-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ordinary_guy_demoregular';
+  src: url('../Fonts/ordinaryguydemo-webfont.woff2') format('woff2'),
+  url('../Fonts/ordinaryguydemo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin gridmobil{
+  padding: 0 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 10px;
+}
+
+$blue: #31A7E0;
+$dark_grey: #3a3a3a;
+$ligt_grey: #707070;
+$white: #ffffff;
+
+
+header{
+  @include gridmobil;
+  grid-column: 1/span 6;
+  grid-row-start: 1;
+  @include gridmobil;
+  background-image: linear-gradient(to bottom, #3a3a3a , rgba(58,58,58,0.5));
+  grid-template-rows: repeat(1, 1fr);
+  margin: 0 5%;
+}
+
+.Menubar{
+  grid-column: 6/span 1;
+  grid-row-start: 1;
+  margin-top: 40%;
+}
+.LogoType{
+  grid-column: 1/span 4;
+  grid-row-start: 1;
+  margin-top: 7%;
+}
+
+#valg{
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  height: 45px;
+  margin-top: 10%;
+  #resume, #trailer {
+    width: 45%;
+    text-align: center;
+    padding-top: 12px;
+  }
+  #resume{
+    border-bottom: 1px solid $ligt_grey;
+    color: $ligt_grey;
+  }
+  #trailer{
+    border-top: 1px solid $ligt_grey;
+    border-left: 1px solid $ligt_grey;
+    color: $white;
+  }
+}
+
+#trailer_section{
+  @include gridmobil;
+  grid-template-rows: repeat(10, 1fr);
+  iframe{
+    grid-column: 2/span 5;
+    grid-row: 2/span 3;
+    margin-left: -25px;
+  }
+  #CTA{
+    color: $blue;
+    font-family: ordinary_guy_demoregular;
+    font-size: 20pt;
+    grid-column: 3/span 3;
+    grid-row: 6/span 1;
+    margin-left: -12px;
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  // Alt der ændres i tablet stående fra mobil
+}
+
+@media screen and (min-width: 992px) {
+  // Alt der ændres i tablet liggende fra mobil og tablet stående
+}
+
+@media screen and (min-width: 1200px) {
+  // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+}
+
+@media print {
+  // Alt der gælder for print specifikt
+}
