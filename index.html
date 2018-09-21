@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <!-- Titel som ses oppe i browserens tab mv. -->
-    <title>Sigende titel</title>
+    <title>John Green</title>
     <!-- En kort beskrivelser af indholdet på siden -->
     <meta name="description" content="Max ca. 170-200 karakterer - 600px">
     <!-- indsæt de keywords du har fundet frem til-->
@@ -28,7 +28,9 @@
     <meta name="copyright" content="Information om copyright">
     <script src="https://use.fontawesome.com/4574f88dc3.js"></script>
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
-    <link href="../John-Green-website/css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+
+
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -36,20 +38,26 @@
 <body>
 
 <header>
-
         <div class="LogoType"><img src="../John-Green-website/images/Logotype.png" width="70%" height="auto"></div>
         <div class="Menubar"><img src="images/Menubar.png" width="50%" height="auto"></div>
-
-
 </header>
 
 <section class="en">
     <div class="Titel1"></div>
     <div class="Titel2"></div>
-    <div class="billede"></div>
-    <div class="Højre"><i class="fa fas fa-angle-right fa-3x"></i></div>
-    <div class="Venstre"><i class="fa fas fa-angle-left fa-3x"></i></div>
+
+    <div class="grid2">
+    <ul class="billeder">
+        <li><img src="images/TheFaultInOurStars.png"></li>
+        <li><img src="images/PaperTowns.png"></li>
+    </ul>
+    </div>
+
+    <div class="BilledeGradient"></div>
+     <span class="next"><i class="fa fas fa-angle-right fa-3x"></i></span>
+     <span class="prev"><i class="fa fas fa-angle-left fa-3x"></i></span>
 </section>
+
 <section class="to">
 <div class="KommendeFilm"><h1>Kommende Film</h1></div>
 <div class="OmJohnGreen"><h1>Om John Green</h1></div>
@@ -76,11 +84,6 @@
 
         success: function(alt) {
             $(".Titel1").append(alt.title);
-            $(".billede").append("<img src='http://image.tmdb.org/t/p/w300/eVo90gqdHXQhcH7bNfbNjXtlZBW.jpg'" + alt.poster_path + ">");
-            $.each(alt.genres, function (i,genre) {
-                $("#genre").append(genre.name + "<br>");
-
-            })
             // Hvis det går godt. Læg jeres indhold op på siden ligesom vi gjorde med getJSON
             // I skal benytte $.each
         },
@@ -90,27 +93,32 @@
         }
     });
 
-    //Paper towns//
-    $.ajax( {
-        type: "GET",
-        dataType: "json",
-        url: "https://api.themoviedb.org/3/movie/286565",
-        data: {
-            'api_key':'54825664bf9208b9c1a756628548abef',
-            'language':'da_DA'
-        },
 
-        success: function(alt) {
 
-            $("#poster").append("<div style='background-image: src=('https://image.tmdb.org/t/p/w300')" + alt.poster_path + ">");
-            // Hvis det går godt. Læg jeres indhold op på siden ligesom vi gjorde med getJSON
-            // I skal benytte $.each
-        },
-        error: function (error) {
-// Hvis den fejler. Fejl kan ses ved højreklik=>inspect=>Console i chrome (+ ud fra object)
-            console.log(error);
-        }
+    $(document).ready(function (e) {
+        var position = 0; // når sidnen loader sætter vi en variabel på der fortæller at positionen er 0//
+        var imageWidth = 900; // fortæller at bredden på billederne er 900 px //
+        var countImage = $(".billeder img").length; //angiver hvor mange billeder vi bruger. length tæller selv.
+
+        $(".next").click(function(e) {
+            if (-(imageWidth * countImage - imageWidth) == position){
+                position = 0;
+            }
+
+            else {position = position - imageWidth;}
+
+
+            $(".billeder img").animate({left: position + 'px'}, 500);
+        });
+        $(".prev").click(function (e) {
+            if (position == 0){
+                position = - (imageWidth * countImage - imageWidth);
+            }
+            else {position = position + imageWidth;}
+            $(".billeder img").animate({left: position + 'px'}, 500);
+        });
     });
+
 </script>
 </body>
 </html>
