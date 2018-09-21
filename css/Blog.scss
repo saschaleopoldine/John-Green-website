@@ -45,7 +45,59 @@ img {
 }
 //farvevariabler
 $baggrund: #3a3a3a;
-$lysgrå: #707070;
+$lightgrey: #707070;
+$orange: #EC621D;
+
+@font-face {
+  font-family: 'ordinary_guy_demoregular';
+  src: url('../Fonts/ordinaryguydemo-webfont.woff2') format('woff2'),
+  url('../Fonts/ordinaryguydemo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'yantramanavlight';
+  src: url('../Fonts/yantramanav-light-webfont.woff2') format('woff2'),
+  url('../Fonts/yantramanav-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'yantramanavmedium';
+  src: url('../Fonts/yantramanav-medium-webfont.woff2') format('woff2'),
+  url('../Fonts/yantramanav-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'trashhandregular';
+  src: url('../Fonts/trashhand-webfont.woff2') format('woff2'),
+  url('../Fonts/trashhand-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'amatic_scregular';
+  src: url('../Fonts/amaticsc-regular-webfont.woff2') format('woff2'),
+  url('../Fonts/amaticsc-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'eraserregular';
+  src: url('../Fonts/eraserregular-webfont.woff2') format('woff2'),
+  url('../Fonts/eraserregular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 
 @mixin gridmobil{
@@ -78,7 +130,7 @@ header{
 
 .en{
   @include gridmobil;
-  grid-template-rows: repeat(11, 60px);
+  grid-template-rows: repeat(9, 60px);
 }
 
 .Blog {
@@ -87,46 +139,172 @@ header{
   grid-column: 3/span 2;
   grid-row-start: 1;
   text-align: center;
+  h1{
+    font-family: trashhandregular;
+  }
 }
 .blogbaggrund1{
   background-image: url("../images/Blog_chalk.png");
   grid-column: 1/span 6;
-  grid-row: 2/span 8;
+  grid-row: 2/span 9;
   background-repeat: no-repeat;
   background-size: 120%;
+  z-index: 20;
 }
 .blogoverskrift1{
-  grid-column: 2/span 4;
+  grid-column: 1/span 6;
   grid-row: 3/span 1;
   font-size: 14pt;
+  text-align: left;
+  margin-left: 25%;
+  z-index: 20;
+  h1{
+    font-family: amatic_scregular;
+    color: $orange;
+  }
 }
+.blogdato1{
+  font-family: Yantramanavlight;
+  color: $orange;
+  grid-column: 2/span 5;
+  grid-row: 3/span 1;
+  margin-top: 25%;
+  margin-left: 10%;
+  z-index: 20;
+}
+.blogforfatter1{
+  font-family: Yantramanavlight;
+  color: $orange;
+  grid-column: 2/span 5;
+  grid-row: 4/span 1;
+  margin-top: 12%;
+  margin-left: 10%;
+  z-index: 20;
+}
+
 .artikelbillede1{
-  grid-column: 2/span 4;
-  grid-row: 4/span 2;
+  grid-column: 2/span 5;
+  grid-row: 5/span 3;
+  z-index: 20;
 
   img {
-    width: 70%;
+    width: 90%;
     height: auto;
 
   }
-
 }
 
+.blogindlæg1{
+  grid-column: 2/span 5;
+  grid-row: 8/span 3;
+  line-height: 15pt;
+  font-size: 14pt;
+  text-align: left;
+  margin-right: 7%;
+  z-index: 20;
+  font-family: Yantramanavlight;
+}
+.læsmere{
+  grid-column: 5/span 2;
+  grid-row: 9/span 1;
+  margin-top: -1%;
+  z-index: 20;
+  a{
+    text-decoration: none;
+    color: $orange;
+    font-size: 14pt;
+  }
+}
 
 .to{
   @include gridmobil;
-  grid-template-rows: repeat(10, 1fr);
-
+  grid-template-rows: repeat(20, 50px);
   background-repeat: no-repeat;
-
-
 }
+.fuldstreg1{
+  display: none;
+}
+.fuldstreg2{
+  display: none;
+}
+.streg1{
+  display: none;
+}
+.streg2{
+  display: none;
+}
+
+.heleindlæg1{
+  grid-column: 2/span 5;
+  grid-row: 1/span 10;
+  font-size: 14pt;
+  font-family: Yantramanavlight;
+}
+.blogbaggrund2{
+  background-image: url("../images/Chalk_Long.png");
+  grid-column: 1/span 6;
+  grid-row: 1/span 20;
+  margin-top: -15%;
+}
+.debatoverskrift{
+  grid-column: 2/span 5;
+  grid-row: 7/span 4;
+  font-size: 20pt;
+  color: white;
+}
+
+.debatemne{
+  grid-column: 1/span 3;
+  grid-row: 12/span 1;
+  color: white;
+}
+.debatafsender{
+  grid-column: 1/span 3;
+  grid-row: 13/span 1;
+}
+.debatindlæg{
+  grid-column: 1/span 3;
+  grid-row: 14/span 4;
+}
+.dinekommentarer{
+  grid-column: 1/span 3;
+  grid-row: 12/span 4;
+}
+.dinoverskrift{
+  grid-column: 1/span 3;
+  grid-row: 12/span 4;
+}
+.ditnavnalder{
+  grid-column: 1/span 3;
+  grid-row: 12/span 4;
+}
+.dinbesked{
+  grid-column: 1/span 3;
+  grid-row: 12/span 4;
+}
+.delkommentar{
+  grid-column: 1/span 3;
+  grid-row: 12/span 4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 .tre{
   @include gridmobil;
-  grid-template-rows: repeat(6, 50px);
+  grid-template-rows: repeat(10, 50px);
 }
 
 
