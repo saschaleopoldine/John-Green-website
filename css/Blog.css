@@ -60,7 +60,7 @@ header {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 0;
-  grid-template-rows: repeat(10, 1fr); }
+  grid-template-rows: repeat(11, 60px); }
 
 .Blog {
   font-size: 20pt;
@@ -73,12 +73,20 @@ header {
   background-image: url("../images/Blog_chalk.png");
   grid-column: 1/span 6;
   grid-row: 2/span 8;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: 120%; }
 
 .blogoverskrift1 {
   grid-column: 2/span 4;
-  grid-row-start: 3;
+  grid-row: 3/span 1;
   font-size: 14pt; }
+
+.artikelbillede1 {
+  grid-column: 2/span 4;
+  grid-row: 4/span 2; }
+  .artikelbillede1 img {
+    width: 70%;
+    height: auto; }
 
 .to {
   padding: 0 0 0 0;
