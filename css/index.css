@@ -34,6 +34,36 @@ img {
   max-width: 100%;
   height: auto; }
 
+@font-face {
+  font-family: 'ordinary_guy_demoregular';
+  src: url("../Fonts/ordinaryguydemo-webfont.woff2") format("woff2"), url("../Fonts/ordinaryguydemo-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'yantramanavlight';
+  src: url("../Fonts/yantramanav-light-webfont.woff2") format("woff2"), url("../Fonts/yantramanav-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'yantramanavmedium';
+  src: url("../Fonts/yantramanav-medium-webfont.woff2") format("woff2"), url("../Fonts/yantramanav-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'trashhandregular';
+  src: url("../Fonts/trashhand-webfont.woff2") format("woff2"), url("../Fonts/trashhand-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'amatic_scregular';
+  src: url("../Fonts/amaticsc-regular-webfont.woff2") format("woff2"), url("../Fonts/amaticsc-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'eraserregular';
+  src: url("../Fonts/eraserregular-webfont.woff2") format("woff2"), url("../Fonts/eraserregular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 header {
   grid-column: 1/span 6;
   grid-row-start: 1;
@@ -42,7 +72,7 @@ header {
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 0;
   background-image: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.2));
-  grid-template-rows: repeat(2, 1fr); }
+  grid-template-rows: repeat(1, 1fr); }
 
 .Menubar {
   grid-column: 6/span 1;
@@ -63,6 +93,8 @@ header {
   grid-template-rows: repeat(9, 20px); }
 
 .billeder {
+  grid-column: 1/span 6;
+  grid-row: 1/span 8;
   overflow: hidden;
   height: 100%;
   display: inline-block;
@@ -105,7 +137,9 @@ header {
   color: white;
   z-index: 20;
   font-size: 20pt;
-  margin-top: 4%; }
+  margin-top: 4%;
+  margin-left: 15%;
+  font-family: ordinary_guy_demoregular; }
 
 .Titel2 {
   display: none;
@@ -129,9 +163,10 @@ header {
   color: white;
   border-bottom: 0.5px solid #707070;
   text-align: center;
+  font-family: ordinary_guy_demoregular;
   padding: 10%; }
   .KommendeFilm h1 {
-    font-family: adorn-condensed-sans, sans-serif;
+    font-family: ordinary_guy_demoregular;
     font-weight: 400; }
 
 .OmJohnGreen {
@@ -141,6 +176,8 @@ header {
   border-bottom: 0.5px solid #707070;
   text-align: center;
   padding: 10%; }
+  .OmJohnGreen h1 {
+    font-family: amatic_scregular; }
 
 .Blog {
   grid-column: 1/span 6;
@@ -148,6 +185,8 @@ header {
   color: white;
   text-align: center;
   padding: 10%; }
+  .Blog h1 {
+    font-family: trashhandregular; }
 
 footer {
   padding: 0 0 0 0;
@@ -168,5 +207,112 @@ footer {
   .socialemedier {
     grid-column: 3/span 2;
     grid-row-start: 2; } }
+@media screen and (min-width: 768px) {
+  .en {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 50px); }
+
+  .billeder {
+    grid-column: 1/span 10;
+    grid-row: 1/span 8;
+    overflow: hidden;
+    height: 100%;
+    display: inline-block;
+    width: 100%; }
+    .billeder img {
+      width: 100%;
+      height: 150%;
+      object-fit: cover; }
+
+  .grid2 {
+    grid-column: 1/span 8;
+    grid-row: 1/span 8; }
+
+  .BilledeGradient {
+    margin-top: -0.5%;
+    grid-column: 1/span 8;
+    grid-row: 1/span 8;
+    position: relative;
+    background: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.1)); }
+
+  .Titel1 {
+    grid-column: 2/span 6;
+    grid-row: 4/span 2;
+    color: white;
+    z-index: 20;
+    font-size: 40pt;
+    margin-top: 4%;
+    text-align: center;
+    margin-left: 0;
+    font-family: ordinary_guy_demoregular; }
+
+  .Titel2 {
+    display: none;
+    grid-column: 2/span 4;
+    grid-row: 3/span 2;
+    color: white;
+    z-index: 20;
+    font-size: 20pt;
+    margin-top: 4%; }
+
+  .next {
+    grid-column: 8/span 1;
+    grid-row: 4/span 2;
+    color: white;
+    margin-left: 45%;
+    margin-top: 10%;
+    z-index: 3;
+    cursor: pointer;
+    font-size: 20pt; }
+
+  .prev {
+    grid-column: 1/span 1;
+    grid-row: 4/span 2;
+    color: white;
+    z-index: 4;
+    margin-left: 15%;
+    cursor: pointer;
+    font-size: 20pt;
+    margin-top: 10%; }
+
+  .to {
+    padding: 0 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 0;
+    grid-template-rows: repeat(9, 50px); }
+
+  .KommendeFilm {
+    grid-column: 1/span 6;
+    grid-row: 1/span 3;
+    color: white;
+    border-bottom: 0.5px solid #707070;
+    text-align: center;
+    font-family: ordinary_guy_demoregular;
+    padding: 10%; }
+    .KommendeFilm h1 {
+      font-family: ordinary_guy_demoregular;
+      font-size: 30pt; }
+
+  .OmJohnGreen {
+    grid-column: 1/span 6;
+    grid-row: 4/span 3;
+    color: white;
+    border-bottom: 0.5px solid #707070;
+    text-align: center;
+    padding: 10%; }
+    .OmJohnGreen h1 {
+      font-family: amatic_scregular;
+      font-size: 30pt; }
+
+  .Blog {
+    grid-column: 1/span 6;
+    grid-row: 7/ span 2;
+    color: white;
+    text-align: center;
+    padding: 10%; }
+    .Blog h1 {
+      font-family: trashhandregular;
+      font-size: 30pt; } }
 
 /*# sourceMappingURL=index.css.map */
