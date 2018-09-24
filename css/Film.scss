@@ -98,122 +98,23 @@ img {
   grid-column-gap: 10px;
 }
 
+@mixin gridweb{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 10px;
+}
+
 $blue: #31A7E0;
 $dark_grey: #3a3a3a;
 $ligt_grey: #707070;
 $white: #ffffff;
+$yellow: #F8E932;
 
-#mobil_paper{
+#web_flaenge_resume, #web_flaenge_trailer{
   display: none;
-    .resume2, .trailer2 {
-      width: 45%;
-      text-align: center;
-      padding-top: 12px;
-    }
-    .resume2{
-      border-bottom: 1px solid $ligt_grey;
-      color: $ligt_grey;
-    }
-    .trailer2{
-      border-top: 1px solid $ligt_grey;
-      border-left: 1px solid $ligt_grey;
-      color: $white;
-    }
-  .film2{
-    @include gridmobil;
-    grid-template-rows: repeat(9, 50px);
-    .tekst_baggrund2{
-      grid-column: 1/span 6;
-      grid-row-start: 1;
-      margin-top: 5%;
-      margin-left: -2%;
-    }
-    #h1_2{
-      grid-column: 2/span 4;
-      grid-row-start: 2;
-      margin-top: 5px;
-      z-index: 2;
-      font-size: 14pt;
-      color: $blue;
-      font-family: ordinary_guy_demoregular, sans-serif;
-      font-weight: 400;
-      letter-spacing: 1.5px;
-    }
-    iframe{
-      grid-column: 2/span 4;
-      grid-row-start: 3;
-      margin-left: -2%;
-      margin-top: -10px;
-    }
-    .genre{
-      z-index: 2;
-      font-size: 8pt;
-      grid-row: 6/span 1;
-      grid-column: 2/span 3;
-      font-family: yantramanavmedium, sans-serif;
-      .light{
-        font-family: Yantramanavlight, sans-serif;
-      }
-    }
-    .spilletid{
-      z-index: 2;
-      font-size: 8pt;
-      grid-row: 6/span 1;
-      grid-column: 5/span 2;
-      margin-left: -20px;
-      font-family: yantramanavmedium, sans-serif;
-      .light{
-        font-family: Yantramanavlight, sans-serif;
-      }
-    }
-    .rating{
-      z-index: 2;
-      font-size: 8pt;
-      grid-row: 7/span 1;
-      grid-column: 2/span 4;
-      font-family: yantramanavmedium, sans-serif;
-      .light{
-        font-family: Yantramanavlight, sans-serif;
-      }
-    }
-
-    .CTA{
-      font-size: 18pt;
-      color: $blue;
-      font-family: ordinary_guy_demoregular, sans-serif;
-      font-weight: 400;
-      letter-spacing: 1.5px;
-      grid-column: 2/span 4;
-      grid-row-start: 8;
-      z-index: 2;
-      text-align: center;
-    }
-    #flex{
-      display: flex;
-      display: -webkit-flex;
-      justify-content: space-around;
-      grid-row-start: 9;
-      grid-column: 2/span 4;
-      z-index: 2;
-      #viaplay, #hbo, #netflix{
-        height: 40px;
-        width: auto;
-      }
-    }
-  }
-
-  footer{
-    .socialemedier{
-      grid-column: 2/span 4;
-      grid-row-start: 2;
-      margin-left: 17%;
-      margin-top: 10px;
-    }
-  }
-
 }
 
-header{
+#mobil_header{
   @include gridmobil;
   grid-column: 1/span 6;
   grid-row-start: 1;
@@ -228,6 +129,7 @@ header{
   grid-row-start: 1;
   margin-top: 40%;
 }
+
 .LogoType{
   grid-column: 1/span 4;
   grid-row-start: 1;
@@ -268,6 +170,17 @@ header{
     z-index: -2;
     margin-left: 4%;
   }
+  .next{
+    grid-column: 6/span 1;
+    grid-row-start: 4;
+    margin-left: 25px;
+    color: $ligt_grey;
+  }
+  .prev{
+    grid-column: 1/span 1;
+    grid-row-start: 4;
+    color: $ligt_grey;
+  }
   .tekst_baggrund{
     grid-column: 1/span 6;
     z-index: -1;
@@ -277,7 +190,7 @@ header{
     margin-left: -5px;
 
   }
-  h1{
+  #flaenge_overskrift{
     z-index: 2;
     grid-column: 2/span 4;
     grid-row: 5/span 1;
@@ -329,8 +242,6 @@ header{
     }
   }
 
-
-
 }
 
 footer{
@@ -355,29 +266,368 @@ footer{
 
 
 
+#mobil_trailer{                                                  
+  display: none;                                                 
+    .resume2, .trailer2 {                                        
+      width: 45%;                                                
+      text-align: center;                                        
+      padding-top: 12px;                                         
+    }                                                            
+    .resume2{                                                    
+      border-bottom: 1px solid $ligt_grey;                       
+      color: $ligt_grey;                                         
+    }                                                            
+    .trailer2{                                                   
+      border-top: 1px solid $ligt_grey;                          
+      border-left: 1px solid $ligt_grey;                         
+      color: $white;                                             
+    }                                                            
+  .film2{                                                        
+    @include gridmobil;                                          
+    grid-template-rows: repeat(9, 50px);                         
+    .tekst_baggrund2{                                            
+      grid-column: 1/span 6;                                     
+      grid-row-start: 1;                                         
+      margin-top: 5%;                                            
+      margin-left: -2%;                                          
+    }                                                            
+    #h1_2{                                                       
+      grid-column: 2/span 4;                                     
+      grid-row-start: 2;                                         
+      margin-top: 5px;                                           
+      z-index: 2;                                                
+      font-size: 14pt;                                           
+      color: $blue;                                              
+      font-family: ordinary_guy_demoregular, sans-serif;         
+      font-weight: 400;                                          
+      letter-spacing: 1.5px;                                     
+    }                                                            
+    iframe{                                                      
+      grid-column: 2/span 4;                                     
+      grid-row-start: 3;                                         
+      margin-left: -2%;                                          
+      margin-top: -10px;                                         
+    }                                                            
+    .genre{                                                      
+      z-index: 2;                                                
+      font-size: 8pt;                                            
+      grid-row: 6/span 1;                                        
+      grid-column: 2/span 3;                                     
+      font-family: yantramanavmedium, sans-serif;                
+      .light{                                                    
+        font-family: Yantramanavlight, sans-serif;               
+      }                                                          
+    }                                                            
+    .spilletid{                                                  
+      z-index: 2;                                                
+      font-size: 8pt;                                            
+      grid-row: 6/span 1;                                        
+      grid-column: 5/span 2;                                     
+      margin-left: -20px;                                        
+      font-family: yantramanavmedium, sans-serif;                
+      .light{                                                    
+        font-family: Yantramanavlight, sans-serif;               
+      }                                                          
+    }                                                            
+    .rating{                                                     
+      z-index: 2;                                                
+      font-size: 8pt;                                            
+      grid-row: 7/span 1;                                        
+      grid-column: 2/span 4;                                     
+      font-family: yantramanavmedium, sans-serif;                
+      .light{                                                    
+        font-family: Yantramanavlight, sans-serif;               
+      }                                                          
+    }                                                            
+                                                                 
+    .CTA{                                                        
+      font-size: 18pt;                                           
+      color: $blue;                                              
+      font-family: ordinary_guy_demoregular, sans-serif;         
+      font-weight: 400;                                          
+      letter-spacing: 1.5px;                                     
+      grid-column: 2/span 4;                                     
+      grid-row-start: 8;                                         
+      z-index: 2;                                                
+      text-align: center;                                        
+    }                                                            
+    .flex{
+      display: flex;                                             
+      display: -webkit-flex;                                     
+      justify-content: space-around;                             
+      grid-row-start: 9;                                         
+      grid-column: 2/span 4;                                     
+      z-index: 2;                                                
+      .viaplay, .hbo, .netflix{
+        height: 40px;                                            
+        width: auto;                                             
+      }                                                          
+    }                                                            
+  }                                                              
+                                                                 
+  footer{                                                        
+    .socialemedier{                                              
+      grid-column: 2/span 4;                                     
+      grid-row-start: 2;                                         
+      margin-left: 17%;                                          
+      margin-top: 10px;                                          
+    }                                                            
+  }                                                              
+                                                                 
+}
 
-@media screen and (min-width: 375px) {
-  #mobil_paper{
-    .film2{
-      .tekst_baggrund2{
+
+
+
+
+
+
+#mobil_paper{
+  display: none;
+  .paper_valg{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    height: 45px;
+    margin-top: 10%;
+    .paper_resume, .paper_trailer {
+      width: 45%;
+      text-align: center;
+      padding-top: 12px;
+    }
+    .paper_trailer{
+      border-bottom: 1px solid $ligt_grey;
+      color: $ligt_grey;
+    }
+    .paper_resume{
+      border-top: 1px solid $ligt_grey;
+      border-right: 1px solid $ligt_grey;
+      color: $white;
+    }
+  }
+  .paper_film{
+    @include gridmobil;
+    grid-template-rows: repeat(12, 50px);
+    .paper_tekst_baggrund{
+      grid-column: 1/span 6;
+      z-index: -1;
+      grid-row: 4/Span 8;
+      width: 100%;
+      margin-top: 30px;
+      margin-left: -5px;      
+    }
+    .film_billede {
+      grid-column: 1/span 6;
+      grid-row: 1/span 7;
+      width: 90%;
+      height: 100%;
+      z-index: -2;
+      margin-left: 4%;
+    }
+    .paper_prev{
+      margin-left: -5px;
+    }
+    .paper_overskrift {
+      z-index: 2;
+      grid-column: 2/span 4;
+      grid-row: 5/span 1;
+      font-size: 18pt;
+      margin-top: 10px;
+      color: $yellow;
+      font-family: amatic_scregular, sans-serif;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+    }
+    .paper_resume_tekst {
+      z-index: 2;
+      grid-column: 2/span 4;
+      grid-row: 6/span 7;
+      font-size: 10pt;
+    }
+    .paper_genre {
+      font-size: 8pt;
+      grid-row: 11/span 1;
+      grid-column: 2/span 3;
+      margin-top: 15px;
+      font-family: yantramanavmedium, sans-serif;
+      .light {
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    .paper_spilletid {
+      font-size: 8pt;
+      grid-row: 11/span 1;
+      grid-column: 5/span 2;
+      margin-top: 15px;
+      margin-left: -20px;
+      font-family: yantramanavmedium, sans-serif;
+      .light {
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    .paper_rating {
+      font-size: 8pt;
+      grid-row: 12/span 1;
+      grid-column: 2/span 4;
+      margin-top: 30px;
+      font-family: yantramanavmedium, sans-serif;
+      .light {
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+  }
+  footer {
+    grid-template-rows: repeat(3, 60px);
+    .socialemedier {
+      grid-column: 2/span 4;
+      grid-row-start: 2;
+      margin-left: 17%;
+      margin-top: 20px;
+    }
+  }
+}
+
+
+
+
+
+
+
+#mobil_paper_trailer{
+  display: none;
+   .paper_valg2{
+     display: flex;
+     display: -webkit-flex;
+     justify-content: center;
+     height: 45px;
+     margin-top: 10%;
+     .paper_resume2, .paper_trailer2 {
+       width: 45%;
+       text-align: center;
+       padding-top: 12px;
+     }
+     .paper_resume2 {
+       border-bottom: 1px solid $ligt_grey;
+       color: $ligt_grey;
+     }
+     .paper_trailer2 {
+       border-top: 1px solid $ligt_grey;
+       border-left: 1px solid $ligt_grey;
+       color: $white;
+     }
+   }
+    .paper_film2{
+      @include gridmobil;
+      grid-template-rows: repeat(9, 50px);
+      .paper_tekst_baggrund2{
         grid-column: 1/span 6;
         grid-row-start: 1;
         margin-top: 5%;
         margin-left: -2%;
       }
-    }
-
-    footer{
-      margin-top: 0;
-      .socialemedier{
+      .paper_overskrift {
         grid-column: 2/span 4;
         grid-row-start: 2;
-        margin-left: 10%;
-        margin-top: 0;
+        font-size: 18pt;
+        color: $yellow;
+        font-family: amatic_scregular, sans-serif;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        z-index: 5;
       }
+      iframe{
+        grid-column: 2/span 4;
+        grid-row-start: 3;
+        margin-top: -5px;
+      }
+      .paper_genre{
+        z-index: 2;
+        font-size: 8pt;
+        margin-top: 15px;
+        grid-row: 6/span 1;
+        grid-column: 2/span 3;
+        font-family: yantramanavmedium, sans-serif;
+        .light{
+          font-family: Yantramanavlight, sans-serif;
+        }
+      }
+      .paper_spilletid{
+        z-index: 2;
+        font-size: 8pt;
+        margin-top: 15px;
+        grid-row: 6/span 1;
+        grid-column: 5/span 2;
+        margin-left: -20px;
+        font-family: yantramanavmedium, sans-serif;
+        .light{
+          font-family: Yantramanavlight, sans-serif;
+        }
+      }
+      .paper_rating{
+        z-index: 2;
+        font-size: 8pt;
+        margin-top: 30px;
+        grid-row: 7/span 1;
+        grid-column: 2/span 4;
+        font-family: yantramanavmedium, sans-serif;
+        .light{
+          font-family: Yantramanavlight, sans-serif;
+        }
+      }
+
+      .paper_CTA{
+        font-size: 24pt;
+        color: $yellow;
+        font-family: amatic_scregular, sans-serif;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        margin-top: 20px;
+        grid-column: 2/span 4;
+        grid-row-start: 8;
+        z-index: 2;
+        text-align: center;
+      }
+      .flex{
+        display: flex;
+        display: -webkit-flex;
+        justify-content: space-around;
+        grid-row-start: 9;
+        grid-column: 2/span 4;
+        margin-top: 25px;
+        z-index: 2;
+        .viaplay, .hbo, .netflix{
+          height: 30px;
+          width: auto;
+        }
+      }
+    }
+
+  footer{
+    grid-template-rows: repeat(3, 60px);
+    margin-top: -40px;
+    .socialemedier{
+      grid-column: 2/span 4;
+      grid-row-start: 2;
+      margin-left: 17%;
+      margin-top: 20px;
     }
   }
 
+}                                                               
+
+
+
+
+
+
+
+
+
+
+
+// --------------------------------  Iphone 6/7/8 --------------------------
+
+@media screen and (min-width: 375px) {
   .film{
     .film_billede{
     width: 80%;
@@ -406,6 +656,81 @@ footer{
       margin-top: 0;
     }
   }
+
+#mobil_trailer{
+  .film2{
+    .tekst_baggrund2{
+      grid-column: 1/span 6;
+      grid-row-start: 1;
+      margin-top: 5%;
+      margin-left: -2%;
+    }
+  }
+
+  footer{
+    margin-top: 0;
+    .socialemedier{
+      grid-column: 2/span 4;
+      grid-row-start: 2;
+      margin-left: 10%;
+      margin-top: 0;
+    }
+  }
+}
+
+#mobil_paper{
+  .paper_film{
+    grid-template-rows: repeat(11, 50px);
+    .paper_overskrift{
+     margin-top: 10%;
+   }
+  .paper_resume_tekst{
+      margin-top: 5%;
+    }
+    .paper_next{
+     margin-left: 33px;
+    }
+    .paper_genre {                                                                                         
+      grid-row: 10/span 1;
+      margin-top: 30px;
+    }                                                            
+    .paper_spilletid {
+      grid-row: 10/span 1;
+      margin-top: 30px;
+    }                                                            
+    .paper_rating {                                                                                       
+      grid-row: 11/span 1;
+      margin-top: 40px;
+    }                                                            
+  }
+  footer{
+    grid-template-rows: repeat(3, 50px);
+    margin-top: 30px;
+  }
+}  
+
+
+#mobil_paper_trailer{                                              
+    .paper_film2 {
+      grid-template-rows: repeat(9, 50px);
+      .paper_tekst_baggrund2 {
+        margin-top: -5px;
+        margin-left: 0;
+      }
+    }
+                                                                   
+  footer{                                                          
+    grid-template-rows: repeat(2, 50px);
+    margin-top: 20px;
+    .socialemedier{                                                
+      grid-column: 2/span 4;                                       
+      grid-row-start: 1;
+      margin-left: 17%;                                            
+      margin-top: 15px;
+    }                                                              
+  }                                                                
+                                                                   
+}
 }
 
 
@@ -413,24 +738,78 @@ footer{
 
 
 
-
-
-
-
+// --------------------------------  Iphone 6/7/8 plus --------------------------
 
 @media screen and (min-width: 414px) {
-  #mobil_paper{
+  #mobil_trailer {
     .film2 {
       .tekst_baggrund2 {
         margin-top: 0;
       }
     }
-    footer{
+    footer {
       grid-template-rows: repeat(3, 50px);
       margin-top: 15px;
-      .socialemedier{
-       margin-left: 18%;
-       margin-top: -5%;
+      .socialemedier {
+        margin-left: 18%;
+        margin-top: -5%;
+      }
+    }
+  }
+
+  #mobil_paper {
+    .paper_film {
+      grid-template-rows: repeat(12, 50px);
+      .paper_overskrift {
+        margin-top: 3%;
+        grid-row: 6/span 1;
+        font-size: 20pt;
+      }
+      .paper_tekst_baggrund {
+        grid-row: 4/span 5;
+        margin-top: 10%;
+      }
+      .paper_resume_tekst {
+        margin-top: 3%;
+        grid-row: 7/span 7;
+      }
+      .paper_next {
+        margin-left: 33px;
+      }
+      .paper_genre {
+        grid-row: 11/span 1;
+        margin-top: 30px;
+      }
+      .paper_spilletid {
+        grid-row: 11/span 1;
+        margin-top: 30px;
+      }
+      .paper_rating {
+        grid-row: 12/span 1;
+        margin-top: 50px;
+      }
+    }
+    footer {
+      grid-template-rows: repeat(3, 58px);
+      margin-top: 30px;
+    }
+  }
+
+  #mobil_paper_trailer {
+    .paper_film2 {
+      grid-template-rows: repeat(9, 50px);
+      .paper_tekst_baggrund2 {
+        margin-top: -5px;
+        margin-left: 0;
+      }
+    }
+
+    footer {
+      grid-template-rows: repeat(3, 45px);
+      margin-top: 20px;
+      .socialemedier {
+        grid-row-start: 2;
+        margin-top: 0;
       }
     }
   }
@@ -439,14 +818,10 @@ footer{
 
 
 
-
-
-
-
-
+// -------------------------------------  Iphone x -------------------------------
 
 @media screen and (min-height: 812px) {
-  .valg{
+  .valg {
     margin-top: 13%;
   }
 
@@ -461,7 +836,7 @@ footer{
       margin-left: -5px;
 
     }
-    h1 {
+    #flaenge_overskrift {
       grid-row: 6/span 1;
     }
     .resume_tekst {
@@ -483,15 +858,15 @@ footer{
     }
   }
 
-  footer{
+  footer {
     margin-top: -14%;
-    .socialemedier{
+    .socialemedier {
       margin-left: 18%;
       margin-top: -5%;
     }
   }
 
-  #mobil_paper{
+  #mobil_trailer {
     .film2 {
       grid-template-rows: repeat(10, 50px);
       .tekst_baggrund2 {
@@ -515,29 +890,599 @@ footer{
       .CTA {
         grid-row-start: 9;
       }
-      #flex {
+      .flex {
         grid-row-start: 10;
-        #viaplay, #hbo, #netflix {
-          height: 40px;
+        .viaplay, .hbo, .netflix {
+          height: 30px;
           width: auto;
         }
       }
     }
 
-      footer{              
-        margin-top: 12%;
-        .socialemedier{    
-          margin-left: 18%;
-          margin-top: -5%; 
-        }                  
+    footer {
+      margin-top: 12%;
+      .socialemedier {
+        margin-left: 18%;
+        margin-top: -5%;
       }
-  }                              
+    }
+  }
 
+  #mobil_paper {
+    .paper_film {
+      grid-template-rows: repeat(12, 50px);
+      .paper_overskrift {
+        margin-top: 3%;
+        grid-row: 6/span 1;
+        font-size: 20pt;
+      }
+      .paper_tekst_baggrund {
+        grid-row: 4/span 5;
+        margin-top: 10%;
+      }
+      .paper_resume_tekst {
+        margin-top: 3%;
+        grid-row: 7/span 7;
+      }
+      .paper_next {
+        margin-left: 33px;
+      }
+      .paper_genre {
+        grid-row: 11/span 1;
+        margin-top: 30px;
+      }
+      .paper_spilletid {
+        grid-row: 11/span 1;
+        margin-top: 30px;
+      }
+      .paper_rating {
+        grid-row: 12/span 1;
+        margin-top: 50px;
+      }
+    }
+    footer {
+      grid-template-rows: repeat(3, 40px);
+      margin-top: 30px;
+    }
+  }
 
+  #mobil_paper_trailer {
+    .paper_film2 {
+      grid-template-rows: repeat(10, 50px);
+      .paper_tekst_baggrund2 {
+        grid-row-start: 2;
+        margin-top: -30px;
+      }
+      .paper_overskrift {
+        grid-column: 2/span 4;
+        grid-row-start: 2;
+        font-size: 18pt;
+        color: $yellow;
+        font-family: amatic_scregular, sans-serif;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        margin-top: 15px;
+        z-index: 5;
+      }
+      iframe {
+        margin-top: 5px;
+      }
+      .paper_genre {
+        margin-top: 20px;
+      }
+      .paper_spilletid {
+        margin-top: 20px;
+      }
+      .paper_rating {
+        margin-top: 40px;
+      }
 
+      .paper_CTA {
+        margin-top: -10px;
+        grid-row-start: 9;
+      }
+      .flex {
+        margin-top: 50px;
+        z-index: 2;
+        .viaplay, .hbo, .netflix {
+          height: 30px;
+        }
+      }
+    }
+
+    footer {
+      grid-template-rows: repeat(3, 55px);
+      margin-top: 25px;
+      .socialemedier {
+        grid-row-start: 1;
+        margin-top: 40px;
+      }
+    }
+
+  }
 
 }
 
-@media print {
-  // Alt der gælder for print specifikt
+
+@media screen and (min-width: 768px) {
+   #mobil_flaenge, #mobil_header{
+     display: none;
+   }
+  
+   #web_flaenge_resume{
+     @include gridweb;
+     grid-template-rows: repeat(21, 50px);
+     .logotype{
+       grid-column: 1/span 4;
+       grid-row-start: 1;
+       margin: 30px 0 0 30px;
+     }
+     .nav_film_skrift{
+       color: $blue;
+       font-family: eraserregular, sans-serif;
+       font-size: 18pt;
+       grid-column: 1/span 2;
+       grid-row-start: 5;
+       margin-left: 30px;
+     }
+     .kommende_film{
+       color: $white;
+       font-family: ordinary_guy_demoregular, sans-serif;
+       font-size: 18pt;
+       grid-column: 1/span 3;
+       grid-row-start: 7;
+       margin-left: 30px;
+     }
+     .om_john_green{
+       color: $white;
+       font-family: amatic_scregular, sans-serif;
+       font-size: 18pt;
+       grid-column: 1/span 3;
+       grid-row-start: 9;
+       margin-left: 30px;
+     }
+     .blog{
+       color: $white;
+       font-family: trashhandregular, sans-serif;
+       font-size: 20pt;
+       grid-column: 1/span 2;
+       grid-row-start: 11;
+       margin-left: 30px;
+     }
+     .film_overskrift{
+       color: $white;                          
+       font-family: eraserregular, sans-serif; 
+       font-size: 24pt;                        
+       grid-column: 5/span 2;                  
+       grid-row-start: 4;                      
+       margin-top: -20%;                       
+     }
+     .web_billede{
+       grid-column: 5/span 7;
+       grid-row-start: 5;
+     }
+     .valg_web{
+       display: flex;                          
+       display: -webkit-flex;                  
+       justify-content: center;                
+       height: 45px;
+       margin-top: 10%;
+       grid-column: 5/span 7;
+       grid-row-start: 8;
+       #web_resume, #web_trailer {
+         width: 50%;
+         text-align: center;                   
+         padding-top: 12px;                    
+       }                                       
+       #web_trailer{
+         border-bottom: 1px solid $ligt_grey;  
+         color: $ligt_grey;                    
+       }                                       
+       #web_resume{
+         border-top: 1px solid $ligt_grey;     
+         border-right: 1px solid $ligt_grey;   
+         color: $white;                        
+       }
+     }
+     .web_tekstbaggrund{
+       grid-row-start: 10;
+       grid-column: 4/span 9;
+       width: 100%;
+     }
+     #flaenge_overskrift_web{
+       color: $blue;
+       font-family: eraserregular, sans-serif;
+       font-size: 16pt;
+       margin-top: 10px;
+       grid-column: 6/span 5;
+       grid-row-start: 11;
+       letter-spacing: 1.5px;
+     }
+     .resume_tekst{
+       font-size: 14pt;
+       grid-column: 6/span 5;
+       grid-row-start: 12;
+     }
+     .genre{
+       grid-column: 6/span 2;
+       grid-row-start: 17;
+       font-size: 10pt;
+       margin-top: 15px;
+       font-family: yantramanavmedium, sans-serif;  
+       .light{                                      
+         font-family: Yantramanavlight, sans-serif; 
+       }                                            
+     }                                                    
+     .spilletid{                                        
+       font-size: 10pt;
+       grid-row-start: 17;
+       grid-column: 10/span 2;
+       margin-top: 15px;
+       font-family: yantramanavmedium, sans-serif;      
+       .light{                                          
+         font-family: Yantramanavlight, sans-serif;     
+       }                                                
+     }                                                  
+     .rating{                                           
+       font-size: 10pt;
+       grid-row-start: 19;
+       grid-column: 6/span 3;
+       font-family: yantramanavmedium, sans-serif;      
+       .light{                                          
+         font-family: Yantramanavlight, sans-serif;     
+       }                                                
+     }                                                  
+     .web_prev{
+       color: $ligt_grey;
+       grid-column: 4/span 1;
+       grid-row-start: 6;
+       margin-left: 30px;
+     }
+     .web_next{
+       color: $ligt_grey;
+       grid-column: 12/span 1;
+       grid-row-start: 6;
+       margin-left: 10px;
+     }
+
+     footer{
+       grid-row-start: 21;
+       grid-column: 4/span 9;
+       margin-bottom: -20px;
+     }
+   }
+
+
+
+
+
+  
+
+  #web_paper_resume{
+    @include gridweb;
+    grid-template-rows: repeat(21, 50px);
+    display: none;
+    .logotype{
+      grid-column: 1/span 4;
+      grid-row-start: 1;
+      margin: 30px 0 0 30px;
+    }
+    .nav_film_skrift{
+      color: $blue;
+      font-family: eraserregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 2;
+      grid-row-start: 5;
+      margin-left: 30px;
+    }
+    .kommende_film{
+      color: $white;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 7;
+      margin-left: 30px;
+    }
+    .om_john_green{
+      color: $white;
+      font-family: amatic_scregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 9;
+      margin-left: 30px;
+    }
+    .blog{
+      color: $white;
+      font-family: trashhandregular, sans-serif;
+      font-size: 20pt;
+      grid-column: 1/span 2;
+      grid-row-start: 11;
+      margin-left: 30px;
+    }
+    .film_overskrift{
+      color: $white;
+      font-family: eraserregular, sans-serif;
+      font-size: 24pt;
+      grid-column: 5/span 2;
+      grid-row-start: 4;
+      margin-top: -20%;
+    }
+    .web_billede{
+      grid-column: 5/span 7;
+      grid-row-start: 5;
+    }
+    .valg_web{                                 
+      display: flex;                           
+      display: -webkit-flex;                   
+      justify-content: center;                 
+      height: 45px;                            
+      margin-top: 10%;                         
+      grid-column: 5/span 7;                   
+      grid-row-start: 8;                       
+      #web_resume, #web_trailer {              
+        width: 50%;                            
+        text-align: center;                    
+        padding-top: 12px;                     
+      }                                        
+      #web_trailer{                            
+        border-bottom: 1px solid $ligt_grey;   
+        color: $ligt_grey;                     
+      }                                        
+      #web_resume{                             
+        border-top: 1px solid $ligt_grey;      
+        border-right: 1px solid $ligt_grey;    
+        color: $white;                         
+      }                                        
+    }                                          
+    .web_tekstbaggrund{
+      grid-row-start: 10;
+      grid-column: 4/span 9;
+      width: 100%;
+    }
+    #paper_overskrift_web{
+      color: $yellow;
+      font-family: amatic_scregular, sans-serif;
+      font-size: 20pt;
+      grid-column: 6/span 5;
+      grid-row-start: 11;
+      letter-spacing: 1.5px;
+    }
+    .resume_tekst{
+      font-size: 14pt;
+      grid-column: 6/span 5;
+      grid-row-start: 12;
+    }
+    .paper_genre{
+      grid-column: 6/span 2;
+      grid-row-start: 17;
+      font-size: 10pt;
+      margin-top: 15px;
+      font-family: yantramanavmedium, sans-serif;
+      .light{
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    .paper_spilletid{
+      font-size: 10pt;
+      grid-row-start: 17;
+      grid-column: 10/span 2;
+      margin-top: 15px;
+      font-family: yantramanavmedium, sans-serif;
+      .light{
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    .paper_rating{
+      font-size: 10pt;
+      grid-row-start: 19;
+      grid-column: 6/span 3;
+      font-family: yantramanavmedium, sans-serif;
+      .light{
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    .web_prev_paper{
+      color: $ligt_grey;
+      grid-column: 4/span 1;
+      grid-row-start: 6;
+      margin-left: 30px;
+    }
+    .web_next_paper{
+      color: $ligt_grey;
+      grid-column: 12/span 1;
+      grid-row-start: 6;
+      margin-left: 10px;
+    }
+
+    footer{
+      grid-row-start: 21;
+      grid-column: 4/span 9;
+      margin-bottom: -20px;
+    }
+  }
+
+
+
+
+
+
+
+  
+  #web_flaenge_trailer {
+    @include gridweb;
+    grid-template-rows: repeat(20, 50px);
+    .logotype {
+      grid-column: 1/span 4;
+      grid-row-start: 1;
+      margin: 30px 0 0 30px;
+    }
+    .nav_film_skrift {
+      color: $blue;
+      font-family: eraserregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 2;
+      grid-row-start: 5;
+      margin-left: 30px;
+    }
+    .kommende_film {
+      color: $white;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 7;
+      margin-left: 30px;
+    }
+    .om_john_green {
+      color: $white;
+      font-family: amatic_scregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 9;
+      margin-left: 30px;
+    }
+    .blog {
+      color: $white;
+      font-family: trashhandregular, sans-serif;
+      font-size: 20pt;
+      grid-column: 1/span 2;
+      grid-row-start: 11;
+      margin-left: 30px;
+    }
+    .film_overskrift {
+      color: $white;
+      font-family: eraserregular, sans-serif;
+      font-size: 24pt;
+      grid-column: 5/span 2;
+      grid-row-start: 4;
+      margin-top: -20%;
+    }
+    .web_billede{            
+      grid-column: 5/span 7; 
+      grid-row-start: 5;     
+    }
+    .valg_web {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: center;
+      height: 45px;
+      margin-top: 10%;
+      grid-column: 5/span 7;
+      grid-row-start: 8;
+      #web_resume_flaenge, #web_trailer_flaenge {
+        width: 50%;
+        text-align: center;
+        padding-top: 12px;
+      }
+      #web_trailer_flaenge {
+        border-top: 1px solid $ligt_grey;
+        border-left: 1px solid $ligt_grey;
+        color: $white;
+      }
+      #web_resume_flaenge {
+        border-bottom: 1px solid $ligt_grey;
+        color: $ligt_grey;
+      }
+    }
+    .web_tekstbaggrund{
+      grid-column: 4/span 9;
+      grid-row-start: 10;
+      width: 100%;
+    }
+    iframe{
+      grid-column: 6/span 5;
+      grid-row-start: 13;
+      margin-top: -15px;
+    }
+    #flaenge_overskrift_web{
+      color: $yellow;                           
+      font-family: amatic_scregular, sans-serif;
+      font-size: 26pt;
+      grid-column: 6/span 5;                    
+      grid-row-start: 11;
+      margin-top: 15px;
+      letter-spacing: 1.5px;                    
+    }
+    .flaenge_genre{
+      grid-column: 6/span 2;                          
+      grid-row-start: 16;
+      font-size: 10pt;                                
+      margin-top: 15px;                               
+      font-family: yantramanavmedium, sans-serif;     
+      .light{                                         
+        font-family: Yantramanavlight, sans-serif;    
+      }                                               
+    }                                                 
+    .flaenge_spilletid{
+      font-size: 10pt;                                
+      grid-row-start: 16;
+      grid-column: 10/span 2;                         
+      margin-top: 15px;                               
+      font-family: yantramanavmedium, sans-serif;     
+      .light{                                         
+        font-family: Yantramanavlight, sans-serif;    
+      }                                               
+    }                                                 
+    .flaenge_rating{
+      font-size: 10pt;                                
+      grid-row-start: 18;
+      grid-column: 6/span 3;                          
+      font-family: yantramanavmedium, sans-serif;     
+      .light{                                         
+        font-family: Yantramanavlight, sans-serif;    
+      }                                               
+    }                                                 
+    footer{
+      grid-row-start: 20;
+      grid-column: 4/span 9;
+      margin-bottom: -40px;
+    } 
+  }
 }
+
+
+
+
+  
+@media screen and (min-width: 1024px) {
+  #web_flaenge_resume {
+    @include gridweb;
+    grid-template-rows: repeat(21, 65px);
+    #flaenge_overskrift_web{
+      font-size: 20pt;
+    }
+    #resume_tekst{
+      font-size: 16pt;
+    }
+    .genre, .spilletid{
+      grid-row-start: 15;
+      font-size: 14pt;
+    }
+    .rating{
+      grid-row-start: 17;
+      font-size: 14pt;
+    }
+  }
+
+
+  #web_paper_resume{
+    @include gridweb;                     
+    grid-template-rows: repeat(21, 65px); 
+    #paper_overskrift_web{
+      font-size: 24pt;
+    }                                     
+    #resume_tekst{                        
+      font-size: 16pt;                    
+    }                                     
+    .paper_genre, .paper_spilletid{
+      grid-row-start: 15;                 
+      font-size: 14pt;                    
+    }                                     
+    .paper_rating{
+      grid-row-start: 17;                 
+      font-size: 14pt;                    
+    }                                                                            
+  }
+  
+}
+
+

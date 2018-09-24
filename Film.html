@@ -46,6 +46,7 @@
 
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link href="css/Film.css" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/4574f88dc3.js"></script>
 
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,7 +57,7 @@
 <!-- i <body> har man alt indhold på siden -->
 <body>
 
-<header>
+<header id="mobil_header">
     <div class="LogoType"><img src="../John-Green-website/images/Logotype.png" width="70%" height="auto"></div>
     <div class="Menubar"><img src="images/Menubar.png" width="50%" height="auto"></div>
 </header>
@@ -69,7 +70,9 @@
 
 <section class="film">
     <img class="film_billede" src="images/TheFaultInOurStars.png">
-    <h1></h1>
+    <span class="next"><i class="fa fas fa-angle-right fa-3x"></i></span>
+    <span class="prev"><i class="fa fas fa-angle-left fa-3x"></i></span>
+    <h1 id="flaenge_overskrift"></h1>
     <p class="resume_tekst"></p>
     <p class="genre">Genre: <br></p>
     <p class="spilletid">Spilletid: <br></p>
@@ -90,7 +93,7 @@
 
 
 
-<div id="mobil_paper">
+<div id="mobil_trailer">
     <section class="valg">
         <div class="resume2">Resumé</div>
         <div class="trailer2">Trailer</div>
@@ -103,10 +106,10 @@
         <p class="spilletid">Spilletid: <br></p>
         <p class="rating">Rating: <br></p>
         <p class="CTA">Se filmene her</p>
-        <div id="flex">
-            <img id="viaplay" src="images/viaplay.png" height="351" width="349"/>
-            <img id="hbo" src="images/HBO.png" height="351" width="750"/>
-            <img id="netflix" src="images/Netflix.png" height="351" width="377"/>
+        <div class="flex">
+            <img class="viaplay" src="images/viaplay.png" height="351" width="349"/>
+            <img class="hbo" src="images/HBO.png" height="351" width="750"/>
+            <img class="netflix" src="images/Netflix.png" height="351" width="377"/>
         </div>
         <img class="tekst_baggrund2" src="images/tekst_baggrund_2.png">
     </section>
@@ -118,10 +121,153 @@
     </footer>
 </div>
 
+<div id="mobil_paper">
+<section class="paper_valg">
+    <div class="paper_resume">Resumé</div>
+    <div class="paper_trailer">Trailer</div>
+</section>
+
+<section class="film paper_film">
+    <img class="film_billede paper_film_billede" src="images/PaperTowns.png">
+    <span class="next paper_next"><i class="fa fas fa-angle-right fa-3x"></i></span>
+    <span class="prev paper_prev"><i class="fa fas fa-angle-left fa-3x"></i></span>
+    <h1 class="paper_overskrift"></h1>
+    <p class="paper_resume_tekst"></p>
+    <p class="paper_genre">Genre: <br></p>
+    <p class="paper_spilletid">Spilletid: <br></p>
+    <p class="paper_rating">Rating: <br></p>
+    <img class="paper_tekst_baggrund" src="images/tekst_baggrund_paper.png">
+</section>
+
+<footer>
+    <div class="socialemedier paper_socialemedier">
+        <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
+    </div>
+</footer>
+</div>
+
+<div id="mobil_paper_trailer">
+    <section class="paper_valg2">
+        <div class="paper_resume2">Resumé</div>
+        <div class="paper_trailer2">Trailer</div>
+    </section>
+
+    <section class="film2 paper_film2">
+        <h1 class="paper_overskrift"></h1>
+        <iframe width="100%" height="auto" id="movietrailer" src="https://www.youtube.com/embed/rFGiHm5WMLk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <p class="paper_genre">Genre: <br></p>
+        <p class="paper_spilletid">Spilletid: <br></p>
+        <p class="paper_rating">Rating: <br></p>
+        <p class="paper_CTA">Se filmene her</p>
+        <div class="flex">
+            <img class="viaplay" src="images/viaplay.png" height="351" width="349"/>
+            <img class="hbo" src="images/HBO.png" height="351" width="750"/>
+            <img class="netflix" src="images/Netflix.png" height="351" width="377"/>
+        </div>
+        <img class="paper_tekst_baggrund2" src="images/tekst_baggrund_2.png">
+    </section>
+
+    <footer>
+        <div class="socialemedier">
+            <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
+        </div>
+    </footer>
+</div>
+
+
+
+<div id="web_flaenge_resume">
+    <img class="logotype" src="images/Logotype.png" height="175" width="1125"/>
+    <p class="nav_film_skrift">FILM</p>
+    <p class="kommende_film">KOMMENDE FILM</p>
+    <p class="om_john_green">OM JOHN GREEN</p>
+    <p class="blog">BLOG</p>
+    <p class="film_overskrift">FILM</p>
+    <img class="web_billede" src="images/paper_web.png"/>
+    <div class="valg_web">
+        <p id="web_resume">Resume</p>
+        <p id="web_trailer">Trailer</p>
+    </div>
+    <img id="web_tekstbaggrund" src="images/tekstbaggrund.png" height="370" width="356"/>
+    <h1 id="flaenge_overskrift_web"></h1>
+    <p class="resume_tekst"></p>
+    <p class="genre">Genre: <br></p>
+    <p class="spilletid">Spilletid: <br></p>
+    <p class="rating">Rating: <br></p>
+    <span class="web_next"><i class="fa fas fa-angle-right fa-3x"></i></span>
+    <span class="web_prev"><i class="fa fas fa-angle-left fa-3x"></i></span>
+
+
+    <footer>
+        <div class="socialemedier">
+            <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
+        </div>
+    </footer>
+
+</div>
+
+
+<div id="web_paper_resume">
+    <img class="logotype" src="images/Logotype.png" height="175" width="1125"/>
+    <p class="nav_film_skrift">FILM</p>
+    <p class="kommende_film">KOMMENDE FILM</p>
+    <p class="om_john_green">OM JOHN GREEN</p>
+    <p class="blog">BLOG</p>
+    <p class="film_overskrift">FILM</p>
+    <img class="web_billede" src="images/flaenge_web.png"/>
+    <div class="valg_web">
+        <p id="web_resume_paper">Resume</p>
+        <p id="web_trailer_paper">Trailer</p>
+    </div>
+    <img class="web_tekstbaggrund" src="images/tekstbaggrund.png" height="370" width="356"/>
+    <h1 id="paper_overskrift_web"></h1>
+    <p class="resume_tekst"></p>
+    <p class="paper_genre">Genre: <br></p>
+    <p class="paper_spilletid">Spilletid: <br></p>
+    <p class="paper_rating">Rating: <br></p>
+    <span class="web_next_paper"><i class="fa fas fa-angle-right fa-3x"></i></span>
+    <span class="web_prev_paper"><i class="fa fas fa-angle-left fa-3x"></i></span>
+
+
+    <footer>
+        <div class="socialemedier">
+            <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
+        </div>
+    </footer>
+
+</div>
 
 
 
 
+
+<div id="web_flaenge_trailer">
+    <img class="logotype" src="images/Logotype.png" height="175" width="1125"/>
+    <p class="nav_film_skrift">FILM</p>
+    <p class="kommende_film">KOMMENDE FILM</p>
+    <p class="om_john_green">OM JOHN GREEN</p>
+    <p class="blog">BLOG</p>
+    <p class="film_overskrift">FILM</p>
+    <img class="web_billede" src="images/flaenge_web.png"/>
+    <div class="valg_web">
+        <p id="web_resume_flaenge">Resume</p>
+        <p id="web_trailer_flaenge">Trailer</p>
+    </div>
+    <img class="web_tekstbaggrund" src="images/tekstbaggrund.png" height="370" width="356"/>
+    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/uec0jU93Bg0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <h1 id="flange_overskrift_web"></h1>
+    <p class="flaenge_genre">Genre: <br></p>
+    <p class="flaenge_spilletid">Spilletid: <br></p>
+    <p class="flaenge_rating">Rating: <br></p>
+
+    <footer>
+        <div class="socialemedier">
+            <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
+        </div>
+    </footer>
+
+
+</div>
 
 
 
@@ -137,19 +283,13 @@
                 'language':'da_DA'
             },
             success: function(alt) {
-            $("h1").append(alt.title);
+            $("#flaenge_overskrift, #flaenge_overskrift_web").append(alt.title);
             $(".resume_tekst").append(alt.overview);
             $.each(alt.genres, function(i, genre){
-                $(".genre").append("<div class='light'>" + genre.name + "</div>")
+                $(".genre, .flaenge_genre").append("<div class='light'>" + genre.name + "</div>")
             });
-            $(".spilletid").append("<div class='light'>" + alt.runtime + " min. </div>");
-            $(".rating").append("<div class='light'>" + alt.vote_average + " baseret på " + alt.vote_count + " stemmer </div>");
-
-
-
-
-
-
+            $(".spilletid, .flaenge_spilletid").append("<div class='light'>" + alt.runtime + " min. </div>");
+            $(".rating, .flaenge_rating").append("<div class='light'>" + alt.vote_average + " baseret på " + alt.vote_count + " stemmer </div>");
             },
 
 
@@ -162,13 +302,111 @@
 
         $(".trailer").click(function (e) {
             $("#mobil_flaenge").hide(0);
-            $("#mobil_paper").show(0);
+            $("#mobil_trailer").show(0);
         });
 
         $(".resume2").click(function (e) {
             $("#mobil_flaenge").show(0);
-            $("#mobil_paper").hide(0);
+            $("#mobil_trailer").hide(0);
         });
+
+        $("#web_trailer").click(function (e) {
+           $("#web_flaenge_trailer").show(0);
+           $("#web_flaenge_resume").hide(0);
+        });
+
+        $("#web_resume_flaenge").click(function (e) {
+            $("#web_flaenge_trailer").hide(0);
+            $("#web_flaenge_resume").show(0);
+        });
+
+
+
+
+
+
+        $(".prev").click(function (e) {
+            $("#mobil_paper").show(0);
+            $("#mobil_flaenge").hide(0);
+        });
+
+        $(".next").click(function (e) {
+            $("#mobil_paper").show(0);
+            $("#mobil_flaenge").hide(0);
+        });
+
+
+
+        $(".web_prev").click(function (e) {
+            $("#web_paper_resume").show(0);
+            $("#web_flaenge_resume").hide(0);
+        });
+
+        $(".web_next").click(function (e) {
+            $("#web_paper_resume").show(0);
+            $("#web_flaenge_resume").hide(0);
+        });
+
+
+        $.ajax({
+            type: "GET",
+            dataType: "json",//skal altiv være
+            url: "https://api.themoviedb.org/3/movie/286565",
+            data: {
+                'api_key':'485529680a690b00e64f1e1bfac047d4',
+                'language':'da_DA'
+            },
+            success: function(alt) {
+                $(".paper_overskrift, #paper_overskrift_web").append(alt.title);
+                $(".paper_resume_tekst").append(alt.overview);
+                $.each(alt.genres, function(i, genre){
+                    $(".paper_genre").append("<div class='light'>" + genre.name + "</div>")
+                });
+                $(".paper_spilletid").append("<div class='light'>" + alt.runtime + " min. </div>");
+                $(".paper_rating").append("<div class='light'>" + alt.vote_average + " baseret på " + alt.vote_count + " stemmer </div>");
+
+            },
+
+            error: function (error) {
+                // Hvis den fejler. Fejl kan ses ved højreklik=>inspect=>Console i chrome (+ ud fra object)
+                console.log(error);
+            }
+        });
+
+
+        $(".paper_trailer").click(function (e) {
+            $("#mobil_paper").hide(0);
+            $("#mobil_paper_trailer").show(0);
+        });
+
+        $(".paper_resume2").click(function (e) {
+            $("#mobil_paper").show(0);
+            $("#mobil_paper_trailer").hide(0);
+        });
+
+
+        $(".paper_prev").click(function (e) {
+            $("#mobil_paper").hide(0);
+            $("#mobil_flaenge").show(0);
+        });
+
+        $(".paper_next").click(function (e) {
+            $("#mobil_paper").hide(0);
+            $("#mobil_flaenge").show(0);
+        });
+
+        $(".web_prev_paper").click(function (e) {
+            $("#web_paper_resume").hide(0);
+            $("#web_flaenge_resume").show(0);
+        });
+
+        $(".web_next_paper").click(function (e) {
+            $("#web_paper_resume").hide(0);
+            $("#web_flaenge_resume").show(0);
+
+        });
+
+
     });
 </script>
 

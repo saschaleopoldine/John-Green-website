@@ -60,97 +60,10 @@ img {
   src: url("../Fonts/eraserregular-webfont.woff2") format("woff2"), url("../Fonts/eraserregular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-#mobil_paper {
+#web_flaenge_resume, #web_flaenge_trailer {
   display: none; }
-  #mobil_paper .resume2, #mobil_paper .trailer2 {
-    width: 45%;
-    text-align: center;
-    padding-top: 12px; }
-  #mobil_paper .resume2 {
-    border-bottom: 1px solid #707070;
-    color: #707070; }
-  #mobil_paper .trailer2 {
-    border-top: 1px solid #707070;
-    border-left: 1px solid #707070;
-    color: #ffffff; }
-  #mobil_paper .film2 {
-    padding: 0 0 0 0;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 10px;
-    grid-template-rows: repeat(9, 50px); }
-    #mobil_paper .film2 .tekst_baggrund2 {
-      grid-column: 1/span 6;
-      grid-row-start: 1;
-      margin-top: 5%;
-      margin-left: -2%; }
-    #mobil_paper .film2 #h1_2 {
-      grid-column: 2/span 4;
-      grid-row-start: 2;
-      margin-top: 5px;
-      z-index: 2;
-      font-size: 14pt;
-      color: #31A7E0;
-      font-family: ordinary_guy_demoregular, sans-serif;
-      font-weight: 400;
-      letter-spacing: 1.5px; }
-    #mobil_paper .film2 iframe {
-      grid-column: 2/span 4;
-      grid-row-start: 3;
-      margin-left: -2%;
-      margin-top: -10px; }
-    #mobil_paper .film2 .genre {
-      z-index: 2;
-      font-size: 8pt;
-      grid-row: 6/span 1;
-      grid-column: 2/span 3;
-      font-family: yantramanavmedium, sans-serif; }
-      #mobil_paper .film2 .genre .light {
-        font-family: Yantramanavlight, sans-serif; }
-    #mobil_paper .film2 .spilletid {
-      z-index: 2;
-      font-size: 8pt;
-      grid-row: 6/span 1;
-      grid-column: 5/span 2;
-      margin-left: -20px;
-      font-family: yantramanavmedium, sans-serif; }
-      #mobil_paper .film2 .spilletid .light {
-        font-family: Yantramanavlight, sans-serif; }
-    #mobil_paper .film2 .rating {
-      z-index: 2;
-      font-size: 8pt;
-      grid-row: 7/span 1;
-      grid-column: 2/span 4;
-      font-family: yantramanavmedium, sans-serif; }
-      #mobil_paper .film2 .rating .light {
-        font-family: Yantramanavlight, sans-serif; }
-    #mobil_paper .film2 .CTA {
-      font-size: 18pt;
-      color: #31A7E0;
-      font-family: ordinary_guy_demoregular, sans-serif;
-      font-weight: 400;
-      letter-spacing: 1.5px;
-      grid-column: 2/span 4;
-      grid-row-start: 8;
-      z-index: 2;
-      text-align: center; }
-    #mobil_paper .film2 #flex {
-      display: flex;
-      display: -webkit-flex;
-      justify-content: space-around;
-      grid-row-start: 9;
-      grid-column: 2/span 4;
-      z-index: 2; }
-      #mobil_paper .film2 #flex #viaplay, #mobil_paper .film2 #flex #hbo, #mobil_paper .film2 #flex #netflix {
-        height: 40px;
-        width: auto; }
-  #mobil_paper footer .socialemedier {
-    grid-column: 2/span 4;
-    grid-row-start: 2;
-    margin-left: 17%;
-    margin-top: 10px; }
 
-header {
+#mobil_header {
   padding: 0 0 0 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -207,6 +120,15 @@ header {
     height: 100%;
     z-index: -2;
     margin-left: 4%; }
+  .film .next {
+    grid-column: 6/span 1;
+    grid-row-start: 4;
+    margin-left: 25px;
+    color: #707070; }
+  .film .prev {
+    grid-column: 1/span 1;
+    grid-row-start: 4;
+    color: #707070; }
   .film .tekst_baggrund {
     grid-column: 1/span 6;
     z-index: -1;
@@ -214,7 +136,7 @@ header {
     width: 100%;
     margin-top: 30px;
     margin-left: -5px; }
-  .film h1 {
+  .film #flaenge_overskrift {
     z-index: 2;
     grid-column: 2/span 4;
     grid-row: 5/span 1;
@@ -272,20 +194,288 @@ footer {
     margin-left: 10%;
     margin-top: 10px; }
 
-@media screen and (min-width: 375px) {
-  #mobil_paper .film2 .tekst_baggrund2 {
-    grid-column: 1/span 6;
-    grid-row-start: 1;
-    margin-top: 5%;
-    margin-left: -2%; }
+#mobil_trailer {
+  display: none; }
+  #mobil_trailer .resume2, #mobil_trailer .trailer2 {
+    width: 45%;
+    text-align: center;
+    padding-top: 12px; }
+  #mobil_trailer .resume2 {
+    border-bottom: 1px solid #707070;
+    color: #707070; }
+  #mobil_trailer .trailer2 {
+    border-top: 1px solid #707070;
+    border-left: 1px solid #707070;
+    color: #ffffff; }
+  #mobil_trailer .film2 {
+    padding: 0 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-template-rows: repeat(9, 50px); }
+    #mobil_trailer .film2 .tekst_baggrund2 {
+      grid-column: 1/span 6;
+      grid-row-start: 1;
+      margin-top: 5%;
+      margin-left: -2%; }
+    #mobil_trailer .film2 #h1_2 {
+      grid-column: 2/span 4;
+      grid-row-start: 2;
+      margin-top: 5px;
+      z-index: 2;
+      font-size: 14pt;
+      color: #31A7E0;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      font-weight: 400;
+      letter-spacing: 1.5px; }
+    #mobil_trailer .film2 iframe {
+      grid-column: 2/span 4;
+      grid-row-start: 3;
+      margin-left: -2%;
+      margin-top: -10px; }
+    #mobil_trailer .film2 .genre {
+      z-index: 2;
+      font-size: 8pt;
+      grid-row: 6/span 1;
+      grid-column: 2/span 3;
+      font-family: yantramanavmedium, sans-serif; }
+      #mobil_trailer .film2 .genre .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #mobil_trailer .film2 .spilletid {
+      z-index: 2;
+      font-size: 8pt;
+      grid-row: 6/span 1;
+      grid-column: 5/span 2;
+      margin-left: -20px;
+      font-family: yantramanavmedium, sans-serif; }
+      #mobil_trailer .film2 .spilletid .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #mobil_trailer .film2 .rating {
+      z-index: 2;
+      font-size: 8pt;
+      grid-row: 7/span 1;
+      grid-column: 2/span 4;
+      font-family: yantramanavmedium, sans-serif; }
+      #mobil_trailer .film2 .rating .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #mobil_trailer .film2 .CTA {
+      font-size: 18pt;
+      color: #31A7E0;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      grid-column: 2/span 4;
+      grid-row-start: 8;
+      z-index: 2;
+      text-align: center; }
+    #mobil_trailer .film2 .flex {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-around;
+      grid-row-start: 9;
+      grid-column: 2/span 4;
+      z-index: 2; }
+      #mobil_trailer .film2 .flex .viaplay, #mobil_trailer .film2 .flex .hbo, #mobil_trailer .film2 .flex .netflix {
+        height: 40px;
+        width: auto; }
+  #mobil_trailer footer .socialemedier {
+    grid-column: 2/span 4;
+    grid-row-start: 2;
+    margin-left: 17%;
+    margin-top: 10px; }
+
+#mobil_paper {
+  display: none; }
+  #mobil_paper .paper_valg {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    height: 45px;
+    margin-top: 10%; }
+    #mobil_paper .paper_valg .paper_resume, #mobil_paper .paper_valg .paper_trailer {
+      width: 45%;
+      text-align: center;
+      padding-top: 12px; }
+    #mobil_paper .paper_valg .paper_trailer {
+      border-bottom: 1px solid #707070;
+      color: #707070; }
+    #mobil_paper .paper_valg .paper_resume {
+      border-top: 1px solid #707070;
+      border-right: 1px solid #707070;
+      color: #ffffff; }
+  #mobil_paper .paper_film {
+    padding: 0 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-template-rows: repeat(12, 50px); }
+    #mobil_paper .paper_film .paper_tekst_baggrund {
+      grid-column: 1/span 6;
+      z-index: -1;
+      grid-row: 4/Span 8;
+      width: 100%;
+      margin-top: 30px;
+      margin-left: -5px; }
+    #mobil_paper .paper_film .film_billede {
+      grid-column: 1/span 6;
+      grid-row: 1/span 7;
+      width: 90%;
+      height: 100%;
+      z-index: -2;
+      margin-left: 4%; }
+    #mobil_paper .paper_film .paper_prev {
+      margin-left: -5px; }
+    #mobil_paper .paper_film .paper_overskrift {
+      z-index: 2;
+      grid-column: 2/span 4;
+      grid-row: 5/span 1;
+      font-size: 18pt;
+      margin-top: 10px;
+      color: #F8E932;
+      font-family: amatic_scregular, sans-serif;
+      font-weight: 600;
+      letter-spacing: 1.5px; }
+    #mobil_paper .paper_film .paper_resume_tekst {
+      z-index: 2;
+      grid-column: 2/span 4;
+      grid-row: 6/span 7;
+      font-size: 10pt; }
+    #mobil_paper .paper_film .paper_genre {
+      font-size: 8pt;
+      grid-row: 11/span 1;
+      grid-column: 2/span 3;
+      margin-top: 15px;
+      font-family: yantramanavmedium, sans-serif; }
+      #mobil_paper .paper_film .paper_genre .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #mobil_paper .paper_film .paper_spilletid {
+      font-size: 8pt;
+      grid-row: 11/span 1;
+      grid-column: 5/span 2;
+      margin-top: 15px;
+      margin-left: -20px;
+      font-family: yantramanavmedium, sans-serif; }
+      #mobil_paper .paper_film .paper_spilletid .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #mobil_paper .paper_film .paper_rating {
+      font-size: 8pt;
+      grid-row: 12/span 1;
+      grid-column: 2/span 4;
+      margin-top: 30px;
+      font-family: yantramanavmedium, sans-serif; }
+      #mobil_paper .paper_film .paper_rating .light {
+        font-family: Yantramanavlight, sans-serif; }
   #mobil_paper footer {
-    margin-top: 0; }
+    grid-template-rows: repeat(3, 60px); }
     #mobil_paper footer .socialemedier {
       grid-column: 2/span 4;
       grid-row-start: 2;
-      margin-left: 10%;
-      margin-top: 0; }
+      margin-left: 17%;
+      margin-top: 20px; }
 
+#mobil_paper_trailer {
+  display: none; }
+  #mobil_paper_trailer .paper_valg2 {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    height: 45px;
+    margin-top: 10%; }
+    #mobil_paper_trailer .paper_valg2 .paper_resume2, #mobil_paper_trailer .paper_valg2 .paper_trailer2 {
+      width: 45%;
+      text-align: center;
+      padding-top: 12px; }
+    #mobil_paper_trailer .paper_valg2 .paper_resume2 {
+      border-bottom: 1px solid #707070;
+      color: #707070; }
+    #mobil_paper_trailer .paper_valg2 .paper_trailer2 {
+      border-top: 1px solid #707070;
+      border-left: 1px solid #707070;
+      color: #ffffff; }
+  #mobil_paper_trailer .paper_film2 {
+    padding: 0 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-template-rows: repeat(9, 50px); }
+    #mobil_paper_trailer .paper_film2 .paper_tekst_baggrund2 {
+      grid-column: 1/span 6;
+      grid-row-start: 1;
+      margin-top: 5%;
+      margin-left: -2%; }
+    #mobil_paper_trailer .paper_film2 .paper_overskrift {
+      grid-column: 2/span 4;
+      grid-row-start: 2;
+      font-size: 18pt;
+      color: #F8E932;
+      font-family: amatic_scregular, sans-serif;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      z-index: 5; }
+    #mobil_paper_trailer .paper_film2 iframe {
+      grid-column: 2/span 4;
+      grid-row-start: 3;
+      margin-top: -5px; }
+    #mobil_paper_trailer .paper_film2 .paper_genre {
+      z-index: 2;
+      font-size: 8pt;
+      margin-top: 15px;
+      grid-row: 6/span 1;
+      grid-column: 2/span 3;
+      font-family: yantramanavmedium, sans-serif; }
+      #mobil_paper_trailer .paper_film2 .paper_genre .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #mobil_paper_trailer .paper_film2 .paper_spilletid {
+      z-index: 2;
+      font-size: 8pt;
+      margin-top: 15px;
+      grid-row: 6/span 1;
+      grid-column: 5/span 2;
+      margin-left: -20px;
+      font-family: yantramanavmedium, sans-serif; }
+      #mobil_paper_trailer .paper_film2 .paper_spilletid .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #mobil_paper_trailer .paper_film2 .paper_rating {
+      z-index: 2;
+      font-size: 8pt;
+      margin-top: 30px;
+      grid-row: 7/span 1;
+      grid-column: 2/span 4;
+      font-family: yantramanavmedium, sans-serif; }
+      #mobil_paper_trailer .paper_film2 .paper_rating .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #mobil_paper_trailer .paper_film2 .paper_CTA {
+      font-size: 24pt;
+      color: #F8E932;
+      font-family: amatic_scregular, sans-serif;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      margin-top: 20px;
+      grid-column: 2/span 4;
+      grid-row-start: 8;
+      z-index: 2;
+      text-align: center; }
+    #mobil_paper_trailer .paper_film2 .flex {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-around;
+      grid-row-start: 9;
+      grid-column: 2/span 4;
+      margin-top: 25px;
+      z-index: 2; }
+      #mobil_paper_trailer .paper_film2 .flex .viaplay, #mobil_paper_trailer .paper_film2 .flex .hbo, #mobil_paper_trailer .paper_film2 .flex .netflix {
+        height: 30px;
+        width: auto; }
+  #mobil_paper_trailer footer {
+    grid-template-rows: repeat(3, 60px);
+    margin-top: -40px; }
+    #mobil_paper_trailer footer .socialemedier {
+      grid-column: 2/span 4;
+      grid-row-start: 2;
+      margin-left: 17%;
+      margin-top: 20px; }
+
+@media screen and (min-width: 375px) {
   .film .film_billede {
     width: 80%;
     margin-left: 10%; }
@@ -304,16 +494,103 @@ footer {
       grid-column: 2/span 4;
       grid-row-start: 2;
       margin-left: 20%;
-      margin-top: 0; } }
-@media screen and (min-width: 414px) {
-  #mobil_paper .film2 .tekst_baggrund2 {
+      margin-top: 0; }
+
+  #mobil_trailer .film2 .tekst_baggrund2 {
+    grid-column: 1/span 6;
+    grid-row-start: 1;
+    margin-top: 5%;
+    margin-left: -2%; }
+  #mobil_trailer footer {
     margin-top: 0; }
+    #mobil_trailer footer .socialemedier {
+      grid-column: 2/span 4;
+      grid-row-start: 2;
+      margin-left: 10%;
+      margin-top: 0; }
+
+  #mobil_paper .paper_film {
+    grid-template-rows: repeat(11, 50px); }
+    #mobil_paper .paper_film .paper_overskrift {
+      margin-top: 10%; }
+    #mobil_paper .paper_film .paper_resume_tekst {
+      margin-top: 5%; }
+    #mobil_paper .paper_film .paper_next {
+      margin-left: 33px; }
+    #mobil_paper .paper_film .paper_genre {
+      grid-row: 10/span 1;
+      margin-top: 30px; }
+    #mobil_paper .paper_film .paper_spilletid {
+      grid-row: 10/span 1;
+      margin-top: 30px; }
+    #mobil_paper .paper_film .paper_rating {
+      grid-row: 11/span 1;
+      margin-top: 40px; }
   #mobil_paper footer {
     grid-template-rows: repeat(3, 50px);
+    margin-top: 30px; }
+
+  #mobil_paper_trailer .paper_film2 {
+    grid-template-rows: repeat(9, 50px); }
+    #mobil_paper_trailer .paper_film2 .paper_tekst_baggrund2 {
+      margin-top: -5px;
+      margin-left: 0; }
+  #mobil_paper_trailer footer {
+    grid-template-rows: repeat(2, 50px);
+    margin-top: 20px; }
+    #mobil_paper_trailer footer .socialemedier {
+      grid-column: 2/span 4;
+      grid-row-start: 1;
+      margin-left: 17%;
+      margin-top: 15px; } }
+@media screen and (min-width: 414px) {
+  #mobil_trailer .film2 .tekst_baggrund2 {
+    margin-top: 0; }
+  #mobil_trailer footer {
+    grid-template-rows: repeat(3, 50px);
     margin-top: 15px; }
-    #mobil_paper footer .socialemedier {
+    #mobil_trailer footer .socialemedier {
       margin-left: 18%;
-      margin-top: -5%; } }
+      margin-top: -5%; }
+
+  #mobil_paper .paper_film {
+    grid-template-rows: repeat(12, 50px); }
+    #mobil_paper .paper_film .paper_overskrift {
+      margin-top: 3%;
+      grid-row: 6/span 1;
+      font-size: 20pt; }
+    #mobil_paper .paper_film .paper_tekst_baggrund {
+      grid-row: 4/span 5;
+      margin-top: 10%; }
+    #mobil_paper .paper_film .paper_resume_tekst {
+      margin-top: 3%;
+      grid-row: 7/span 7; }
+    #mobil_paper .paper_film .paper_next {
+      margin-left: 33px; }
+    #mobil_paper .paper_film .paper_genre {
+      grid-row: 11/span 1;
+      margin-top: 30px; }
+    #mobil_paper .paper_film .paper_spilletid {
+      grid-row: 11/span 1;
+      margin-top: 30px; }
+    #mobil_paper .paper_film .paper_rating {
+      grid-row: 12/span 1;
+      margin-top: 50px; }
+  #mobil_paper footer {
+    grid-template-rows: repeat(3, 58px);
+    margin-top: 30px; }
+
+  #mobil_paper_trailer .paper_film2 {
+    grid-template-rows: repeat(9, 50px); }
+    #mobil_paper_trailer .paper_film2 .paper_tekst_baggrund2 {
+      margin-top: -5px;
+      margin-left: 0; }
+  #mobil_paper_trailer footer {
+    grid-template-rows: repeat(3, 45px);
+    margin-top: 20px; }
+    #mobil_paper_trailer footer .socialemedier {
+      grid-row-start: 2;
+      margin-top: 0; } }
 @media screen and (min-height: 812px) {
   .valg {
     margin-top: 13%; }
@@ -325,7 +602,7 @@ footer {
     grid-row: 5/Span 8;
     margin-top: 15px;
     margin-left: -5px; }
-  .film h1 {
+  .film #flaenge_overskrift {
     grid-row: 6/span 1; }
   .film .resume_tekst {
     grid-row: 7/span 4;
@@ -346,31 +623,481 @@ footer {
       margin-left: 18%;
       margin-top: -5%; }
 
-  #mobil_paper .film2 {
+  #mobil_trailer .film2 {
     grid-template-rows: repeat(10, 50px); }
-    #mobil_paper .film2 .tekst_baggrund2 {
+    #mobil_trailer .film2 .tekst_baggrund2 {
       margin-top: 10%; }
-    #mobil_paper .film2 #h1_2 {
+    #mobil_trailer .film2 #h1_2 {
       grid-row-start: 3; }
-    #mobil_paper .film2 iframe {
+    #mobil_trailer .film2 iframe {
       grid-row-start: 4; }
-    #mobil_paper .film2 .genre {
+    #mobil_trailer .film2 .genre {
       grid-row: 7/span 1; }
-    #mobil_paper .film2 .spilletid {
+    #mobil_trailer .film2 .spilletid {
       grid-row: 7/span 1; }
-    #mobil_paper .film2 .rating {
+    #mobil_trailer .film2 .rating {
       grid-row: 8/span 1; }
-    #mobil_paper .film2 .CTA {
+    #mobil_trailer .film2 .CTA {
       grid-row-start: 9; }
-    #mobil_paper .film2 #flex {
+    #mobil_trailer .film2 .flex {
       grid-row-start: 10; }
-      #mobil_paper .film2 #flex #viaplay, #mobil_paper .film2 #flex #hbo, #mobil_paper .film2 #flex #netflix {
-        height: 40px;
+      #mobil_trailer .film2 .flex .viaplay, #mobil_trailer .film2 .flex .hbo, #mobil_trailer .film2 .flex .netflix {
+        height: 30px;
         width: auto; }
-  #mobil_paper footer {
+  #mobil_trailer footer {
     margin-top: 12%; }
-    #mobil_paper footer .socialemedier {
+    #mobil_trailer footer .socialemedier {
       margin-left: 18%;
-      margin-top: -5%; } }
+      margin-top: -5%; }
+
+  #mobil_paper .paper_film {
+    grid-template-rows: repeat(12, 50px); }
+    #mobil_paper .paper_film .paper_overskrift {
+      margin-top: 3%;
+      grid-row: 6/span 1;
+      font-size: 20pt; }
+    #mobil_paper .paper_film .paper_tekst_baggrund {
+      grid-row: 4/span 5;
+      margin-top: 10%; }
+    #mobil_paper .paper_film .paper_resume_tekst {
+      margin-top: 3%;
+      grid-row: 7/span 7; }
+    #mobil_paper .paper_film .paper_next {
+      margin-left: 33px; }
+    #mobil_paper .paper_film .paper_genre {
+      grid-row: 11/span 1;
+      margin-top: 30px; }
+    #mobil_paper .paper_film .paper_spilletid {
+      grid-row: 11/span 1;
+      margin-top: 30px; }
+    #mobil_paper .paper_film .paper_rating {
+      grid-row: 12/span 1;
+      margin-top: 50px; }
+  #mobil_paper footer {
+    grid-template-rows: repeat(3, 40px);
+    margin-top: 30px; }
+
+  #mobil_paper_trailer .paper_film2 {
+    grid-template-rows: repeat(10, 50px); }
+    #mobil_paper_trailer .paper_film2 .paper_tekst_baggrund2 {
+      grid-row-start: 2;
+      margin-top: -30px; }
+    #mobil_paper_trailer .paper_film2 .paper_overskrift {
+      grid-column: 2/span 4;
+      grid-row-start: 2;
+      font-size: 18pt;
+      color: #F8E932;
+      font-family: amatic_scregular, sans-serif;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      margin-top: 15px;
+      z-index: 5; }
+    #mobil_paper_trailer .paper_film2 iframe {
+      margin-top: 5px; }
+    #mobil_paper_trailer .paper_film2 .paper_genre {
+      margin-top: 20px; }
+    #mobil_paper_trailer .paper_film2 .paper_spilletid {
+      margin-top: 20px; }
+    #mobil_paper_trailer .paper_film2 .paper_rating {
+      margin-top: 40px; }
+    #mobil_paper_trailer .paper_film2 .paper_CTA {
+      margin-top: -10px;
+      grid-row-start: 9; }
+    #mobil_paper_trailer .paper_film2 .flex {
+      margin-top: 50px;
+      z-index: 2; }
+      #mobil_paper_trailer .paper_film2 .flex .viaplay, #mobil_paper_trailer .paper_film2 .flex .hbo, #mobil_paper_trailer .paper_film2 .flex .netflix {
+        height: 30px; }
+  #mobil_paper_trailer footer {
+    grid-template-rows: repeat(3, 55px);
+    margin-top: 25px; }
+    #mobil_paper_trailer footer .socialemedier {
+      grid-row-start: 1;
+      margin-top: 40px; } }
+@media screen and (min-width: 768px) {
+  #mobil_flaenge, #mobil_header {
+    display: none; }
+
+  #web_flaenge_resume {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    grid-template-rows: repeat(21, 50px); }
+    #web_flaenge_resume .logotype {
+      grid-column: 1/span 4;
+      grid-row-start: 1;
+      margin: 30px 0 0 30px; }
+    #web_flaenge_resume .nav_film_skrift {
+      color: #31A7E0;
+      font-family: eraserregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 2;
+      grid-row-start: 5;
+      margin-left: 30px; }
+    #web_flaenge_resume .kommende_film {
+      color: #ffffff;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 7;
+      margin-left: 30px; }
+    #web_flaenge_resume .om_john_green {
+      color: #ffffff;
+      font-family: amatic_scregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 9;
+      margin-left: 30px; }
+    #web_flaenge_resume .blog {
+      color: #ffffff;
+      font-family: trashhandregular, sans-serif;
+      font-size: 20pt;
+      grid-column: 1/span 2;
+      grid-row-start: 11;
+      margin-left: 30px; }
+    #web_flaenge_resume .film_overskrift {
+      color: #ffffff;
+      font-family: eraserregular, sans-serif;
+      font-size: 24pt;
+      grid-column: 5/span 2;
+      grid-row-start: 4;
+      margin-top: -20%; }
+    #web_flaenge_resume .web_billede {
+      grid-column: 5/span 7;
+      grid-row-start: 5; }
+    #web_flaenge_resume .valg_web {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: center;
+      height: 45px;
+      margin-top: 10%;
+      grid-column: 5/span 7;
+      grid-row-start: 8; }
+      #web_flaenge_resume .valg_web #web_resume, #web_flaenge_resume .valg_web #web_trailer {
+        width: 50%;
+        text-align: center;
+        padding-top: 12px; }
+      #web_flaenge_resume .valg_web #web_trailer {
+        border-bottom: 1px solid #707070;
+        color: #707070; }
+      #web_flaenge_resume .valg_web #web_resume {
+        border-top: 1px solid #707070;
+        border-right: 1px solid #707070;
+        color: #ffffff; }
+    #web_flaenge_resume .web_tekstbaggrund {
+      grid-row-start: 10;
+      grid-column: 4/span 9;
+      width: 100%; }
+    #web_flaenge_resume #flaenge_overskrift_web {
+      color: #31A7E0;
+      font-family: eraserregular, sans-serif;
+      font-size: 16pt;
+      margin-top: 10px;
+      grid-column: 6/span 5;
+      grid-row-start: 11;
+      letter-spacing: 1.5px; }
+    #web_flaenge_resume .resume_tekst {
+      font-size: 14pt;
+      grid-column: 6/span 5;
+      grid-row-start: 12; }
+    #web_flaenge_resume .genre {
+      grid-column: 6/span 2;
+      grid-row-start: 17;
+      font-size: 10pt;
+      margin-top: 15px;
+      font-family: yantramanavmedium, sans-serif; }
+      #web_flaenge_resume .genre .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #web_flaenge_resume .spilletid {
+      font-size: 10pt;
+      grid-row-start: 17;
+      grid-column: 10/span 2;
+      margin-top: 15px;
+      font-family: yantramanavmedium, sans-serif; }
+      #web_flaenge_resume .spilletid .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #web_flaenge_resume .rating {
+      font-size: 10pt;
+      grid-row-start: 19;
+      grid-column: 6/span 3;
+      font-family: yantramanavmedium, sans-serif; }
+      #web_flaenge_resume .rating .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #web_flaenge_resume .web_prev {
+      color: #707070;
+      grid-column: 4/span 1;
+      grid-row-start: 6;
+      margin-left: 30px; }
+    #web_flaenge_resume .web_next {
+      color: #707070;
+      grid-column: 12/span 1;
+      grid-row-start: 6;
+      margin-left: 10px; }
+    #web_flaenge_resume footer {
+      grid-row-start: 21;
+      grid-column: 4/span 9;
+      margin-bottom: -20px; }
+
+  #web_paper_resume {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    grid-template-rows: repeat(21, 50px);
+    display: none; }
+    #web_paper_resume .logotype {
+      grid-column: 1/span 4;
+      grid-row-start: 1;
+      margin: 30px 0 0 30px; }
+    #web_paper_resume .nav_film_skrift {
+      color: #31A7E0;
+      font-family: eraserregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 2;
+      grid-row-start: 5;
+      margin-left: 30px; }
+    #web_paper_resume .kommende_film {
+      color: #ffffff;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 7;
+      margin-left: 30px; }
+    #web_paper_resume .om_john_green {
+      color: #ffffff;
+      font-family: amatic_scregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 9;
+      margin-left: 30px; }
+    #web_paper_resume .blog {
+      color: #ffffff;
+      font-family: trashhandregular, sans-serif;
+      font-size: 20pt;
+      grid-column: 1/span 2;
+      grid-row-start: 11;
+      margin-left: 30px; }
+    #web_paper_resume .film_overskrift {
+      color: #ffffff;
+      font-family: eraserregular, sans-serif;
+      font-size: 24pt;
+      grid-column: 5/span 2;
+      grid-row-start: 4;
+      margin-top: -20%; }
+    #web_paper_resume .web_billede {
+      grid-column: 5/span 7;
+      grid-row-start: 5; }
+    #web_paper_resume .valg_web {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: center;
+      height: 45px;
+      margin-top: 10%;
+      grid-column: 5/span 7;
+      grid-row-start: 8; }
+      #web_paper_resume .valg_web #web_resume, #web_paper_resume .valg_web #web_trailer {
+        width: 50%;
+        text-align: center;
+        padding-top: 12px; }
+      #web_paper_resume .valg_web #web_trailer {
+        border-bottom: 1px solid #707070;
+        color: #707070; }
+      #web_paper_resume .valg_web #web_resume {
+        border-top: 1px solid #707070;
+        border-right: 1px solid #707070;
+        color: #ffffff; }
+    #web_paper_resume .web_tekstbaggrund {
+      grid-row-start: 10;
+      grid-column: 4/span 9;
+      width: 100%; }
+    #web_paper_resume #paper_overskrift_web {
+      color: #F8E932;
+      font-family: amatic_scregular, sans-serif;
+      font-size: 20pt;
+      grid-column: 6/span 5;
+      grid-row-start: 11;
+      letter-spacing: 1.5px; }
+    #web_paper_resume .resume_tekst {
+      font-size: 14pt;
+      grid-column: 6/span 5;
+      grid-row-start: 12; }
+    #web_paper_resume .paper_genre {
+      grid-column: 6/span 2;
+      grid-row-start: 17;
+      font-size: 10pt;
+      margin-top: 15px;
+      font-family: yantramanavmedium, sans-serif; }
+      #web_paper_resume .paper_genre .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #web_paper_resume .paper_spilletid {
+      font-size: 10pt;
+      grid-row-start: 17;
+      grid-column: 10/span 2;
+      margin-top: 15px;
+      font-family: yantramanavmedium, sans-serif; }
+      #web_paper_resume .paper_spilletid .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #web_paper_resume .paper_rating {
+      font-size: 10pt;
+      grid-row-start: 19;
+      grid-column: 6/span 3;
+      font-family: yantramanavmedium, sans-serif; }
+      #web_paper_resume .paper_rating .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #web_paper_resume .web_prev_paper {
+      color: #707070;
+      grid-column: 4/span 1;
+      grid-row-start: 6;
+      margin-left: 30px; }
+    #web_paper_resume .web_next_paper {
+      color: #707070;
+      grid-column: 12/span 1;
+      grid-row-start: 6;
+      margin-left: 10px; }
+    #web_paper_resume footer {
+      grid-row-start: 21;
+      grid-column: 4/span 9;
+      margin-bottom: -20px; }
+
+  #web_flaenge_trailer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    grid-template-rows: repeat(20, 50px); }
+    #web_flaenge_trailer .logotype {
+      grid-column: 1/span 4;
+      grid-row-start: 1;
+      margin: 30px 0 0 30px; }
+    #web_flaenge_trailer .nav_film_skrift {
+      color: #31A7E0;
+      font-family: eraserregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 2;
+      grid-row-start: 5;
+      margin-left: 30px; }
+    #web_flaenge_trailer .kommende_film {
+      color: #ffffff;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 7;
+      margin-left: 30px; }
+    #web_flaenge_trailer .om_john_green {
+      color: #ffffff;
+      font-family: amatic_scregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 9;
+      margin-left: 30px; }
+    #web_flaenge_trailer .blog {
+      color: #ffffff;
+      font-family: trashhandregular, sans-serif;
+      font-size: 20pt;
+      grid-column: 1/span 2;
+      grid-row-start: 11;
+      margin-left: 30px; }
+    #web_flaenge_trailer .film_overskrift {
+      color: #ffffff;
+      font-family: eraserregular, sans-serif;
+      font-size: 24pt;
+      grid-column: 5/span 2;
+      grid-row-start: 4;
+      margin-top: -20%; }
+    #web_flaenge_trailer .web_billede {
+      grid-column: 5/span 7;
+      grid-row-start: 5; }
+    #web_flaenge_trailer .valg_web {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: center;
+      height: 45px;
+      margin-top: 10%;
+      grid-column: 5/span 7;
+      grid-row-start: 8; }
+      #web_flaenge_trailer .valg_web #web_resume_flaenge, #web_flaenge_trailer .valg_web #web_trailer_flaenge {
+        width: 50%;
+        text-align: center;
+        padding-top: 12px; }
+      #web_flaenge_trailer .valg_web #web_trailer_flaenge {
+        border-top: 1px solid #707070;
+        border-left: 1px solid #707070;
+        color: #ffffff; }
+      #web_flaenge_trailer .valg_web #web_resume_flaenge {
+        border-bottom: 1px solid #707070;
+        color: #707070; }
+    #web_flaenge_trailer .web_tekstbaggrund {
+      grid-column: 4/span 9;
+      grid-row-start: 10;
+      width: 100%; }
+    #web_flaenge_trailer iframe {
+      grid-column: 6/span 5;
+      grid-row-start: 13;
+      margin-top: -15px; }
+    #web_flaenge_trailer #flaenge_overskrift_web {
+      color: #F8E932;
+      font-family: amatic_scregular, sans-serif;
+      font-size: 26pt;
+      grid-column: 6/span 5;
+      grid-row-start: 11;
+      margin-top: 15px;
+      letter-spacing: 1.5px; }
+    #web_flaenge_trailer .flaenge_genre {
+      grid-column: 6/span 2;
+      grid-row-start: 16;
+      font-size: 10pt;
+      margin-top: 15px;
+      font-family: yantramanavmedium, sans-serif; }
+      #web_flaenge_trailer .flaenge_genre .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #web_flaenge_trailer .flaenge_spilletid {
+      font-size: 10pt;
+      grid-row-start: 16;
+      grid-column: 10/span 2;
+      margin-top: 15px;
+      font-family: yantramanavmedium, sans-serif; }
+      #web_flaenge_trailer .flaenge_spilletid .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #web_flaenge_trailer .flaenge_rating {
+      font-size: 10pt;
+      grid-row-start: 18;
+      grid-column: 6/span 3;
+      font-family: yantramanavmedium, sans-serif; }
+      #web_flaenge_trailer .flaenge_rating .light {
+        font-family: Yantramanavlight, sans-serif; }
+    #web_flaenge_trailer footer {
+      grid-row-start: 20;
+      grid-column: 4/span 9;
+      margin-bottom: -40px; } }
+@media screen and (min-width: 1024px) {
+  #web_flaenge_resume {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    grid-template-rows: repeat(21, 65px); }
+    #web_flaenge_resume #flaenge_overskrift_web {
+      font-size: 20pt; }
+    #web_flaenge_resume #resume_tekst {
+      font-size: 16pt; }
+    #web_flaenge_resume .genre, #web_flaenge_resume .spilletid {
+      grid-row-start: 15;
+      font-size: 14pt; }
+    #web_flaenge_resume .rating {
+      grid-row-start: 17;
+      font-size: 14pt; }
+
+  #web_paper_resume {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    grid-template-rows: repeat(21, 65px); }
+    #web_paper_resume #paper_overskrift_web {
+      font-size: 24pt; }
+    #web_paper_resume #resume_tekst {
+      font-size: 16pt; }
+    #web_paper_resume .paper_genre, #web_paper_resume .paper_spilletid {
+      grid-row-start: 15;
+      font-size: 14pt; }
+    #web_paper_resume .paper_rating {
+      grid-row-start: 17;
+      font-size: 14pt; } }
 
 /*# sourceMappingURL=Film.css.map */
