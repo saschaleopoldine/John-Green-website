@@ -61,6 +61,13 @@
     <div class="Menubar"><img src="images/Menubar.png" width="50%" height="auto"></div>
 
 </header>
+<section class="sidemenu">
+    <div class="Film"><h1>Film</h1></div>
+    <div class="KommendeFilm"><h1>Kommende Film</h1></div>
+    <div class="OmJohnGreen"><h1>Om John Green</h1></div>
+    <div class="BlogLink"><h1>Blog</h1></div>
+
+</section>
 
 <section class="en">
     <div class="tidslinje"></div>
@@ -73,7 +80,7 @@
     <div class="blogindlæg1">Hvis du oplever stress i hverdagen, er du er langt fra den eneste.
         Mange unge føler sig ofte stressede, og det er der flere grunde til.
     </div>
-    <div class="læsmere"><a href="XX"> Læs mere</a></div>
+    <div class="readmere">Læs mere</div>
 </section>
 
 <section class="to">
@@ -138,7 +145,7 @@ eller få mere viden og hør om andre, der har oplevet stress i hverdagen:
     <div class="artikelbillede2"><img src="images/Artikel2.jpg"></div>
     <div class="blogindlæg2">Mange unge føler sig ind i mellem anderledes eller forkerte.
         Men du er lige som du skal være..</div>
-    <div class="læsmere2"><a href="XX">Læs mere</a></div>
+    <div class="læsmere2"><a href="">Læs mere</a></div>
 
 </section>
 
@@ -147,10 +154,6 @@ eller få mere viden og hør om andre, der har oplevet stress i hverdagen:
         <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
     </div>
 </footer>
-
-
-
-
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -202,14 +205,15 @@ eller få mere viden og hør om andre, der har oplevet stress i hverdagen:
             console.log(error);
         }
     });
-</script>
-
-
-<script>
     $(document).ready(function (e) {
-        // Din kode her
-    });
-</script>
+        //Section 2//
 
+        $(".readmere").click(function(e){
+            $(".to").slideToggle(0);
+        });
+    });
+
+
+</script>
 </body>
 </html>

@@ -72,6 +72,9 @@ header {
   background-image: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 0.2));
   grid-template-rows: repeat(2, 1fr); }
 
+.sidemenu {
+  display: none; }
+
 .Menubar {
   grid-column: 6/span 1;
   grid-row-start: 1;
@@ -96,7 +99,7 @@ header {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 0;
-  grid-template-rows: repeat(9, 60px); }
+  grid-template-rows: repeat(10, 60px); }
 
 .Blog {
   font-size: 20pt;
@@ -110,9 +113,10 @@ header {
 .blogbaggrund1 {
   background-image: url("../images/Blog_chalk.png");
   grid-column: 1/span 6;
-  grid-row: 2/span 9;
+  grid-row: 2/span 13;
   background-repeat: no-repeat;
-  background-size: 120%;
+  background-size: 110%;
+  margin-left: -10%;
   z-index: 20; }
 
 .blogoverskrift1 {
@@ -155,22 +159,22 @@ header {
 
 .blogindlæg1 {
   grid-column: 2/span 4;
-  grid-row: 8/span 3;
+  grid-row: 7/span 3;
   line-height: 15pt;
+  margin-top: 12%;
+  margin-left: 2%;
   font-size: 14pt;
   text-align: left;
   z-index: 20;
   font-family: Yantramanavlight; }
 
-.læsmere {
+.readmere {
   grid-column: 4/span 2;
   grid-row: 9/span 1;
-  margin-top: 13%;
-  z-index: 20; }
-  .læsmere a {
-    text-decoration: none;
-    color: #EC621D;
-    font-size: 14pt; }
+  margin-top: -9%;
+  z-index: 20;
+  color: #EC621D;
+  font-size: 13pt; }
 
 .to {
   padding: 0 0 0 0;
@@ -370,8 +374,14 @@ footer {
 @media screen and (min-width: 600px) {
   .socialemedier {
     grid-column: 3/span 2;
-    grid-row-start: 2; } }
+    grid-row-start: 2; }
+
+  .sidemenu {
+    display: none; } }
 @media screen and (min-width: 768px) {
+  .sidemenu {
+    display: none; }
+
   .en {
     padding: 0 0 0 0;
     display: grid;
@@ -396,35 +406,40 @@ footer {
 
   .blogoverskrift1 {
     font-size: 24pt;
-    grid-column: 1/span 5;
-    grid-row-start: 4; }
+    grid-column: 2/span 5;
+    grid-row-start: 4;
+    margin-left: 0; }
 
   .blogdato1 {
     grid-column: 2/span 4;
     grid-row-start: 4;
-    font-size: 18pt; }
+    font-size: 18pt;
+    margin-left: 0; }
 
   .blogforfatter1 {
     grid-column: 2/span 4;
     grid-row-start: 5;
-    font-size: 18pt; }
+    font-size: 18pt;
+    margin-left: 0; }
 
   .artikelbillede1 {
     grid-column: 2/span 4;
     grid-row-start: 8;
     margin-top: 5%; }
 
-  .læsmere {
+  .readmere {
     grid-column: 2/span 4;
     grid-row-start: 16;
-    margin-top: -1.5%;
+    margin-top: 2%;
     font-size: 13pt; }
 
   .blogindlæg1 {
     grid-column: 2/span 4;
-    grid-row-start: 15; }
+    grid-row-start: 14;
+    margin-left: 0; }
 
   .to {
+    display: none;
     padding: 0 0 0 0;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -585,5 +600,138 @@ footer {
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0;
     grid-template-rows: repeat(3, 47px); } }
+@media screen and (min-width: 992px) {
+  .sidemenu {
+    display: none; } }
+@media screen and (min-width: 1023px) {
+  .sidemenu {
+    display: none; }
+
+  .en {
+    grid-template-rows: repeat(19, 47px); }
+
+  .blogindlæg1 {
+    grid-column: 2/span 4;
+    grid-row: 16/span 4; }
+
+  .readmere {
+    grid-column: 4/span 2;
+    grid-row: 18/span 1;
+    margin-left: -10%; }
+
+  .blogdato2 {
+    grid-column: 2/span 4;
+    grid-row: 3/span 4;
+    margin-top: 0; }
+
+  .blogforfatter2 {
+    grid-column: 2/span 4;
+    grid-row: 3/span 4;
+    margin-top: 3%; }
+
+  .blogindlæg2 {
+    grid-column: 2/span 4;
+    grid-row: 14/span 2; }
+
+  .tidslinje {
+    height: 285vh; }
+
+  .læsmere2 {
+    grid-column: 2/span 2;
+    grid-row: 15/span 1;
+    margin-left: 15%;
+    margin-top: -4%; } }
+@media screen and (min-width: 1200px) {
+  .sidemenu {
+    display: inline; }
+    .sidemenu h1 {
+      color: white; }
+
+  .Menubar {
+    display: none; }
+
+  .en {
+    padding: 0 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 0;
+    grid-template-rows: repeat(17, 47px); }
+
+  .blogbaggrund1 {
+    grid-column: 3/span 9;
+    grid-row: 2/span 20; }
+
+  .blogoverskrift1 {
+    grid-column: 5/span 6;
+    grid-row: 4/span 4; }
+
+  .artikelbillede1 {
+    grid-column: 3/span 5;
+    grid-row: 7/span 5; }
+
+  .blogdato1 {
+    grid-column: 4/span 5;
+    grid-row: 6/span 2;
+    margin-top: 6%;
+    margin-left: 5%; }
+
+  .blogforfatter1 {
+    grid-column: 4/span 5;
+    grid-row: 6/span 2;
+    margin-top: 11%;
+    margin-left: 5%; }
+
+  .blogindlæg1 {
+    grid-column: 4/span 5;
+    grid-row: 14/span 2;
+    margin-top: 8%;
+    margin-left: 4.5%; }
+
+  .readmere {
+    grid-column: 4/span 5;
+    grid-row: 15/span 2;
+    margin-top: 6.5%;
+    margin-left: 10%; } }
+.to {
+  padding: 0 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 0;
+  grid-template-rows: repeat(40, 47px); }
+
+.blogbaggrund2 {
+  grid-column: 3/span 9;
+  grid-row: 2/span 20;
+  background-size: 110%; }
+
+.heleindlæg1 {
+  grid-column: 4/span 5;
+  grid-row: 1/span 5;
+  margin-left: 5%; }
+
+.debatoverskrift {
+  grid-column: 4/span 5;
+  grid-row: 23/span 2; }
+
+.debatemne {
+  grid-column: 4/span 5;
+  grid-row: 24/span 2;
+  margin-top: 15%; }
+
+.debatafsender {
+  grid-column: 4/span 5;
+  grid-row: 27/span 2; }
+
+.debatindlæg {
+  grid-column: 4/span 5;
+  grid-row: 29/span 4;
+  margin-left: 0; }
+
+.tre {
+  padding: 0 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 0;
+  grid-template-rows: repeat(20, 47px); }
 
 /*# sourceMappingURL=Blog.css.map */
