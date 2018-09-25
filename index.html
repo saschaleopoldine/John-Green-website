@@ -92,6 +92,19 @@
             console.log(error);
         }
     });
+    $(document).ready(function (e) {
+        if($("body").width >= 1200){
+            document.location = "side.html";
+        }
+
+        $(window).resize(function(){
+            if($("body").width >= 1200){
+                document.location = "Film.html";
+            }
+        });
+    });
+
+
 
 
 
