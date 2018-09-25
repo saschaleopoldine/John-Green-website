@@ -304,7 +304,7 @@ header {
   text-align: left;
   margin-left: 30px; }
 .sidemenu .nav_film_skrift {
-  color: #31a7e0;
+  color: white;
   font-family: eraserregular, sans-serif;
   font-size: 18pt;
   grid-column: 1/span 2;
@@ -336,7 +336,7 @@ header {
   grid-column: 1/span 3;
   grid-row-start: 10; }
 .sidemenu .blog {
-  color: white;
+  color: #31a7e0;
   font-family: trashhandregular, sans-serif;
   font-size: 20pt;
   grid-column: 1/span 2;

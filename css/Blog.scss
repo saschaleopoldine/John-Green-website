@@ -364,7 +364,7 @@ header{
     margin-left: 30px;
   }
   .nav_film_skrift{
-    color: $blue;
+    color: white;
     font-family: eraserregular, sans-serif;
     font-size: 18pt;
     grid-column: 1/span 2;
@@ -404,7 +404,7 @@ header{
     grid-row-start: 10;
   }
   .blog{
-    color: white;
+    color: $blue;
     font-family: trashhandregular, sans-serif;
     font-size: 20pt;
     grid-column: 1/span 2;
