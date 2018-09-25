@@ -45,6 +45,7 @@ $baggrund: #3a3a3a;
 $lightgrey: #707070;
 $orange: #EC621D;
 $green: #7EC07A;
+$blue: #31a7e0;
 
 @font-face {
   font-family: 'ordinary_guy_demoregular';
@@ -350,6 +351,57 @@ header{
 .tre{
   @include gridmobil;
   grid-template-rows: repeat(9, 46px);
+}
+
+.sidemenu{
+  p{
+    text-align: left;
+    margin-left: 30px;
+  }
+  .nav_film_skrift{
+    color: $blue;
+    font-family: eraserregular, sans-serif;
+    font-size: 18pt;
+    grid-column: 1/span 2;
+    grid-row-start: 5;
+  }
+  .en_flaenge_i_himlen, .paper_town{
+    color: white;
+  }
+  .light_valg{
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .en_flaenge_i_himlen{
+    grid-row-start: 6;
+    grid-column: 2/span 3;
+  }
+  .paper_town{
+    grid-row-start: 7;
+    grid-column: 2/span 3;
+    margin-top: -10px;
+  }
+  .kommende_film{
+    color: white;
+    font-family: ordinary_guy_demoregular, sans-serif;
+    font-size: 18pt;
+    grid-column: 1/span 3;
+    grid-row-start: 8;
+  }
+  .om_john_green {
+    color: white;
+    font-family: amatic_scregular, sans-serif;
+    font-size: 18pt;
+    grid-column: 1/span 3;
+    grid-row-start: 10;
+  }
+  .blog{
+    color: white;
+    font-family: trashhandregular, sans-serif;
+    font-size: 20pt;
+    grid-column: 1/span 2;
+    grid-row-start: 12;
+  }
 }
 .blogbaggrund3{
   background-image: url("../images/Chalk_ekstraShort.png");
