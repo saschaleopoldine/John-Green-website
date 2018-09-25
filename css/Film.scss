@@ -1004,6 +1004,13 @@ footer{
 }
 
 
+
+
+
+
+
+
+
 @media screen and (min-width: 768px) {
    #mobil_flaenge, #mobil_header{
      display: none;
@@ -1011,7 +1018,7 @@ footer{
   
    #web_flaenge_resume{
      @include gridweb;
-     grid-template-rows: repeat(21, 50px);
+     grid-template-rows: repeat(20, 50px);
      .logotype{
        grid-column: 1/span 4;
        grid-row-start: 1;
@@ -1025,12 +1032,28 @@ footer{
        grid-row-start: 5;
        margin-left: 30px;
      }
+     .en_flaenge_i_himlen, .paper_town{
+       color: $white;
+     }
+     .light_valg{
+       font-weight: 300;
+       color: rgba(255, 255, 255, 0.7);
+     }
+     .en_flaenge_i_himlen{
+       grid-row-start: 6;
+       grid-column: 2/span 3;
+     }
+     .paper_town{
+       grid-row-start: 7;
+       grid-column: 2/span 3;
+       margin-top: -10px;
+     }
      .kommende_film{
        color: $white;
        font-family: ordinary_guy_demoregular, sans-serif;
        font-size: 18pt;
        grid-column: 1/span 3;
-       grid-row-start: 7;
+       grid-row-start: 8;
        margin-left: 30px;
      }
      .om_john_green{
@@ -1038,7 +1061,7 @@ footer{
        font-family: amatic_scregular, sans-serif;
        font-size: 18pt;
        grid-column: 1/span 3;
-       grid-row-start: 9;
+       grid-row-start: 10;
        margin-left: 30px;
      }
      .blog{
@@ -1046,7 +1069,7 @@ footer{
        font-family: trashhandregular, sans-serif;
        font-size: 20pt;
        grid-column: 1/span 2;
-       grid-row-start: 11;
+       grid-row-start: 12;
        margin-left: 30px;
      }
      .film_overskrift{
@@ -1159,9 +1182,9 @@ footer{
   
 
   #web_paper_resume{
-    @include gridweb;
-    grid-template-rows: repeat(21, 50px);
     display: none;
+    @include gridweb;
+    grid-template-rows: repeat(20, 50px);
     .logotype{
       grid-column: 1/span 4;
       grid-row-start: 1;
@@ -1175,12 +1198,28 @@ footer{
       grid-row-start: 5;
       margin-left: 30px;
     }
+    .en_flaenge_i_himlen, .paper_town{      
+      color: $white;                        
+    }                                       
+    .light_valg{                            
+      font-weight: 300;                     
+      color: rgba(255, 255, 255, 0.7);      
+    }                                       
+    .en_flaenge_i_himlen{                   
+      grid-row-start: 6;                    
+      grid-column: 2/span 3;                
+    }                                       
+    .paper_town{                            
+      grid-row-start: 7;                    
+      grid-column: 2/span 3;                
+      margin-top: -10px;                    
+    }                                       
     .kommende_film{
       color: $white;
       font-family: ordinary_guy_demoregular, sans-serif;
       font-size: 18pt;
       grid-column: 1/span 3;
-      grid-row-start: 7;
+      grid-row-start: 8;
       margin-left: 30px;
     }
     .om_john_green{
@@ -1188,7 +1227,7 @@ footer{
       font-family: amatic_scregular, sans-serif;
       font-size: 18pt;
       grid-column: 1/span 3;
-      grid-row-start: 9;
+      grid-row-start: 10;
       margin-left: 30px;
     }
     .blog{
@@ -1196,7 +1235,7 @@ footer{
       font-family: trashhandregular, sans-serif;
       font-size: 20pt;
       grid-column: 1/span 2;
-      grid-row-start: 11;
+      grid-row-start: 12;
       margin-left: 30px;
     }
     .film_overskrift{
@@ -1219,16 +1258,16 @@ footer{
       margin-top: 10%;                         
       grid-column: 5/span 7;                   
       grid-row-start: 8;                       
-      #web_resume, #web_trailer {              
+      #web_resume_paper, #web_trailer_paper {
         width: 50%;                            
         text-align: center;                    
         padding-top: 12px;                     
       }                                        
-      #web_trailer{                            
+      #web_trailer_paper{
         border-bottom: 1px solid $ligt_grey;   
         color: $ligt_grey;                     
       }                                        
-      #web_resume{                             
+      #web_resume_paper{
         border-top: 1px solid $ligt_grey;      
         border-right: 1px solid $ligt_grey;    
         color: $white;                         
@@ -1309,6 +1348,7 @@ footer{
 
   
   #web_flaenge_trailer {
+    display: none; 
     @include gridweb;
     grid-template-rows: repeat(20, 50px);
     .logotype {
@@ -1324,12 +1364,28 @@ footer{
       grid-row-start: 5;
       margin-left: 30px;
     }
+    .en_flaenge_i_himlen, .paper_town{
+      color: $white;
+    }
+    .light_valg{
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .en_flaenge_i_himlen{
+      grid-row-start: 6;
+      grid-column: 2/span 3;
+    }
+    .paper_town{
+      grid-row-start: 7;
+      grid-column: 2/span 3;
+      margin-top: -10px;
+    }
     .kommende_film {
       color: $white;
       font-family: ordinary_guy_demoregular, sans-serif;
       font-size: 18pt;
       grid-column: 1/span 3;
-      grid-row-start: 7;
+      grid-row-start: 8;
       margin-left: 30px;
     }
     .om_john_green {
@@ -1337,7 +1393,7 @@ footer{
       font-family: amatic_scregular, sans-serif;
       font-size: 18pt;
       grid-column: 1/span 3;
-      grid-row-start: 9;
+      grid-row-start: 10;
       margin-left: 30px;
     }
     .blog {
@@ -1345,7 +1401,7 @@ footer{
       font-family: trashhandregular, sans-serif;
       font-size: 20pt;
       grid-column: 1/span 2;
-      grid-row-start: 11;
+      grid-row-start: 12;
       margin-left: 30px;
     }
     .film_overskrift {
@@ -1393,14 +1449,14 @@ footer{
       grid-row-start: 13;
       margin-top: -15px;
     }
-    #flaenge_overskrift_web{
+    .flaenge_overskrift_web{
       color: $yellow;                           
       font-family: amatic_scregular, sans-serif;
       font-size: 26pt;
       grid-column: 6/span 5;                    
       grid-row-start: 11;
       margin-top: 15px;
-      letter-spacing: 1.5px;                    
+      letter-spacing: 1.5px;
     }
     .flaenge_genre{
       grid-column: 6/span 2;                          
@@ -1437,12 +1493,168 @@ footer{
       margin-bottom: -40px;
     } 
   }
+
+
+
+
+
+
+
+
+
+  #web_paper_trailer {
+    display: none; 
+    @include gridweb;
+    grid-template-rows: repeat(20, 50px);
+    .logotype {
+      grid-column: 1/span 4;
+      grid-row-start: 1;
+      margin: 30px 0 0 30px;
+    }
+    .nav_film_skrift {
+      color: $blue;
+      font-family: eraserregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 2;
+      grid-row-start: 5;
+      margin-left: 30px;
+    }
+    .en_flaenge_i_himlen, .paper_town{      
+      color: $white;                        
+    }                                       
+    .light_valg{                            
+      font-weight: 300;                     
+      color: rgba(255, 255, 255, 0.7);      
+    }                                       
+    .en_flaenge_i_himlen{                   
+      grid-row-start: 6;                    
+      grid-column: 2/span 3;                
+    }                                       
+    .paper_town{                            
+      grid-row-start: 7;                    
+      grid-column: 2/span 3;                
+      margin-top: -10px;                    
+    }                                       
+    .kommende_film {
+      color: $white;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 8;
+      margin-left: 30px;
+    }
+    .om_john_green {
+      color: $white;
+      font-family: amatic_scregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 10;
+      margin-left: 30px;
+    }
+    .blog {
+      color: $white;
+      font-family: trashhandregular, sans-serif;
+      font-size: 20pt;
+      grid-column: 1/span 2;
+      grid-row-start: 12;
+      margin-left: 30px;
+    }
+    .film_overskrift {
+      color: $white;
+      font-family: eraserregular, sans-serif;
+      font-size: 24pt;
+      grid-column: 5/span 2;
+      grid-row-start: 4;
+      margin-top: -20%;
+    }
+    .web_billede{
+      grid-column: 5/span 7;
+      grid-row-start: 5;
+    }
+    .valg_web {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: center;
+      height: 45px;
+      margin-top: 10%;
+      grid-column: 5/span 7;
+      grid-row-start: 8;
+      .web_resume_paper, .web_trailer_paper {
+        width: 50%;
+        text-align: center;
+        padding-top: 12px;
+      }
+      .web_trailer_paper {
+        border-top: 1px solid $ligt_grey;
+        border-left: 1px solid $ligt_grey;
+        color: $white;
+      }
+      .web_resume_paper {
+        border-bottom: 1px solid $ligt_grey;
+        color: $ligt_grey;
+      }
+    }
+    .web_tekstbaggrund{
+      grid-column: 4/span 9;
+      grid-row-start: 10;
+      width: 100%;
+    }
+    iframe{
+      grid-column: 6/span 5;
+      grid-row-start: 13;
+      margin-top: -15px;
+    }
+    .paper_overskrift_web{
+      color: $yellow;
+      font-family: amatic_scregular, sans-serif;
+      font-size: 26pt;
+      grid-column: 6/span 5;
+      grid-row-start: 11;
+      margin-top: 15px;
+      letter-spacing: 1.5px;
+    }
+    .paper_genre{
+      grid-column: 6/span 2;
+      grid-row-start: 16;
+      font-size: 10pt;
+      margin-top: 15px;
+      font-family: yantramanavmedium, sans-serif;
+      .light{
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    .paper_spilletid{
+      font-size: 10pt;
+      grid-row-start: 16;
+      grid-column: 10/span 2;
+      margin-top: 15px;
+      font-family: yantramanavmedium, sans-serif;
+      .light{
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    .paper_rating{
+      font-size: 10pt;
+      grid-row-start: 18;
+      grid-column: 6/span 3;
+      font-family: yantramanavmedium, sans-serif;
+      .light{
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    footer{
+      grid-row-start: 20;
+      grid-column: 4/span 9;
+      margin-bottom: -40px;
+    }
+  }
+
 }
 
 
 
 
-  
+
 @media screen and (min-width: 1024px) {
   #web_flaenge_resume {
     @include gridweb;
@@ -1465,24 +1677,24 @@ footer{
 
 
   #web_paper_resume{
-    @include gridweb;                     
-    grid-template-rows: repeat(21, 65px); 
+    @include gridweb;
+    grid-template-rows: repeat(21, 65px);
     #paper_overskrift_web{
       font-size: 24pt;
-    }                                     
-    #resume_tekst{                        
-      font-size: 16pt;                    
-    }                                     
+    }
+    #resume_tekst{
+      font-size: 16pt;
+    }
     .paper_genre, .paper_spilletid{
-      grid-row-start: 15;                 
-      font-size: 14pt;                    
-    }                                     
+      grid-row-start: 15;
+      font-size: 14pt;
+    }
     .paper_rating{
-      grid-row-start: 17;                 
-      font-size: 14pt;                    
-    }                                                                            
+      grid-row-start: 17;
+      font-size: 14pt;
+    }
   }
-  
+
 }
 
 
