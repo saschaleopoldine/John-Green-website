@@ -63,11 +63,10 @@
 </header>
 
 <section class="en">
-    <div class="tidslinje"></div>
     <div class="sidemenu">
         <p class="nav_film_skrift">FILM</p>
         <p class="en_flaenge_i_himlen light_valg">En Flænge i Himlen</p>
-        <p class="paper_town">Paper Town</p>
+        <p class="paper_town light_valg">Paper Town</p>
         <p class="kommende_film">KOMMENDE FILM</p>
         <p class="om_john_green">OM JOHN GREEN</p>
         <p class="blog">BLOG</p>
@@ -81,7 +80,8 @@
     <div class="blogindlæg1">Hvis du oplever stress i hverdagen, er du er langt fra den eneste.
         Mange unge føler sig ofte stressede, og det er der flere grunde til.
     </div>
-    <div class="readmere">Læs mere</div>
+    <div class="readmere">Læs mindre</div>
+    <div class="readless">Læs mere</div>
 </section>
 
 <section class="to">
@@ -211,7 +211,15 @@ eller få mere viden og hør om andre, der har oplevet stress i hverdagen:
 
         $(".readmere").click(function(e){
             $(".to").slideToggle(0);
+            $(".readmere").css({"display":"none"})
+            $(".readless").css({"display":"inline"})
         });
+        $(".readless").click(function(e){
+            $(".to").slideToggle(0);
+            $(".readmere").css({"display":"inline"})
+            $(".readless").css({"display":"none"})
+        });
+
     });
 
 
