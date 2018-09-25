@@ -175,7 +175,8 @@
 
     <footer>
         <div class="socialemedier">
-            <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
+            <img src="images/footer_web.png" height="150" width="1425"/>
+            <img class="some" src="images/SocialeMedierIkoner.png" height="209" width="455"/>
         </div>
     </footer>
 </div>
@@ -183,7 +184,7 @@
 
 
 
-
+<div id="display_flaenge_resume">
 <div id="web_flaenge_resume">
     <img class="logotype" src="images/Logotype.png" height="175" width="1125"/>
     <p class="nav_film_skrift">FILM</p>
@@ -210,13 +211,16 @@
 
     <footer>
         <div class="socialemedier">
-            <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
+            <img src="images/footer_web.png" height="150" width="1425"/>
+            <img class="some" src="images/SocialeMedierIkoner.png" height="209" width="455"/>
         </div>
     </footer>
 
 </div>
+</div>
 
 
+<div id="display_paper_resume">
 <div id="web_paper_resume">
     <img class="logotype" src="images/Logotype.png" height="175" width="1125"/>
     <p class="nav_film_skrift">FILM</p>
@@ -243,16 +247,18 @@
 
     <footer>
         <div class="socialemedier">
-            <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
+            <img src="images/footer_web.png" height="150" width="1425"/>
+            <img class="some" src="images/SocialeMedierIkoner.png" height="209" width="455"/>
         </div>
     </footer>
 
+</div>
 </div>
 
 
 
 
-
+<div id="display_flaenge_trailer">
 <div id="web_flaenge_trailer">
     <img class="logotype" src="images/Logotype.png" height="175" width="1125"/>
     <p class="nav_film_skrift">FILM</p>
@@ -276,17 +282,19 @@
 
     <footer>
         <div class="socialemedier">
-            <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
+            <img src="images/footer_web.png" height="150" width="1425"/>
+            <img class="some" src="images/SocialeMedierIkoner.png" height="209" width="455"/>
         </div>
     </footer>
 
 
 </div>
+</div>
 
 
 
 
-
+<div id="display_paper_trailer">
 <div id="web_paper_trailer">
     <img class="logotype" src="images/Logotype.png" height="175" width="1125"/>
     <p class="nav_film_skrift">FILM</p>
@@ -296,7 +304,7 @@
     <p class="om_john_green">OM JOHN GREEN</p>
     <p class="blog">BLOG</p>
     <p class="film_overskrift">FILM</p>
-    <img class="web_billede" src="images/flaenge_web.png"/>
+    <img class="web_billede" src="images/paper_web.png"/>
     <div class="valg_web">
         <p class="web_resume_paper">Resume</p>
         <p class="web_trailer_paper">Trailer</p>
@@ -313,6 +321,7 @@
             <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
         </div>
     </footer>
+</div>
 </div>
 
 
@@ -357,24 +366,24 @@
         });
 
         $("#web_trailer").click(function (e) {
-           $("#web_flaenge_trailer").show(0);
-           $("#web_flaenge_resume").hide(0);
+           $("#display_flaenge_trailer").show(0);
+           $("#display_flaenge_resume").hide(0);
         });
 
         $("#web_resume_flaenge").click(function (e) {
-            $("#web_flaenge_trailer").hide(0);
-            $("#web_flaenge_resume").show(0);
+            $("#display_flaenge_trailer").hide(0);
+            $("#display_flaenge_resume").show(0);
         });
 
 
         $(".paper_town").click(function (e) {
-            $("#web_flaeng_resume").hide(0);
-            $("#web_paper_resume").show(0);
+            $("#display_flaeng_resume").hide(0);
+            $("#display_paper_resume").show(0);
         });
 
         $(".en_flaenge_i_himlen").click(function (e) {
-            $("#web_flaenge_resume").show(0);
-            $("#web_paper_resume").hide(0);
+            $("#display_flaenge_resume").show(0);
+            $("#display_paper_resume").hide(0);
         });
 
 
@@ -391,13 +400,13 @@
 
 
         $(".web_prev").click(function (e) {
-            $("#web_paper_resume").show(0);
-            $("#web_flaenge_resume").hide(0);
+            $("#display_paper_resume").show(0);
+            $("#display_flaenge_resume").hide(0);
         });
 
         $(".web_next").click(function (e) {
-            $("#web_paper_resume").show(0);
-            $("#web_flaenge_resume").hide(0);
+            $("#display_paper_resume").show(0);
+            $("#display_flaenge_resume").hide(0);
         });
 
 
@@ -439,13 +448,13 @@
 
 
         $("#web_trailer_paper").click(function (e) {
-            $("#web_paper_resume").hide(0);
-            $("#web_paper_trailer").show(0);
+            $("#display_paper_resume").hide(0);
+            $("#display_paper_trailer").show(0);
         });
 
         $(".web_resume_paper").click(function (e) {
-            $("#web_paper_resume").show(0);
-            $("#web_paper_trailer").hide(0);
+            $("#display_paper_resume").show(0);
+            $("#display_paper_trailer").hide(0);
         });
 
 
@@ -461,13 +470,13 @@
         });
 
         $(".web_prev_paper").click(function (e) {
-            $("#web_paper_resume").hide(0);
-            $("#web_flaenge_resume").show(0);
+            $("#display_paper_resume").hide(0);
+            $("#display_flaenge_resume").show(0);
         });
 
         $(".web_next_paper").click(function (e) {
-            $("#web_paper_resume").hide(0);
-            $("#web_flaenge_resume").show(0);
+            $("#display_paper_resume").hide(0);
+            $("#disaplay_flaenge_resume").show(0);
 
         });
 
