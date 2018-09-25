@@ -318,11 +318,73 @@
 
     <footer>
         <div class="socialemedier">
-            <img src="images/SocialeMedierIkoner.png" height="auto" width="80%">
+            <img src="images/footer_web.png" height="150" width="1425"/>
+            <img class="some" src="images/SocialeMedierIkoner.png" height="209" width="455"/>
         </div>
     </footer>
 </div>
 </div>
+
+
+
+
+
+<div id="display_flaenge_resume_web">
+    <div id="web2_flaenge_resume">
+        <img class="logotype" src="images/Logotype.png" height="175" width="1125"/>
+        <p class="nav_film_skrift">FILM</p>
+        <p class="en_flaenge_i_himlen"><strong>En Flænge i Himlen</strong></p>
+        <p class="paper_town light_valg">Paper Town</p>
+        <p class="kommende_film">KOMMENDE FILM</p>
+        <p class="om_john_green">OM JOHN GREEN</p>
+        <p class="blog">BLOG</p>
+        <p class="film_overskrift">FILM</p>
+        <img class="web_billede" src="images/flaenge_web.png"/>
+        <p class="web2_resume_flaenge">Resume</p>
+        <p class="web2_trailer_flaenge">Trailer</p>
+        <img class="web_tekstbaggrund" src="images/tekstbaggrund_web.png" height="370" width="356"/>
+        <h1 id="flaenge_overskrift_web2"></h1>
+        <p class="resume_tekst"></p>
+        <p class="flaenge_genre">Genre: <br></p>
+        <p class="flaenge_spilletid">Spilletid: <br></p>
+        <p class="flaenge_rating">Rating: <br></p>
+        <span class="web_next_flaenge"><i class="fa fas fa-angle-right fa-3x"></i></span>
+        <span class="web_prev_flaenge"><i class="fa fas fa-angle-left fa-3x"></i></span>
+        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/uec0jU93Bg0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <p class="CTA">Se filmene her</p>
+        <div class="flex">
+            <img class="viaplay" src="images/viaplay.png" height="351" width="349"/>
+            <img class="hbo" src="images/HBO.png" height="351" width="750"/>
+            <img class="netflix" src="images/Netflix.png" height="351" width="377"/>
+        </div>
+        <img class="some_web" src="images/SocialeMedierIkoner.png" height="209" width="455"/>
+        <img class="baggrund_some_web" src="images/some_background.png" height="222" width="279"/>
+    </div>
+</div>
+
+
+
+
+<div id="display_flaenge_trailer_web">
+
+</div>
+
+
+
+
+
+<div id="display_paper_resume_web">
+
+</div>
+
+
+
+<div id="display_paper_trailer_web">
+
+</div>
+
+
+
 
 
 
@@ -338,7 +400,7 @@
                 'language':'da_DA'
             },
             success: function(alt) {
-            $("#flaenge_overskrift, #flaenge_overskrift_web").append(alt.title);
+            $("#flaenge_overskrift, #flaenge_overskrift_web, #flaenge_overskrift_web2").append(alt.title);
             $(".resume_tekst").append(alt.overview);
             $.each(alt.genres, function(i, genre){
                 $(".genre, .flaenge_genre").append("<div class='light'>" + genre.name + "</div>")

@@ -110,7 +110,7 @@ $ligt_grey: #707070;
 $white: #ffffff;
 $yellow: #F8E932;
 
-#web_flaenge_resume, #web_flaenge_trailer{
+#display_flaenge_resume, #display_flaenge_trailer, #display_paper_resume, #display_paper_trailer{
   display: none;
 }
 
@@ -1015,6 +1015,9 @@ footer{
    #mobil_flaenge, #mobil_header{
      display: none;
    }
+    #display_flaenge_resume{
+      display: block;
+    }
    #web_flaenge_resume{
      @include gridweb;
      grid-template-rows: repeat(22, 50px);
@@ -1715,33 +1718,325 @@ footer{
   }
 
 
+  #web_paper_trailer{
+    @include gridweb;                    
+    grid-template-rows: repeat(21, 65px);
+  }
+
+  #web_flaenge_trailer{
+    @include gridweb;                    
+    grid-template-rows: repeat(21, 65px);
+  }
+}
 
 
 
 
 
+@media screen and (min-width: 1280px) {
+  #display_flaenge_resume, #display_flaenge_trailer, #display_paper_resume, #display_paper_trailer {
+    display: none;
+  }
+  #web2_flaenge_resume {
+    @include gridweb;
+    grid-template-rows: repeat(20, 50px);
+    .logotype {
+      grid-column: 1/span 4;
+      grid-row-start: 1;
+      margin: 30px 0 0 30px;
+    }
+    .nav_film_skrift {
+      color: $blue;
+      font-family: eraserregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 2;
+      grid-row-start: 5;
+      margin-left: 30px;
+    }
+    .en_flaenge_i_himlen, .paper_town {
+      color: $white;
+    }
+    .light_valg {
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .en_flaenge_i_himlen {
+      grid-row-start: 6;
+      grid-column: 2/span 3;
+    }
+    .paper_town {
+      grid-row-start: 7;
+      grid-column: 2/span 3;
+      margin-top: -10px;
+    }
+    .kommende_film {
+      color: $white;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 8;
+      margin-left: 30px;
+    }
+    .om_john_green {
+      color: $white;
+      font-family: amatic_scregular, sans-serif;
+      font-size: 18pt;
+      grid-column: 1/span 3;
+      grid-row-start: 10;
+      margin-left: 30px;
+    }
+    .blog {
+      color: $white;
+      font-family: trashhandregular, sans-serif;
+      font-size: 20pt;
+      grid-column: 1/span 2;
+      grid-row-start: 12;
+      margin-left: 30px;
+    }
+    .film_overskrift {
+      color: $white;
+      font-family: eraserregular, sans-serif;
+      font-size: 24pt;
+      grid-column: 5/span 2;
+      grid-row-start: 4;
+      margin-top: -20%;
+    }
+    .web_billede {
+      grid-column: 5/span 7;
+      grid-row-start: 5;
+    }
+    .web2_resume_flaenge {
+      color: $white;
+      font-size: 14pt;
+      grid-column: 5/span 1;
+      grid-row-start: 10;
+    }
+    .web2_trailer_flaenge {
+      color: $white;
+      font-size: 14pt;
+      grid-column: 9/span 1;
+      grid-row-start: 10;
+    }
+    .web_tekstbaggrund {
+      grid-row-start: 10;
+      grid-column: 4/span 5;
+      width: 100%;
+      margin-top: 40px;
+    }
+    #flaenge_overskrift_web2 {
+      color: $yellow;
+      font-family: amatic_scregular, sans-serif;
+      font-size: 20pt;
+      grid-column: 5/span 3;
+      grid-row-start: 11;
+      margin-top: 20px;
+      letter-spacing: 1.5px;
+    }
+    .resume_tekst {
+      font-size: 14pt;
+      grid-column: 5/span 3;
+      grid-row-start: 12;
+      margin-top: 10px;
+    }
+    .flaenge_genre {
+      grid-column: 5/span 2;
+      grid-row-start: 17;
+      font-size: 10pt;
+      margin-top: 10px;
+      font-family: yantramanavmedium, sans-serif;
+      .light {
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    .flaenge_spilletid {
+      font-size: 10pt;
+      grid-row-start: 17;
+      grid-column: 7/span 2;
+      margin-top: 10px;
+      font-family: yantramanavmedium, sans-serif;
+      .light {
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    .flaenge_rating {
+      font-size: 10pt;
+      grid-row-start: 19;
+      grid-column: 5/span 3;
+      margin-top: -5px;
+      font-family: yantramanavmedium, sans-serif;
+      .light {
+        font-family: Yantramanavlight, sans-serif;
+      }
+    }
+    .web_prev_flaenge {
+      color: $ligt_grey;
+      grid-column: 4/span 1;
+      grid-row-start: 7;
+      margin-left: 30px;
+    }
+    .web_next_flaenge {
+      color: $ligt_grey;
+      grid-column: 12/span 1;
+      grid-row-start: 7;
+      margin-left: 10px;
+    }
+    iframe {
+      grid-row-start: 11;
+      grid-column: 9/span 3;
+    }
+    .CTA {
+      color: $blue;
+      font-size: 18pt;
+      font-family: ordinary_guy_demoregular, sans-serif;
+      grid-column: 10/span 2;
+      grid-row-start: 15;
+      margin-left: -105px;
+      text-align: center;
+    }
+    .flex {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-around;
+      grid-column: 9/span 3;
+      grid-row-start: 17;
+      .viaplay, .netflix, .hbo {
+        height: 40px;
+        width: auto;
+      }
+    }
+    .baggrund_some_web {
+      grid-column: 10/span 3;
+      grid-row-start: 19;
+      z-index: 1;
+    }
+    .some_web{
+      grid-column: 11/span 2;
+      grid-row-start: 20;
+      height: 80px;
+      width: auto;
+      z-index: 2;
+      margin-left: -40px;
+      margin-top: -10px;
+    }
+  }
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (min-width: 1600px) {
+  #web2_flaenge_resume {
+    @include gridweb;
+    grid-template-rows: repeat(20, 60px);
+   .en_flaenge_i_himlen, .paper_town{
+     font-size: 14pt;
+     margin-left: -5%;
+   }
+   .kommende_film, .om_john_green{
+     margin-left: 15%;
+   }
+   .nav_film_skrift, .blog{
+     margin-left: 24%;
+   }
+   .web_prev_flaenge{
+     margin-left: -25%;
+     grid-column: 5/span 1;
+   }
+   .web2_trailer_flaenge, .web2_resume_flaenge{
+     margin-top: 10%;
+   }
+  }
 
 
 
   
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
