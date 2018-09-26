@@ -110,7 +110,7 @@ $ligt_grey: #707070;
 $white: #ffffff;
 $yellow: #F8E932;
 
-#display_flaenge_resume, #display_flaenge_trailer, #display_paper_resume, #display_paper_trailer{
+#display_flaenge_resume, #display_flaenge_trailer, #display_paper_resume, #display_paper_trailer, #display_flaenge_resume_web, #display_paper_resume_web{
   display: none;
 }
 
@@ -1737,6 +1737,9 @@ footer{
   #display_flaenge_resume, #display_flaenge_trailer, #display_paper_resume, #display_paper_trailer {
     display: none;
   }
+  #display_flaenge_resume_web{
+    display: block;
+  }
   #web2_flaenge_resume {
     @include gridweb;
     grid-template-rows: repeat(20, 50px);
@@ -1799,7 +1802,7 @@ footer{
       font-size: 24pt;
       grid-column: 5/span 2;
       grid-row-start: 4;
-      margin-top: -20%;
+      margin-top: -10%;
     }
     .web_billede {
       grid-column: 5/span 7;
@@ -1889,7 +1892,7 @@ footer{
       font-size: 18pt;
       font-family: ordinary_guy_demoregular, sans-serif;
       grid-column: 10/span 2;
-      grid-row-start: 15;
+      grid-row-start: 16;
       margin-left: -105px;
       text-align: center;
     }
@@ -2108,24 +2111,17 @@ footer{
       margin-top: -10px;
     }
   }
-
-
-
-
-
-
-
-
-
-
 }
 
 
 
 @media screen and (min-width: 1600px) {
+  #display_flaenge_resume_web{
+    display: block;
+  }
   #web2_flaenge_resume {
     @include gridweb;
-    grid-template-rows: repeat(20, 60px);
+    grid-template-rows: repeat(20, 70px);
     .en_flaenge_i_himlen_web, .paper_town_web {
       font-size: 14pt;
       margin-left: -5%;
@@ -2149,12 +2145,24 @@ footer{
     .some_web{
       margin-left: 15%;
     }
+    .flaenge_spilletid, .flaenge_genre{
+      grid-row-start: 15;
+    }
+    .flaenge_rating{
+      grid-row-start: 17;
+    }
+    .CTA{
+      grid-row-start: 15;
+    }
+    .flex{
+      grid-row-start: 16;
+    }
   }
 
 
   #web2_paper_resume {
     @include gridweb;
-    grid-template-rows: repeat(20, 60px);
+    grid-template-rows: repeat(20, 70px);
     .en_flaenge_i_himlen_web, .paper_town_web {
       font-size: 14pt;
       margin-left: -5%;
@@ -2178,5 +2186,15 @@ footer{
     .some_web{
       margin-left: 15%;
     }
+    .paper_spilletid, .paper_genre{
+      grid-row-start: 15;
+    }
+    .paper_rating{
+      grid-row-start: 17;
+    }
+    .flex{
+      grid-row-start: 16;
+    }
   }
 }
+

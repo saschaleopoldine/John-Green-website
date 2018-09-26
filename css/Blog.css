@@ -300,47 +300,34 @@ header {
   grid-column-gap: 0;
   grid-template-rows: repeat(9, 46px); }
 
-.sidemenu p {
-  text-align: left;
-  margin-left: 30px; }
 .sidemenu .nav_film_skrift {
   color: white;
   font-family: eraserregular, sans-serif;
   font-size: 18pt;
   grid-column: 1/span 2;
-  grid-row-start: 5; }
-.sidemenu .en_flaenge_i_himlen, .sidemenu .paper_town {
-  color: white;
-  margin-left: 60px; }
-.sidemenu .light_valg {
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
-  margin-left: 60px; }
-.sidemenu .en_flaenge_i_himlen {
-  grid-row-start: 6;
-  grid-column: 2/span 3; }
-.sidemenu .paper_town {
-  grid-row-start: 7;
-  grid-column: 2/span 3;
-  margin-top: -10px; }
+  grid-row-start: 5;
+  margin-left: 30px; }
 .sidemenu .kommende_film {
   color: white;
   font-family: ordinary_guy_demoregular, sans-serif;
   font-size: 18pt;
   grid-column: 1/span 3;
-  grid-row-start: 8; }
+  grid-row-start: 8;
+  margin-left: 30px; }
 .sidemenu .om_john_green {
   color: white;
   font-family: amatic_scregular, sans-serif;
   font-size: 18pt;
   grid-column: 1/span 3;
-  grid-row-start: 10; }
+  grid-row-start: 10;
+  margin-left: 30px; }
 .sidemenu .blog {
   color: #31a7e0;
   font-family: trashhandregular, sans-serif;
   font-size: 20pt;
   grid-column: 1/span 2;
-  grid-row-start: 12; }
+  grid-row-start: 12;
+  margin-left: 30px; }
 
 .blogbaggrund3 {
   background-image: url("../images/Chalk_ekstraShort.png");
@@ -745,8 +732,7 @@ footer {
     display: inline;
     grid-column: 1/span 2;
     grid-row: 2/span 6;
-    line-height: 50pt;
-    text-align: center; }
+    line-height: 50pt; }
     .sidemenu h1 {
       font-size: 20pt;
       color: white; }

@@ -65,8 +65,6 @@
 <section class="en">
     <div class="sidemenu">
         <p class="nav_film_skrift">FILM</p>
-        <p class="en_flaenge_i_himlen light_valg">En Flænge i Himlen</p>
-        <p class="paper_town light_valg">Paper Town</p>
         <p class="kommende_film">KOMMENDE FILM</p>
         <p class="om_john_green">OM JOHN GREEN</p>
         <p class="blog">BLOG</p>
@@ -211,15 +209,21 @@ eller få mere viden og hør om andre, der har oplevet stress i hverdagen:
 
         $(".readmere").click(function(e){
             $(".to").slideToggle(0);
-            $(".readmere").css({"display":"none"})
+            $(".readmere").css({"display":"none"});
             $(".readless").css({"display":"inline"})
         });
         $(".readless").click(function(e){
             $(".to").slideToggle(0);
-            $(".readmere").css({"display":"inline"})
+            $(".readmere").css({"display":"inline"});
             $(".readless").css({"display":"none"})
         });
 
+        $(".LogoType").click(function (e) {
+            document.location = "index.html";
+        });
+        $(".nav_film_skrift").click(function (e) {
+            document.location = "Film.html";
+        });
     });
 
 

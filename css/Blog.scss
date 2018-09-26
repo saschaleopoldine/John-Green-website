@@ -359,35 +359,13 @@ header{
 }
 
 .sidemenu{
-  p{
-    text-align: left;
-    margin-left: 30px;
-  }
   .nav_film_skrift{
     color: white;
     font-family: eraserregular, sans-serif;
     font-size: 18pt;
     grid-column: 1/span 2;
     grid-row-start: 5;
-  }
-  .en_flaenge_i_himlen, .paper_town{
-    color: white;
-    margin-left: 60px;
-  }
-  .light_valg{
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.7);
-    margin-left: 60px;
-  }
-  .en_flaenge_i_himlen{
-    grid-row-start: 6;
-    grid-column: 2/span 3;
-
-  }
-  .paper_town{
-    grid-row-start: 7;
-    grid-column: 2/span 3;
-    margin-top: -10px;
+    margin-left: 30px;
   }
   .kommende_film{
     color: white;
@@ -395,13 +373,15 @@ header{
     font-size: 18pt;
     grid-column: 1/span 3;
     grid-row-start: 8;
+    margin-left: 30px;
   }
-  .om_john_green {
+  .om_john_green{
     color: white;
     font-family: amatic_scregular, sans-serif;
     font-size: 18pt;
     grid-column: 1/span 3;
     grid-row-start: 10;
+    margin-left: 30px;
   }
   .blog{
     color: $blue;
@@ -409,6 +389,7 @@ header{
     font-size: 20pt;
     grid-column: 1/span 2;
     grid-row-start: 12;
+    margin-left: 30px;
   }
 }
 .blogbaggrund3{
@@ -849,7 +830,6 @@ footer{
     grid-column: 1/span 2;
     grid-row: 2/span 6;
     line-height: 50pt;
-    text-align: center;
     h1{
       font-size: 20pt;
       color: white;

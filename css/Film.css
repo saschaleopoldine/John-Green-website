@@ -60,7 +60,7 @@ img {
   src: url("../Fonts/eraserregular-webfont.woff2") format("woff2"), url("../Fonts/eraserregular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-#display_flaenge_resume, #display_flaenge_trailer, #display_paper_resume, #display_paper_trailer {
+#display_flaenge_resume, #display_flaenge_trailer, #display_paper_resume, #display_paper_trailer, #display_flaenge_resume_web, #display_paper_resume_web {
   display: none; }
 
 #mobil_header {
@@ -1298,6 +1298,9 @@ footer {
   #display_flaenge_resume, #display_flaenge_trailer, #display_paper_resume, #display_paper_trailer {
     display: none; }
 
+  #display_flaenge_resume_web {
+    display: block; }
+
   #web2_flaenge_resume {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -1353,7 +1356,7 @@ footer {
       font-size: 24pt;
       grid-column: 5/span 2;
       grid-row-start: 4;
-      margin-top: -20%; }
+      margin-top: -10%; }
     #web2_flaenge_resume .web_billede {
       grid-column: 5/span 7;
       grid-row-start: 5; }
@@ -1427,7 +1430,7 @@ footer {
       font-size: 18pt;
       font-family: ordinary_guy_demoregular, sans-serif;
       grid-column: 10/span 2;
-      grid-row-start: 15;
+      grid-row-start: 16;
       margin-left: -105px;
       text-align: center; }
     #web2_flaenge_resume .flex {
@@ -1609,11 +1612,14 @@ footer {
       margin-left: -40px;
       margin-top: -10px; } }
 @media screen and (min-width: 1600px) {
+  #display_flaenge_resume_web {
+    display: block; }
+
   #web2_flaenge_resume {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
-    grid-template-rows: repeat(20, 60px); }
+    grid-template-rows: repeat(20, 70px); }
     #web2_flaenge_resume .en_flaenge_i_himlen_web, #web2_flaenge_resume .paper_town_web {
       font-size: 14pt;
       margin-left: -5%; }
@@ -1630,12 +1636,20 @@ footer {
       grid-column: 11/span 2; }
     #web2_flaenge_resume .some_web {
       margin-left: 15%; }
+    #web2_flaenge_resume .flaenge_spilletid, #web2_flaenge_resume .flaenge_genre {
+      grid-row-start: 15; }
+    #web2_flaenge_resume .flaenge_rating {
+      grid-row-start: 17; }
+    #web2_flaenge_resume .CTA {
+      grid-row-start: 15; }
+    #web2_flaenge_resume .flex {
+      grid-row-start: 16; }
 
   #web2_paper_resume {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
-    grid-template-rows: repeat(20, 60px); }
+    grid-template-rows: repeat(20, 70px); }
     #web2_paper_resume .en_flaenge_i_himlen_web, #web2_paper_resume .paper_town_web {
       font-size: 14pt;
       margin-left: -5%; }
@@ -1651,6 +1665,12 @@ footer {
     #web2_paper_resume .baggrund_some_web {
       grid-column: 11/span 2; }
     #web2_paper_resume .some_web {
-      margin-left: 15%; } }
+      margin-left: 15%; }
+    #web2_paper_resume .paper_spilletid, #web2_paper_resume .paper_genre {
+      grid-row-start: 15; }
+    #web2_paper_resume .paper_rating {
+      grid-row-start: 17; }
+    #web2_paper_resume .flex {
+      grid-row-start: 16; } }
 
 /*# sourceMappingURL=Film.css.map */
